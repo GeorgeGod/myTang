@@ -47,6 +47,12 @@
 		847C177E1FCE7883004793AD /* EnjoySectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C177D1FCE7883004793AD /* EnjoySectionHeader.m */; };
 		847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17811FCE798C004793AD /* MemberCenterCell.m */; };
 		847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17841FCE8652004793AD /* MCCycleCollectionCell.m */; };
+		847C17881FCEB9DE004793AD /* VIPDetailPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17871FCEB9DE004793AD /* VIPDetailPriceCell.m */; };
+		847C178C1FCEBA32004793AD /* VIPDetailGiftBagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C178A1FCEBA32004793AD /* VIPDetailGiftBagCell.m */; };
+		847C178D1FCEBA32004793AD /* VIPDetailGiftBagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847C178B1FCEBA32004793AD /* VIPDetailGiftBagCell.xib */; };
+		847C17911FCEBA8C004793AD /* VIPDetailDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C178F1FCEBA8C004793AD /* VIPDetailDiscountCell.m */; };
+		847C17921FCEBA8C004793AD /* VIPDetailDiscountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */; };
+		847C17951FCEBAC4004793AD /* VIPDetailTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */; };
 		89FB1DC188E31433325A8E09 /* libPods-Tang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5E258E51337524F00D4225 /* libPods-Tang.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +135,16 @@
 		847C17811FCE798C004793AD /* MemberCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberCenterCell.m; sourceTree = "<group>"; };
 		847C17831FCE8652004793AD /* MCCycleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCCycleCollectionCell.h; sourceTree = "<group>"; };
 		847C17841FCE8652004793AD /* MCCycleCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCCycleCollectionCell.m; sourceTree = "<group>"; };
+		847C17861FCEB9DE004793AD /* VIPDetailPriceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailPriceCell.h; sourceTree = "<group>"; };
+		847C17871FCEB9DE004793AD /* VIPDetailPriceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailPriceCell.m; sourceTree = "<group>"; };
+		847C17891FCEBA32004793AD /* VIPDetailGiftBagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailGiftBagCell.h; sourceTree = "<group>"; };
+		847C178A1FCEBA32004793AD /* VIPDetailGiftBagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailGiftBagCell.m; sourceTree = "<group>"; };
+		847C178B1FCEBA32004793AD /* VIPDetailGiftBagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VIPDetailGiftBagCell.xib; sourceTree = "<group>"; };
+		847C178E1FCEBA8C004793AD /* VIPDetailDiscountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailDiscountCell.h; sourceTree = "<group>"; };
+		847C178F1FCEBA8C004793AD /* VIPDetailDiscountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailDiscountCell.m; sourceTree = "<group>"; };
+		847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VIPDetailDiscountCell.xib; sourceTree = "<group>"; };
+		847C17931FCEBAC4004793AD /* VIPDetailTipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailTipsCell.h; sourceTree = "<group>"; };
+		847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailTipsCell.m; sourceTree = "<group>"; };
 		CA5E258E51337524F00D4225 /* libPods-Tang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A5A9F6637E3D0285F5105D /* Pods-Tang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tang/Pods-Tang.release.xcconfig"; sourceTree = "<group>"; };
 		D9C1D89D0CC039D1697D2E95 /* Pods-Tang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tang/Pods-Tang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -349,6 +365,16 @@
 				847C17811FCE798C004793AD /* MemberCenterCell.m */,
 				847C17831FCE8652004793AD /* MCCycleCollectionCell.h */,
 				847C17841FCE8652004793AD /* MCCycleCollectionCell.m */,
+				847C17861FCEB9DE004793AD /* VIPDetailPriceCell.h */,
+				847C17871FCEB9DE004793AD /* VIPDetailPriceCell.m */,
+				847C17891FCEBA32004793AD /* VIPDetailGiftBagCell.h */,
+				847C178A1FCEBA32004793AD /* VIPDetailGiftBagCell.m */,
+				847C178B1FCEBA32004793AD /* VIPDetailGiftBagCell.xib */,
+				847C178E1FCEBA8C004793AD /* VIPDetailDiscountCell.h */,
+				847C178F1FCEBA8C004793AD /* VIPDetailDiscountCell.m */,
+				847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */,
+				847C17931FCEBAC4004793AD /* VIPDetailTipsCell.h */,
+				847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */,
 			);
 			path = ComponentCells;
 			sourceTree = "<group>";
@@ -417,7 +443,9 @@
 				5EA821F31FCD85DC00DC1FEE /* MineHeadTableViewCell.xib in Resources */,
 				5EA821F81FCD85EE00DC1FEE /* MineClassifyTableViewCell.xib in Resources */,
 				5EA821DD1FCD7C4600DC1FEE /* LaunchScreen.storyboard in Resources */,
+				847C178D1FCEBA32004793AD /* VIPDetailGiftBagCell.xib in Resources */,
 				5EA821DA1FCD7C4600DC1FEE /* Assets.xcassets in Resources */,
+				847C17921FCEBA8C004793AD /* VIPDetailDiscountCell.xib in Resources */,
 				5EA821FD1FCD879C00DC1FEE /* MineResources.bundle in Resources */,
 				5EA821D81FCD7C4600DC1FEE /* Main.storyboard in Resources */,
 			);
@@ -482,10 +510,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA821F71FCD85EE00DC1FEE /* MineClassifyTableViewCell.m in Sources */,
+				847C17881FCEB9DE004793AD /* VIPDetailPriceCell.m in Sources */,
 				847C176D1FCE6CA5004793AD /* LockerPayResultViewController.m in Sources */,
 				847C177A1FCE6DC9004793AD /* ContactCustomerService.m in Sources */,
 				847C17561FCE6085004793AD /* VIPConfirmOrderViewController.m in Sources */,
 				847C17441FCE5267004793AD /* BaseViewController.m in Sources */,
+				847C17951FCEBAC4004793AD /* VIPDetailTipsCell.m in Sources */,
 				5EA821D51FCD7C4600DC1FEE /* ViewController.m in Sources */,
 				847C17731FCE6D23004793AD /* MakerWaitPayViewController.m in Sources */,
 				5EA8220A1FCD89CD00DC1FEE /* UIView+Extension.m in Sources */,
@@ -507,10 +537,12 @@
 				847C17631FCE6A75004793AD /* MakerConfirmOrderViewController.m in Sources */,
 				847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */,
 				5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */,
+				847C17911FCEBA8C004793AD /* VIPDetailDiscountCell.m in Sources */,
 				5EA821E01FCD7C4600DC1FEE /* main.m in Sources */,
 				847C175C1FCE61B6004793AD /* MemberCenterCtrl.m in Sources */,
 				847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */,
 				5EA821EE1FCD7EFA00DC1FEE /* MineModel.m in Sources */,
+				847C178C1FCEBA32004793AD /* VIPDetailGiftBagCell.m in Sources */,
 				5EA822011FCD87F500DC1FEE /* UIColor+Extension.m in Sources */,
 				5EA821D21FCD7C4600DC1FEE /* AppDelegate.m in Sources */,
 				847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */,

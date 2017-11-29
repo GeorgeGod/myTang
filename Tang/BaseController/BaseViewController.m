@@ -71,13 +71,13 @@
         
         if ([item isKindOfClass:[NSString class]]) {
             
-            UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:item style:UIBarButtonItemStylePlain target:weakSelf action:@selector(leftBarButtonItemAction:)];
+            UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:item style:UIBarButtonItemStylePlain target:weakSelf action:@selector(rightBarButtonItemAction:)];
             
-            weakSelf.navigationItem.leftBarButtonItems = @[gap, rightItem];
+            weakSelf.navigationItem.rightBarButtonItems = @[gap, rightItem];
             
         } else if ([item isKindOfClass:[UIImage class]]) {
             
-            UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:item style:UIBarButtonItemStylePlain target:weakSelf action:@selector(leftBarButtonItemAction:)];
+            UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:item style:UIBarButtonItemStylePlain target:weakSelf action:@selector(rightBarButtonItemAction:)];
             weakSelf.navigationItem.rightBarButtonItems = @[gap, rightItem];
         }
     };
@@ -94,6 +94,10 @@
     } else {
         NSLog(@"弹出的必须是控制器！");
     }
+}
+
+-(void)popViewController {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

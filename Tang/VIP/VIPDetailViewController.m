@@ -8,6 +8,11 @@
 
 #import "VIPDetailViewController.h"
 
+#import "VIPDetailPriceCell.h"
+#import "VIPDetailGiftBagCell.h"
+#import "VIPDetailDiscountCell.h"
+#import "VIPDetailTipsCell.h"
+
 @interface VIPDetailViewController ()
 
 
@@ -22,22 +27,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.title = @"VIP特权";
+    self.leftBarButtonItem([UIImage load:@"back_gray"]);
+    self.rightBarButtonItem(@"联系客服");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem {
+    [self popViewController];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)rightBarButtonItemAction:(UIBarButtonItem *)rightBarButtonItem {
+    [ContactCustomerService ContactCustomerService];
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.01;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 49;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 49;
+    } else if (indexPath.row == 1) {
+        return 179;
+    } else if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
+        return 94;
+    } else if (indexPath.row == 5 || indexPath.row == 6) {
+        return 110;
+    } else {
+        return 0;
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 7;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        
+    }
+    
+    if (indexPath.row == 6) {
+        VIPDetailTipsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VIPDetailTipsCell"];
+        if (!cell) {
+            cell = [[VIPDetailTipsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"VIPDetailTipsCell"];
+        }
+        return cell;
+    }
+}
+
+
 
 @end

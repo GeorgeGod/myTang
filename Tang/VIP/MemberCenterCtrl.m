@@ -9,6 +9,7 @@
 #import "MemberCenterCtrl.h"
 #import "EnjoySectionHeader.h"
 #import "MemberCenterCell.h"
+#import "VIPDetailViewController.h"
 
 @interface MemberCenterCtrl ()
 
@@ -53,6 +54,10 @@
     }
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self pushViewController:[VIPDetailViewController class]];
 }
 
 @end

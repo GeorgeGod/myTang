@@ -41,4 +41,10 @@
  */
 -(void)pushViewController:(Class)clazz;
 
+
+/**
+ 弹出控制器
+ */
+-(void)popViewController;
+
 @end
