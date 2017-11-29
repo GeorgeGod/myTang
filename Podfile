@@ -9,6 +9,7 @@ target 'Tang' do
   pod 'AFNetworking'
   pod 'MJExtension'
   pod 'Masonry'
+  pod 'JKCategories'
   pod 'FDFullscreenPopGesture'
   
 end

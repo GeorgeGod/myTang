@@ -19,37 +19,61 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_gift" translatesAutoresizingMaskIntoConstraints="NO" id="sT7-64-i7Q">
-                        <rect key="frame" x="22" y="25" width="71" height="62"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gift" translatesAutoresizingMaskIntoConstraints="NO" id="sT7-64-i7Q">
+                        <rect key="frame" x="25" y="27" width="41" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="dES-eg-XBd"/>
+                            <constraint firstAttribute="width" constant="41" id="lrx-kU-mu8"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INNO会员大礼包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tz-AC-ZDr">
-                        <rect key="frame" x="118" y="25" width="233" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNO会员大礼包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tz-AC-ZDr">
+                        <rect key="frame" x="86" y="27" width="269" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="价值298元的大礼包，包含以下内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-OL-4IH">
-                        <rect key="frame" x="118" y="46" width="233" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价值298元的大礼包，包含以下内容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-OL-4IH">
+                        <rect key="frame" x="86" y="47" width="269" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Si-az-wB9">
-                        <rect key="frame" x="118" y="75" width="233" height="78"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Si-az-wB9">
+                        <rect key="frame" x="86" y="71.5" width="269" height="90"/>
                         <string key="text">· 灵活工位抵用券2张（价值140元，每张可体验一天）；
-</string>
+· INNO挂耳咖啡包一盒（价值73元）；
+· 会议室抵用券2张（价值80元，每张可抵用0.5h）； 
+· NNO马克杯一个；
+· 免费打印10张；
+· NNO-T恤1件；</string>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="sT7-64-i7Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="PNw-xL-hwb"/>
+                    <constraint firstAttribute="bottom" secondItem="5Si-az-wB9" secondAttribute="bottom" constant="18" id="Z37-V1-lho"/>
+                    <constraint firstItem="sT7-64-i7Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="acs-Zr-6wT"/>
+                    <constraint firstAttribute="trailing" secondItem="TqC-OL-4IH" secondAttribute="trailing" constant="20" id="gM3-xk-lPi"/>
+                    <constraint firstAttribute="trailing" secondItem="5tz-AC-ZDr" secondAttribute="trailing" constant="20" id="hVX-0k-FRh"/>
+                    <constraint firstItem="5Si-az-wB9" firstAttribute="top" secondItem="TqC-OL-4IH" secondAttribute="bottom" constant="10" id="hYS-F7-B6T"/>
+                    <constraint firstItem="TqC-OL-4IH" firstAttribute="leading" secondItem="5tz-AC-ZDr" secondAttribute="leading" id="jDC-V5-KLc"/>
+                    <constraint firstItem="5tz-AC-ZDr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="jRX-gD-1gQ"/>
+                    <constraint firstItem="5Si-az-wB9" firstAttribute="leading" secondItem="5tz-AC-ZDr" secondAttribute="leading" id="loE-Ad-W0J"/>
+                    <constraint firstItem="5tz-AC-ZDr" firstAttribute="leading" secondItem="sT7-64-i7Q" secondAttribute="trailing" constant="20" id="s3e-vF-8c7"/>
+                    <constraint firstItem="TqC-OL-4IH" firstAttribute="top" secondItem="5tz-AC-ZDr" secondAttribute="bottom" constant="2" id="tJ3-eK-7kr"/>
+                    <constraint firstAttribute="trailing" secondItem="5Si-az-wB9" secondAttribute="trailing" constant="20" id="x7X-gR-RIg"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="-91.5" y="13"/>
+            <connections>
+                <outlet property="describe" destination="5Si-az-wB9" id="xqw-yd-C6o"/>
+                <outlet property="detail" destination="TqC-OL-4IH" id="hcy-ai-o92"/>
+                <outlet property="logo" destination="sT7-64-i7Q" id="DoJ-9X-rnd"/>
+                <outlet property="title" destination="5tz-AC-ZDr" id="Hpz-xF-zbL"/>
+            </connections>
+            <point key="canvasLocation" x="-170" y="12"/>
         </tableViewCell>
     </objects>
     <resources>

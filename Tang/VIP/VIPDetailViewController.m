@@ -7,6 +7,7 @@
 //
 
 #import "VIPDetailViewController.h"
+#import "VIPConfirmOrderViewController.h"
 
 #import "VIPDetailPriceCell.h"
 #import "VIPDetailGiftBagCell.h"
@@ -61,19 +62,38 @@
     }
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    UIButton *vipBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [vipBtn setTitle:@"立即开通VIP会员" forState:UIControlStateNormal];
+    vipBtn.titleLabel.font = [UIFont font:17];
+    [vipBtn setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#222222"]] forState:UIControlStateNormal];
+    [vipBtn setShowsTouchWhenHighlighted:YES];
+    __weak typeof(self) weakSelf = self;
+    [vipBtn jk_addActionHandler:^(NSInteger tag) {
+        [weakSelf pushViewController:[VIPConfirmOrderViewController class]];
+    }];
+    return vipBtn;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 7;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        VIPDetailPriceCell *cell = (VIPDetailPriceCell *)[tableView obtainCell:[VIPDetailPriceCell class]];
+        return cell;
+    } else if (indexPath.row == 1) {
+        VIPDetailGiftBagCell *cell = (VIPDetailGiftBagCell *)[tableView obtainXibCell:[VIPDetailGiftBagCell class]];
+        return cell;
         
-    }
-    
-    if (indexPath.row == 6) {
-        VIPDetailTipsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VIPDetailTipsCell"];
-        if (!cell) {
-            cell = [[VIPDetailTipsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"VIPDetailTipsCell"];
-        }
+    } else if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5) {
+        VIPDetailDiscountCell *cell = (VIPDetailDiscountCell *)[tableView obtainXibCell:[VIPDetailDiscountCell class]];
+        
+        return cell;
+        
+    } else if (indexPath.row == 6) {
+        VIPDetailTipsCell *cell = (VIPDetailTipsCell *)[tableView obtainCell:[VIPDetailTipsCell class]];
         return cell;
     }
     return nil;

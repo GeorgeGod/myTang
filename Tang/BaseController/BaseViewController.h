@@ -41,10 +41,22 @@
  */
 -(void)pushViewController:(Class)clazz;
 
-
 /**
  弹出控制器
  */
 -(void)popViewController;
+
+/**
+ present出控制器
+
+ @param clazz 控制器类名
+ */
+-(void)displayViewController:(Class)clazz;
+
+/**
+ 弹出控制器
+ */
+-(void)dismissViewController;
+
 
 @end

@@ -13,4 +13,6 @@
 //typedef NSString *(^VIPButtonCallBack)(id);
 typedef void(^VIPButtonCallBack)(id);
 
+typedef void(^ButtonClickedCallBack)(UIButton *btn);
+
 #endif /* BlockCallBack_h */

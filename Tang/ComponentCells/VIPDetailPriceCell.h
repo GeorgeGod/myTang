@@ -10,6 +10,7 @@
 
 @interface VIPDetailPriceCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *viplogo;
 @property (nonatomic, strong) UILabel *title;
 @property (nonatomic, strong) UILabel *price;
 

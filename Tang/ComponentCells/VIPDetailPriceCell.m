@@ -13,13 +13,15 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
         [self initView];
     }
     return self;
 }
 
 -(void)initView {
+    self.viplogo = [UIImageView new];
+    [self.contentView addSubview:self.viplogo];
+    
     {
         UILabel *label = [UILabel new];
         label.text = @"包月VIP会员";
@@ -38,8 +40,12 @@
         self.price = label;
     }
     
+    [self.viplogo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(20);
+        make.centerY.equalTo(self.contentView);
+    }];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(20);
+        make.left.equalTo(self.viplogo.mas_right).offset(10);
         make.centerY.equalTo(self.contentView);
     }];
     [self.price mas_makeConstraints:^(MASConstraintMaker *make) {

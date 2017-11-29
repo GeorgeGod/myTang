@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="VIPConfirmOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="163.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="特权包含：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-eG-kAk">
+                        <rect key="frame" x="20" y="14.5" width="335" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRy-m5-249">
+                        <rect key="frame" x="20" y="35" width="335" height="72"/>
+                        <string key="text">· INNO会员大礼包 
+· INNO Store专享价
+· 企业咨询服务
+· INNO专属标识
+· 全国范围享受权益</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购买后即日起生效，有效期至2017-07-31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-0X-7Uf">
+                        <rect key="frame" x="20" y="117" width="335" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Swl-0X-7Uf" secondAttribute="trailing" constant="20" id="2xu-zl-orZ"/>
+                    <constraint firstAttribute="trailing" secondItem="yRy-m5-249" secondAttribute="trailing" constant="20" id="41E-vq-KPh"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Swl-0X-7Uf" secondAttribute="bottom" constant="14" id="6Mq-Ma-eto"/>
+                    <constraint firstItem="dgT-eG-kAk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14.5" id="DpK-9d-imP"/>
+                    <constraint firstItem="Swl-0X-7Uf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="HBu-2T-7Yo"/>
+                    <constraint firstItem="yRy-m5-249" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Wju-F7-OcJ"/>
+                    <constraint firstItem="Swl-0X-7Uf" firstAttribute="top" secondItem="yRy-m5-249" secondAttribute="bottom" constant="10" id="bLO-kO-f4n"/>
+                    <constraint firstAttribute="trailing" secondItem="dgT-eG-kAk" secondAttribute="trailing" constant="20" id="pss-2s-aox"/>
+                    <constraint firstItem="dgT-eG-kAk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rNt-nb-Jg3"/>
+                    <constraint firstItem="yRy-m5-249" firstAttribute="top" secondItem="dgT-eG-kAk" secondAttribute="bottom" constant="2.5" id="rQU-ke-YCM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="33.5" y="80"/>
+        </tableViewCell>
+    </objects>
+</document>

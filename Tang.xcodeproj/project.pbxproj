@@ -27,6 +27,15 @@
 		5EA8220A1FCD89CD00DC1FEE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822091FCD89CD00DC1FEE /* UIView+Extension.m */; };
 		5EA822121FCDAF6C00DC1FEE /* UIImage+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */; };
 		5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822141FCDC23F00DC1FEE /* Scale.m */; };
+		5EA8221C1FCED6D100DC1FEE /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */; };
+		5EA822201FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8221E1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m */; };
+		5EA822211FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8221F1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib */; };
+		5EA822241FCEE5D200DC1FEE /* DefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822231FCEE5D200DC1FEE /* DefaultCell.m */; };
+		5EA822291FCEEE0000DC1FEE /* UIAlertController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822281FCEEE0000DC1FEE /* UIAlertController+Extension.m */; };
+		5EA8222D1FCF009700DC1FEE /* ActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8222C1FCF009700DC1FEE /* ActionSheetView.m */; };
+		5EA822301FCF00AF00DC1FEE /* ActionSheetHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8222F1FCF00AF00DC1FEE /* ActionSheetHeadView.m */; };
+		5EA822331FCF04F600DC1FEE /* ActionSheetBoardVciew.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822321FCF04F600DC1FEE /* ActionSheetBoardVciew.m */; };
+		5EA822361FCF0D9400DC1FEE /* PaymentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822351FCF0D9400DC1FEE /* PaymentBarView.m */; };
 		847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173D1FCE5267004793AD /* BaseTableViewController.m */; };
 		847C17441FCE5267004793AD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173E1FCE5267004793AD /* BaseViewController.m */; };
 		847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173F1FCE5267004793AD /* BaseNavigationController.m */; };
@@ -93,6 +102,24 @@
 		5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Path.m"; sourceTree = "<group>"; };
 		5EA822131FCDC23F00DC1FEE /* Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scale.h; sourceTree = "<group>"; };
 		5EA822141FCDC23F00DC1FEE /* Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scale.m; sourceTree = "<group>"; };
+		5EA8221A1FCED6D100DC1FEE /* UITableView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
+		5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extension.m"; sourceTree = "<group>"; };
+		5EA8221D1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPConfirmOrderCell.h; sourceTree = "<group>"; };
+		5EA8221E1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPConfirmOrderCell.m; sourceTree = "<group>"; };
+		5EA8221F1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VIPConfirmOrderCell.xib; sourceTree = "<group>"; };
+		5EA822221FCEE5D200DC1FEE /* DefaultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultCell.h; sourceTree = "<group>"; };
+		5EA822231FCEE5D200DC1FEE /* DefaultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultCell.m; sourceTree = "<group>"; };
+		5EA822251FCEEBE200DC1FEE /* Enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		5EA822271FCEEE0000DC1FEE /* UIAlertController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Extension.h"; sourceTree = "<group>"; };
+		5EA822281FCEEE0000DC1FEE /* UIAlertController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Extension.m"; sourceTree = "<group>"; };
+		5EA8222B1FCF009700DC1FEE /* ActionSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetView.h; sourceTree = "<group>"; };
+		5EA8222C1FCF009700DC1FEE /* ActionSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetView.m; sourceTree = "<group>"; };
+		5EA8222E1FCF00AF00DC1FEE /* ActionSheetHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetHeadView.h; sourceTree = "<group>"; };
+		5EA8222F1FCF00AF00DC1FEE /* ActionSheetHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetHeadView.m; sourceTree = "<group>"; };
+		5EA822311FCF04F600DC1FEE /* ActionSheetBoardVciew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetBoardVciew.h; sourceTree = "<group>"; };
+		5EA822321FCF04F600DC1FEE /* ActionSheetBoardVciew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetBoardVciew.m; sourceTree = "<group>"; };
+		5EA822341FCF0D9400DC1FEE /* PaymentBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentBarView.h; sourceTree = "<group>"; };
+		5EA822351FCF0D9400DC1FEE /* PaymentBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentBarView.m; sourceTree = "<group>"; };
 		847C173D1FCE5267004793AD /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		847C173E1FCE5267004793AD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		847C173F1FCE5267004793AD /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
@@ -199,6 +226,7 @@
 				5EA821F61FCD85EE00DC1FEE /* MineClassifyTableViewCell.xib */,
 				5EA821F91FCD860B00DC1FEE /* MineNormalTableViewCell.h */,
 				5EA821FA1FCD860B00DC1FEE /* MineNormalTableViewCell.m */,
+				5EA8222A1FCF000B00DC1FEE /* ComponentSheets */,
 				847C177F1FCE793E004793AD /* ComponentCells */,
 				847C177B1FCE7804004793AD /* MemberCenterCommon */,
 				847C17771FCE6D78004793AD /* ContactCustomer */,
@@ -210,6 +238,8 @@
 				847C173C1FCE5267004793AD /* BaseController */,
 				5EA8220C1FCDAD7A00DC1FEE /* Scale */,
 				5EA821FE1FCD87B900DC1FEE /* Font&Color */,
+				5EA822161FCED45E00DC1FEE /* Cell */,
+				5EA822261FCEEDC600DC1FEE /* Alert */,
 				5EA821D61FCD7C4600DC1FEE /* Main.storyboard */,
 				5EA821D91FCD7C4600DC1FEE /* Assets.xcassets */,
 				5EA821DB1FCD7C4600DC1FEE /* LaunchScreen.storyboard */,
@@ -234,6 +264,8 @@
 				5EA822091FCD89CD00DC1FEE /* UIView+Extension.m */,
 				5EA822101FCDAF6C00DC1FEE /* UIImage+Path.h */,
 				5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */,
+				5EA822271FCEEE0000DC1FEE /* UIAlertController+Extension.h */,
+				5EA822281FCEEE0000DC1FEE /* UIAlertController+Extension.m */,
 			);
 			path = "Font&Color";
 			sourceTree = "<group>";
@@ -245,6 +277,35 @@
 				5EA822141FCDC23F00DC1FEE /* Scale.m */,
 			);
 			path = Scale;
+			sourceTree = "<group>";
+		};
+		5EA822161FCED45E00DC1FEE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8221A1FCED6D100DC1FEE /* UITableView+Extension.h */,
+				5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5EA822261FCEEDC600DC1FEE /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		5EA8222A1FCF000B00DC1FEE /* ComponentSheets */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8222B1FCF009700DC1FEE /* ActionSheetView.h */,
+				5EA8222C1FCF009700DC1FEE /* ActionSheetView.m */,
+				5EA822311FCF04F600DC1FEE /* ActionSheetBoardVciew.h */,
+				5EA822321FCF04F600DC1FEE /* ActionSheetBoardVciew.m */,
+				5EA8222E1FCF00AF00DC1FEE /* ActionSheetHeadView.h */,
+				5EA8222F1FCF00AF00DC1FEE /* ActionSheetHeadView.m */,
+			);
+			path = ComponentSheets;
 			sourceTree = "<group>";
 		};
 		5F53873F6648FB8CEE4AA34E /* Pods */ = {
@@ -267,8 +328,8 @@
 		847C173C1FCE5267004793AD /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
-				847C173D1FCE5267004793AD /* BaseTableViewController.m */,
 				847C17401FCE5267004793AD /* BaseTableViewController.h */,
+				847C173D1FCE5267004793AD /* BaseTableViewController.m */,
 				847C17411FCE5267004793AD /* BaseNavigationController.h */,
 				847C173F1FCE5267004793AD /* BaseNavigationController.m */,
 				847C17421FCE5267004793AD /* BaseViewController.h */,
@@ -291,6 +352,7 @@
 			children = (
 				847C174B1FCE5DEC004793AD /* BlockCallBack.h */,
 				847C174C1FCE5E02004793AD /* DelegateCallBack.h */,
+				5EA822251FCEEBE200DC1FEE /* Enum.h */,
 			);
 			path = CallBack;
 			sourceTree = "<group>";
@@ -354,6 +416,8 @@
 			children = (
 				847C177C1FCE7883004793AD /* EnjoySectionHeader.h */,
 				847C177D1FCE7883004793AD /* EnjoySectionHeader.m */,
+				5EA822341FCF0D9400DC1FEE /* PaymentBarView.h */,
+				5EA822351FCF0D9400DC1FEE /* PaymentBarView.m */,
 			);
 			path = MemberCenterCommon;
 			sourceTree = "<group>";
@@ -375,6 +439,11 @@
 				847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */,
 				847C17931FCEBAC4004793AD /* VIPDetailTipsCell.h */,
 				847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */,
+				5EA8221D1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.h */,
+				5EA8221E1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m */,
+				5EA8221F1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib */,
+				5EA822221FCEE5D200DC1FEE /* DefaultCell.h */,
+				5EA822231FCEE5D200DC1FEE /* DefaultCell.m */,
 			);
 			path = ComponentCells;
 			sourceTree = "<group>";
@@ -443,6 +512,7 @@
 				5EA821F31FCD85DC00DC1FEE /* MineHeadTableViewCell.xib in Resources */,
 				5EA821F81FCD85EE00DC1FEE /* MineClassifyTableViewCell.xib in Resources */,
 				5EA821DD1FCD7C4600DC1FEE /* LaunchScreen.storyboard in Resources */,
+				5EA822211FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib in Resources */,
 				847C178D1FCEBA32004793AD /* VIPDetailGiftBagCell.xib in Resources */,
 				5EA821DA1FCD7C4600DC1FEE /* Assets.xcassets in Resources */,
 				847C17921FCEBA8C004793AD /* VIPDetailDiscountCell.xib in Resources */,
@@ -514,14 +584,17 @@
 				847C176D1FCE6CA5004793AD /* LockerPayResultViewController.m in Sources */,
 				847C177A1FCE6DC9004793AD /* ContactCustomerService.m in Sources */,
 				847C17561FCE6085004793AD /* VIPConfirmOrderViewController.m in Sources */,
+				5EA822241FCEE5D200DC1FEE /* DefaultCell.m in Sources */,
 				847C17441FCE5267004793AD /* BaseViewController.m in Sources */,
 				847C17951FCEBAC4004793AD /* VIPDetailTipsCell.m in Sources */,
+				5EA822291FCEEE0000DC1FEE /* UIAlertController+Extension.m in Sources */,
 				5EA821D51FCD7C4600DC1FEE /* ViewController.m in Sources */,
 				847C17731FCE6D23004793AD /* MakerWaitPayViewController.m in Sources */,
 				5EA8220A1FCD89CD00DC1FEE /* UIView+Extension.m in Sources */,
 				847C17701FCE6D0D004793AD /* VIPWaitPayViewController.m in Sources */,
 				5EA821FB1FCD860B00DC1FEE /* MineNormalTableViewCell.m in Sources */,
 				847C17531FCE605D004793AD /* VIPDetailViewController.m in Sources */,
+				5EA822361FCF0D9400DC1FEE /* PaymentBarView.m in Sources */,
 				847C17491FCE5D04004793AD /* HPHomeViewController.m in Sources */,
 				847C176A1FCE6C42004793AD /* LockerConfirmOrderViewController.m in Sources */,
 				847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */,
@@ -542,10 +615,15 @@
 				847C175C1FCE61B6004793AD /* MemberCenterCtrl.m in Sources */,
 				847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */,
 				5EA821EE1FCD7EFA00DC1FEE /* MineModel.m in Sources */,
+				5EA822201FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m in Sources */,
 				847C178C1FCEBA32004793AD /* VIPDetailGiftBagCell.m in Sources */,
+				5EA8221C1FCED6D100DC1FEE /* UITableView+Extension.m in Sources */,
 				5EA822011FCD87F500DC1FEE /* UIColor+Extension.m in Sources */,
 				5EA821D21FCD7C4600DC1FEE /* AppDelegate.m in Sources */,
+				5EA822301FCF00AF00DC1FEE /* ActionSheetHeadView.m in Sources */,
+				5EA8222D1FCF009700DC1FEE /* ActionSheetView.m in Sources */,
 				847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */,
+				5EA822331FCF04F600DC1FEE /* ActionSheetBoardVciew.m in Sources */,
 				5EA821F21FCD85DC00DC1FEE /* MineHeadTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

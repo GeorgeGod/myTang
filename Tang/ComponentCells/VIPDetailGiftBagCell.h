@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface VIPDetailGiftBagCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *detail;
+@property (weak, nonatomic) IBOutlet UILabel *describe;
 
 @end
