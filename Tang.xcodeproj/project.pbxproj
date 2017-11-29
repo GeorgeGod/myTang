@@ -13,7 +13,6 @@
 		5EA821DA1FCD7C4600DC1FEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA821D91FCD7C4600DC1FEE /* Assets.xcassets */; };
 		5EA821DD1FCD7C4600DC1FEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA821DB1FCD7C4600DC1FEE /* LaunchScreen.storyboard */; };
 		5EA821E01FCD7C4600DC1FEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821DF1FCD7C4600DC1FEE /* main.m */; };
-		5EA821E81FCD7DB600DC1FEE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821E71FCD7DB600DC1FEE /* BaseViewController.m */; };
 		5EA821EB1FCD7DCE00DC1FEE /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821EA1FCD7DCE00DC1FEE /* MineViewController.m */; };
 		5EA821EE1FCD7EFA00DC1FEE /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821ED1FCD7EFA00DC1FEE /* MineModel.m */; };
 		5EA821F21FCD85DC00DC1FEE /* MineHeadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821F01FCD85DC00DC1FEE /* MineHeadTableViewCell.m */; };
@@ -26,9 +25,28 @@
 		5EA822041FCD881000DC1FEE /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822031FCD881000DC1FEE /* UIFont+Extension.m */; };
 		5EA822071FCD88A300DC1FEE /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822061FCD88A300DC1FEE /* UIImage+Extension.m */; };
 		5EA8220A1FCD89CD00DC1FEE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822091FCD89CD00DC1FEE /* UIView+Extension.m */; };
-		5EA8220F1FCDAD9A00DC1FEE /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8220E1FCDAD9A00DC1FEE /* NSString+Path.m */; };
 		5EA822121FCDAF6C00DC1FEE /* UIImage+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */; };
 		5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822141FCDC23F00DC1FEE /* Scale.m */; };
+		847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173D1FCE5267004793AD /* BaseTableViewController.m */; };
+		847C17441FCE5267004793AD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173E1FCE5267004793AD /* BaseViewController.m */; };
+		847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173F1FCE5267004793AD /* BaseNavigationController.m */; };
+		847C17491FCE5D04004793AD /* HPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17481FCE5D04004793AD /* HPHomeViewController.m */; };
+		847C17531FCE605D004793AD /* VIPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17521FCE605D004793AD /* VIPDetailViewController.m */; };
+		847C17561FCE6085004793AD /* VIPConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17551FCE6085004793AD /* VIPConfirmOrderViewController.m */; };
+		847C17591FCE60C8004793AD /* VIPPayResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17581FCE60C8004793AD /* VIPPayResultViewController.m */; };
+		847C175C1FCE61B6004793AD /* MemberCenterCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C175B1FCE61B6004793AD /* MemberCenterCtrl.m */; };
+		847C17601FCE6A31004793AD /* MakerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C175F1FCE6A31004793AD /* MakerDetailViewController.m */; };
+		847C17631FCE6A75004793AD /* MakerConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17621FCE6A75004793AD /* MakerConfirmOrderViewController.m */; };
+		847C17661FCE6A93004793AD /* MakerPayResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17651FCE6A93004793AD /* MakerPayResultViewController.m */; };
+		847C176A1FCE6C42004793AD /* LockerConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17691FCE6C42004793AD /* LockerConfirmOrderViewController.m */; };
+		847C176D1FCE6CA5004793AD /* LockerPayResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C176C1FCE6CA5004793AD /* LockerPayResultViewController.m */; };
+		847C17701FCE6D0D004793AD /* VIPWaitPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C176F1FCE6D0D004793AD /* VIPWaitPayViewController.m */; };
+		847C17731FCE6D23004793AD /* MakerWaitPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17721FCE6D23004793AD /* MakerWaitPayViewController.m */; };
+		847C17761FCE6D31004793AD /* LockerWaitPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17751FCE6D31004793AD /* LockerWaitPayViewController.m */; };
+		847C177A1FCE6DC9004793AD /* ContactCustomerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17791FCE6DC9004793AD /* ContactCustomerService.m */; };
+		847C177E1FCE7883004793AD /* EnjoySectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C177D1FCE7883004793AD /* EnjoySectionHeader.m */; };
+		847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17811FCE798C004793AD /* MemberCenterCell.m */; };
+		847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17841FCE8652004793AD /* MCCycleCollectionCell.m */; };
 		89FB1DC188E31433325A8E09 /* libPods-Tang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5E258E51337524F00D4225 /* libPods-Tang.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +61,6 @@
 		5EA821DC1FCD7C4600DC1FEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EA821DE1FCD7C4600DC1FEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EA821DF1FCD7C4600DC1FEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5EA821E61FCD7DB600DC1FEE /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		5EA821E71FCD7DB600DC1FEE /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		5EA821E91FCD7DCE00DC1FEE /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		5EA821EA1FCD7DCE00DC1FEE /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		5EA821EC1FCD7EFA00DC1FEE /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
@@ -67,12 +83,52 @@
 		5EA822081FCD89CD00DC1FEE /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5EA822091FCD89CD00DC1FEE /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5EA8220B1FCD8AE900DC1FEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		5EA8220D1FCDAD9A00DC1FEE /* NSString+Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
-		5EA8220E1FCDAD9A00DC1FEE /* NSString+Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
 		5EA822101FCDAF6C00DC1FEE /* UIImage+Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Path.h"; sourceTree = "<group>"; };
 		5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Path.m"; sourceTree = "<group>"; };
 		5EA822131FCDC23F00DC1FEE /* Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scale.h; sourceTree = "<group>"; };
 		5EA822141FCDC23F00DC1FEE /* Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scale.m; sourceTree = "<group>"; };
+		847C173D1FCE5267004793AD /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		847C173E1FCE5267004793AD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		847C173F1FCE5267004793AD /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		847C17401FCE5267004793AD /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		847C17411FCE5267004793AD /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		847C17421FCE5267004793AD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		847C17471FCE5D04004793AD /* HPHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPHomeViewController.h; sourceTree = "<group>"; };
+		847C17481FCE5D04004793AD /* HPHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPHomeViewController.m; sourceTree = "<group>"; };
+		847C174B1FCE5DEC004793AD /* BlockCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockCallBack.h; sourceTree = "<group>"; };
+		847C174C1FCE5E02004793AD /* DelegateCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateCallBack.h; sourceTree = "<group>"; };
+		847C17511FCE605D004793AD /* VIPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailViewController.h; sourceTree = "<group>"; };
+		847C17521FCE605D004793AD /* VIPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailViewController.m; sourceTree = "<group>"; };
+		847C17541FCE6085004793AD /* VIPConfirmOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPConfirmOrderViewController.h; sourceTree = "<group>"; };
+		847C17551FCE6085004793AD /* VIPConfirmOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPConfirmOrderViewController.m; sourceTree = "<group>"; };
+		847C17571FCE60C8004793AD /* VIPPayResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPPayResultViewController.h; sourceTree = "<group>"; };
+		847C17581FCE60C8004793AD /* VIPPayResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPPayResultViewController.m; sourceTree = "<group>"; };
+		847C175A1FCE61B6004793AD /* MemberCenterCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberCenterCtrl.h; sourceTree = "<group>"; };
+		847C175B1FCE61B6004793AD /* MemberCenterCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberCenterCtrl.m; sourceTree = "<group>"; };
+		847C175E1FCE6A31004793AD /* MakerDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerDetailViewController.h; sourceTree = "<group>"; };
+		847C175F1FCE6A31004793AD /* MakerDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerDetailViewController.m; sourceTree = "<group>"; };
+		847C17611FCE6A75004793AD /* MakerConfirmOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerConfirmOrderViewController.h; sourceTree = "<group>"; };
+		847C17621FCE6A75004793AD /* MakerConfirmOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerConfirmOrderViewController.m; sourceTree = "<group>"; };
+		847C17641FCE6A93004793AD /* MakerPayResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerPayResultViewController.h; sourceTree = "<group>"; };
+		847C17651FCE6A93004793AD /* MakerPayResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerPayResultViewController.m; sourceTree = "<group>"; };
+		847C17681FCE6C42004793AD /* LockerConfirmOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockerConfirmOrderViewController.h; sourceTree = "<group>"; };
+		847C17691FCE6C42004793AD /* LockerConfirmOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockerConfirmOrderViewController.m; sourceTree = "<group>"; };
+		847C176B1FCE6CA5004793AD /* LockerPayResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockerPayResultViewController.h; sourceTree = "<group>"; };
+		847C176C1FCE6CA5004793AD /* LockerPayResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockerPayResultViewController.m; sourceTree = "<group>"; };
+		847C176E1FCE6D0D004793AD /* VIPWaitPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPWaitPayViewController.h; sourceTree = "<group>"; };
+		847C176F1FCE6D0D004793AD /* VIPWaitPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPWaitPayViewController.m; sourceTree = "<group>"; };
+		847C17711FCE6D23004793AD /* MakerWaitPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerWaitPayViewController.h; sourceTree = "<group>"; };
+		847C17721FCE6D23004793AD /* MakerWaitPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerWaitPayViewController.m; sourceTree = "<group>"; };
+		847C17741FCE6D31004793AD /* LockerWaitPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockerWaitPayViewController.h; sourceTree = "<group>"; };
+		847C17751FCE6D31004793AD /* LockerWaitPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockerWaitPayViewController.m; sourceTree = "<group>"; };
+		847C17781FCE6DC9004793AD /* ContactCustomerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactCustomerService.h; sourceTree = "<group>"; };
+		847C17791FCE6DC9004793AD /* ContactCustomerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactCustomerService.m; sourceTree = "<group>"; };
+		847C177C1FCE7883004793AD /* EnjoySectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnjoySectionHeader.h; sourceTree = "<group>"; };
+		847C177D1FCE7883004793AD /* EnjoySectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnjoySectionHeader.m; sourceTree = "<group>"; };
+		847C17801FCE798C004793AD /* MemberCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberCenterCell.h; sourceTree = "<group>"; };
+		847C17811FCE798C004793AD /* MemberCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberCenterCell.m; sourceTree = "<group>"; };
+		847C17831FCE8652004793AD /* MCCycleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCCycleCollectionCell.h; sourceTree = "<group>"; };
+		847C17841FCE8652004793AD /* MCCycleCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCCycleCollectionCell.m; sourceTree = "<group>"; };
 		CA5E258E51337524F00D4225 /* libPods-Tang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A5A9F6637E3D0285F5105D /* Pods-Tang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tang/Pods-Tang.release.xcconfig"; sourceTree = "<group>"; };
 		D9C1D89D0CC039D1697D2E95 /* Pods-Tang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tang/Pods-Tang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,8 +171,6 @@
 				5EA821D11FCD7C4600DC1FEE /* AppDelegate.m */,
 				5EA821D31FCD7C4600DC1FEE /* ViewController.h */,
 				5EA821D41FCD7C4600DC1FEE /* ViewController.m */,
-				5EA821E61FCD7DB600DC1FEE /* BaseViewController.h */,
-				5EA821E71FCD7DB600DC1FEE /* BaseViewController.m */,
 				5EA821E91FCD7DCE00DC1FEE /* MineViewController.h */,
 				5EA821EA1FCD7DCE00DC1FEE /* MineViewController.m */,
 				5EA821EC1FCD7EFA00DC1FEE /* MineModel.h */,
@@ -129,6 +183,15 @@
 				5EA821F61FCD85EE00DC1FEE /* MineClassifyTableViewCell.xib */,
 				5EA821F91FCD860B00DC1FEE /* MineNormalTableViewCell.h */,
 				5EA821FA1FCD860B00DC1FEE /* MineNormalTableViewCell.m */,
+				847C177F1FCE793E004793AD /* ComponentCells */,
+				847C177B1FCE7804004793AD /* MemberCenterCommon */,
+				847C17771FCE6D78004793AD /* ContactCustomer */,
+				847C174A1FCE5DC9004793AD /* CallBack */,
+				847C17671FCE6AF6004793AD /* LOCKER */,
+				847C175D1FCE61CD004793AD /* MAKER */,
+				847C174D1FCE5F28004793AD /* VIP */,
+				847C17461FCE5C74004793AD /* PersonalHomePage */,
+				847C173C1FCE5267004793AD /* BaseController */,
 				5EA8220C1FCDAD7A00DC1FEE /* Scale */,
 				5EA821FE1FCD87B900DC1FEE /* Font&Color */,
 				5EA821D61FCD7C4600DC1FEE /* Main.storyboard */,
@@ -162,8 +225,6 @@
 		5EA8220C1FCDAD7A00DC1FEE /* Scale */ = {
 			isa = PBXGroup;
 			children = (
-				5EA8220D1FCDAD9A00DC1FEE /* NSString+Path.h */,
-				5EA8220E1FCDAD9A00DC1FEE /* NSString+Path.m */,
 				5EA822131FCDC23F00DC1FEE /* Scale.h */,
 				5EA822141FCDC23F00DC1FEE /* Scale.m */,
 			);
@@ -185,6 +246,111 @@
 				CA5E258E51337524F00D4225 /* libPods-Tang.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		847C173C1FCE5267004793AD /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				847C173D1FCE5267004793AD /* BaseTableViewController.m */,
+				847C17401FCE5267004793AD /* BaseTableViewController.h */,
+				847C17411FCE5267004793AD /* BaseNavigationController.h */,
+				847C173F1FCE5267004793AD /* BaseNavigationController.m */,
+				847C17421FCE5267004793AD /* BaseViewController.h */,
+				847C173E1FCE5267004793AD /* BaseViewController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		847C17461FCE5C74004793AD /* PersonalHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				847C17471FCE5D04004793AD /* HPHomeViewController.h */,
+				847C17481FCE5D04004793AD /* HPHomeViewController.m */,
+			);
+			path = PersonalHomePage;
+			sourceTree = "<group>";
+		};
+		847C174A1FCE5DC9004793AD /* CallBack */ = {
+			isa = PBXGroup;
+			children = (
+				847C174B1FCE5DEC004793AD /* BlockCallBack.h */,
+				847C174C1FCE5E02004793AD /* DelegateCallBack.h */,
+			);
+			path = CallBack;
+			sourceTree = "<group>";
+		};
+		847C174D1FCE5F28004793AD /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				847C175A1FCE61B6004793AD /* MemberCenterCtrl.h */,
+				847C175B1FCE61B6004793AD /* MemberCenterCtrl.m */,
+				847C17511FCE605D004793AD /* VIPDetailViewController.h */,
+				847C17521FCE605D004793AD /* VIPDetailViewController.m */,
+				847C17541FCE6085004793AD /* VIPConfirmOrderViewController.h */,
+				847C17551FCE6085004793AD /* VIPConfirmOrderViewController.m */,
+				847C17571FCE60C8004793AD /* VIPPayResultViewController.h */,
+				847C17581FCE60C8004793AD /* VIPPayResultViewController.m */,
+				847C176E1FCE6D0D004793AD /* VIPWaitPayViewController.h */,
+				847C176F1FCE6D0D004793AD /* VIPWaitPayViewController.m */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
+		847C175D1FCE61CD004793AD /* MAKER */ = {
+			isa = PBXGroup;
+			children = (
+				847C175E1FCE6A31004793AD /* MakerDetailViewController.h */,
+				847C175F1FCE6A31004793AD /* MakerDetailViewController.m */,
+				847C17611FCE6A75004793AD /* MakerConfirmOrderViewController.h */,
+				847C17621FCE6A75004793AD /* MakerConfirmOrderViewController.m */,
+				847C17641FCE6A93004793AD /* MakerPayResultViewController.h */,
+				847C17651FCE6A93004793AD /* MakerPayResultViewController.m */,
+				847C17711FCE6D23004793AD /* MakerWaitPayViewController.h */,
+				847C17721FCE6D23004793AD /* MakerWaitPayViewController.m */,
+			);
+			path = MAKER;
+			sourceTree = "<group>";
+		};
+		847C17671FCE6AF6004793AD /* LOCKER */ = {
+			isa = PBXGroup;
+			children = (
+				847C17681FCE6C42004793AD /* LockerConfirmOrderViewController.h */,
+				847C17691FCE6C42004793AD /* LockerConfirmOrderViewController.m */,
+				847C176B1FCE6CA5004793AD /* LockerPayResultViewController.h */,
+				847C176C1FCE6CA5004793AD /* LockerPayResultViewController.m */,
+				847C17741FCE6D31004793AD /* LockerWaitPayViewController.h */,
+				847C17751FCE6D31004793AD /* LockerWaitPayViewController.m */,
+			);
+			path = LOCKER;
+			sourceTree = "<group>";
+		};
+		847C17771FCE6D78004793AD /* ContactCustomer */ = {
+			isa = PBXGroup;
+			children = (
+				847C17781FCE6DC9004793AD /* ContactCustomerService.h */,
+				847C17791FCE6DC9004793AD /* ContactCustomerService.m */,
+			);
+			path = ContactCustomer;
+			sourceTree = "<group>";
+		};
+		847C177B1FCE7804004793AD /* MemberCenterCommon */ = {
+			isa = PBXGroup;
+			children = (
+				847C177C1FCE7883004793AD /* EnjoySectionHeader.h */,
+				847C177D1FCE7883004793AD /* EnjoySectionHeader.m */,
+			);
+			path = MemberCenterCommon;
+			sourceTree = "<group>";
+		};
+		847C177F1FCE793E004793AD /* ComponentCells */ = {
+			isa = PBXGroup;
+			children = (
+				847C17801FCE798C004793AD /* MemberCenterCell.h */,
+				847C17811FCE798C004793AD /* MemberCenterCell.m */,
+				847C17831FCE8652004793AD /* MCCycleCollectionCell.h */,
+				847C17841FCE8652004793AD /* MCCycleCollectionCell.m */,
+			);
+			path = ComponentCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,20 +482,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA821F71FCD85EE00DC1FEE /* MineClassifyTableViewCell.m in Sources */,
+				847C176D1FCE6CA5004793AD /* LockerPayResultViewController.m in Sources */,
+				847C177A1FCE6DC9004793AD /* ContactCustomerService.m in Sources */,
+				847C17561FCE6085004793AD /* VIPConfirmOrderViewController.m in Sources */,
+				847C17441FCE5267004793AD /* BaseViewController.m in Sources */,
 				5EA821D51FCD7C4600DC1FEE /* ViewController.m in Sources */,
+				847C17731FCE6D23004793AD /* MakerWaitPayViewController.m in Sources */,
 				5EA8220A1FCD89CD00DC1FEE /* UIView+Extension.m in Sources */,
+				847C17701FCE6D0D004793AD /* VIPWaitPayViewController.m in Sources */,
 				5EA821FB1FCD860B00DC1FEE /* MineNormalTableViewCell.m in Sources */,
-				5EA8220F1FCDAD9A00DC1FEE /* NSString+Path.m in Sources */,
+				847C17531FCE605D004793AD /* VIPDetailViewController.m in Sources */,
+				847C17491FCE5D04004793AD /* HPHomeViewController.m in Sources */,
+				847C176A1FCE6C42004793AD /* LockerConfirmOrderViewController.m in Sources */,
+				847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */,
 				5EA822071FCD88A300DC1FEE /* UIImage+Extension.m in Sources */,
-				5EA821E81FCD7DB600DC1FEE /* BaseViewController.m in Sources */,
+				847C17661FCE6A93004793AD /* MakerPayResultViewController.m in Sources */,
 				5EA822121FCDAF6C00DC1FEE /* UIImage+Path.m in Sources */,
 				5EA821EB1FCD7DCE00DC1FEE /* MineViewController.m in Sources */,
+				847C177E1FCE7883004793AD /* EnjoySectionHeader.m in Sources */,
+				847C17591FCE60C8004793AD /* VIPPayResultViewController.m in Sources */,
+				847C17601FCE6A31004793AD /* MakerDetailViewController.m in Sources */,
 				5EA822041FCD881000DC1FEE /* UIFont+Extension.m in Sources */,
+				847C17761FCE6D31004793AD /* LockerWaitPayViewController.m in Sources */,
+				847C17631FCE6A75004793AD /* MakerConfirmOrderViewController.m in Sources */,
+				847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */,
 				5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */,
 				5EA821E01FCD7C4600DC1FEE /* main.m in Sources */,
+				847C175C1FCE61B6004793AD /* MemberCenterCtrl.m in Sources */,
+				847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */,
 				5EA821EE1FCD7EFA00DC1FEE /* MineModel.m in Sources */,
 				5EA822011FCD87F500DC1FEE /* UIColor+Extension.m in Sources */,
 				5EA821D21FCD7C4600DC1FEE /* AppDelegate.m in Sources */,
+				847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */,
 				5EA821F21FCD85DC00DC1FEE /* MineHeadTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

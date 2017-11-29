@@ -1,18 +1,18 @@
 //
-//  BaseViewController.m
+//  MakerWaitPayViewController.m
 //  Tang
 //
-//  Created by 虞嘉伟 on 2017/11/28.
+//  Created by admin on 2017/11/29.
 //  Copyright © 2017年 虞嘉伟. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "MakerWaitPayViewController.h"
 
-@interface BaseViewController ()
+@interface MakerWaitPayViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation MakerWaitPayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

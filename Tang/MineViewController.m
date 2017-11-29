@@ -13,6 +13,7 @@
 #import "MineClassifyTableViewCell.h"
 #import "MineNormalTableViewCell.h"
 
+#import "MemberCenterCtrl.h"
 @interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 //是否登陆状态
@@ -27,13 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"我的";
-    self.isLogin = NO;
+    self.leftBarButtonItem([UIImage load:@"news_no"]);
+    self.rightBarButtonItem([UIImage load:@"news_yes"]);
+    self.isLogin = YES;
     
-    [self initView];
-    
-    [self initData];
 }
 
+//override
 -(void)initView {
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
@@ -91,7 +92,6 @@
             MineNormalTableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:@"MineNormalTableViewCell"];
             if (!cell) {
                 cell = [[MineNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MineNormalTableViewCell"];
-//                cell = [[[NSBundle mainBundle]loadNibNamed:@"MineNormalTableViewCell" owner:nil options:nil] firstObject];
             }
             
             MineModel *model = nil;
@@ -129,6 +129,10 @@
         }
     }
     return 49;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self pushViewController:[MemberCenterCtrl class]];
 }
 
 @end

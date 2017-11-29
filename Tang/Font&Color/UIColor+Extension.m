@@ -60,4 +60,10 @@
     return [self colorWithHexString:color alpha:1.0f];
 }
 
++ (UIColor *)randomColor {
+    float r = arc4random_uniform(255)/255.0;
+    float g = arc4random_uniform(255)/255.0;
+    float b = arc4random_uniform(255)/255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1];
+}
 @end

@@ -20,6 +20,9 @@
 #import "Scale.h"
 
 
+#import "BlockCallBack.h"
+#import "DelegateCallBack.h"
+
 #import <MJExtension/MJExtension.h>
 #import <Masonry.h>
 #import <AFNetworking.h>
