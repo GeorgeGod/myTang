@@ -76,6 +76,7 @@
         }
         return cell;
     }
+    return nil;
 }
 
 
