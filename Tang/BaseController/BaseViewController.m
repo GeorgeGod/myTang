@@ -101,7 +101,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)displayViewController:(Class)clazz {
+-(UIViewController *)displayViewController:(Class)clazz {
     UIViewController *ctrl = [clazz new];
     if ([ctrl isKindOfClass:[UIViewController class]]) {
         BaseNavigationController *navigationCtrl = [BaseNavigationController RootViewCtrl:ctrl];
@@ -109,6 +109,7 @@
     } else {
         NSLog(@"弹出的必须是控制器！");
     }
+    return ctrl;
 }
 
 -(void)dismissViewController {

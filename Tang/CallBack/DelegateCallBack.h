@@ -10,4 +10,6 @@
 
 @protocol DelegateCallBack <NSObject>
 
+-(void)buttonClickedBackCtrlDelegate:(BaseViewController *)target withType:(int)type;
+
 @end

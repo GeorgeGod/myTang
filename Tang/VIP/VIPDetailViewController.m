@@ -62,6 +62,9 @@
     }
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return nil;
+}
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     
     UIButton *vipBtn = [UIButton buttonWithType:UIButtonTypeCustom];

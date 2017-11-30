@@ -10,6 +10,7 @@
 #import "MineViewController.h"
 #import "BaseNavigationController.h"
 
+#import "RequestTest.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window.rootViewController = [BaseNavigationController RootViewCtrl:[MineViewController new]];
+    
+    [RequestTest requestTest];
     return YES;
 }
 

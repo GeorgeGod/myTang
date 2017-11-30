@@ -24,9 +24,18 @@
 }
 
 -(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem {
-    [self dismissViewController];
+    [self backCtrlWithType:1];
 }
 
+//privite
+-(void)backCtrlWithType:(int)type {
+    if ([self.delegate respondsToSelector:@selector(buttonClickedBackCtrlDelegate:withType:)]) {
+        [self.delegate buttonClickedBackCtrlDelegate:self withType:type];
+    }
+    if (self.buttonClickedBlock) {
+        self.buttonClickedBlock(self, type);
+    }
+}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.01;
@@ -39,10 +48,14 @@
     return 180;
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return nil;
+}
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     
     //创建一个容器视图
     UIView *footView = [UIView new];
+    __weak typeof(self)weakSelf = self;
     
     //创建提示标题
     UILabel *tips = [UILabel new];
@@ -58,6 +71,9 @@
     [checkInterestsBtn setTitle:@"查看我的权益" forState:UIControlStateNormal];
     [checkInterestsBtn jk_setBackgroundColor:[UIColor colorWithHexString:@"#222222"] forState:UIControlStateNormal];
     checkInterestsBtn.showsTouchWhenHighlighted = YES;
+    [checkInterestsBtn jk_addActionHandler:^(NSInteger tag) {
+        [weakSelf backCtrlWithType:2];
+    }];
     [footView addSubview:checkInterestsBtn];
     
     //创建“联系客服领礼包”的按钮
@@ -66,6 +82,9 @@
     [contactCustomerBtn setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
     contactCustomerBtn.titleLabel.font = [UIFont font:14];
     contactCustomerBtn.showsTouchWhenHighlighted = YES;
+    [contactCustomerBtn jk_addActionHandler:^(NSInteger tag) {
+        [weakSelf backCtrlWithType:3];
+    }];
     [footView addSubview:contactCustomerBtn];
     
     

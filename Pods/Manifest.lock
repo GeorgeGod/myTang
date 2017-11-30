@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - FDFullscreenPopGesture (1.1)
+  - GVUserDefaults (1.0.2)
   - JKCategories (1.5)
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
@@ -22,6 +23,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - FDFullscreenPopGesture
+  - GVUserDefaults
   - JKCategories
   - Masonry
   - MJExtension
@@ -29,10 +31,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  GVUserDefaults: 52d48cf8ba578b40a1a76312b196dfc9134ba36a
   JKCategories: 863f4c7ed2d521ee6bf72ceea97948da23bb5af4
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
 
-PODFILE CHECKSUM: 48e2e707c3cabb7abf8bdec463f7f5bc9b601597
+PODFILE CHECKSUM: 187a1a3f5f7ee04690ce84a6718fb18724eca5b3
 
 COCOAPODS: 1.3.1

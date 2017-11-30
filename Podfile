@@ -6,6 +6,7 @@ target 'Tang' do
   # use_frameworks!
 
   # Pods for Tang
+  pod 'GVUserDefaults'
   pod 'AFNetworking'
   pod 'MJExtension'
   pod 'Masonry'

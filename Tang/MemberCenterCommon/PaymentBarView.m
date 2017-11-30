@@ -18,6 +18,15 @@
     
     PaymentBarView *barView = [PaymentBarView new];
     
+    //分割线
+    UIView *line = [UIView new];
+    line.backgroundColor = [UIColor colorWithHexString:@"#B2B2B2"];
+    [barView addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(barView);
+        make.height.mas_equalTo(0.5);
+    }];
+    
     //价格
     UILabel *price = [UILabel new];
     barView.priceLabel = price;

@@ -10,4 +10,8 @@
 
 @interface VIPPayResultViewController : BaseTableViewController
 
+//二者选其一作为回调即可
+@property (nonatomic, copy) ButtonClickedBackCtrlCallBack buttonClickedBlock;
+@property (nonatomic, weak) id<DelegateCallBack>delegate;
+
 @end

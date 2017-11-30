@@ -9,6 +9,7 @@
 #import "MemberCenterCtrl.h"
 #import "EnjoySectionHeader.h"
 #import "MemberCenterCell.h"
+#import "MemberEnjoyCell.h"
 #import "VIPDetailViewController.h"
 
 @interface MemberCenterCtrl ()
@@ -21,8 +22,8 @@
     [super viewDidLoad];
     
     self.title = @"会员中心";
-    
-    [self.tableView registerClass:[MemberCenterCell class] forCellReuseIdentifier:@"MemberCenterCell"];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -35,28 +36,38 @@
     if (section == 0) {
         return nil;
     } else {
-        return [EnjoySectionHeader EnjoySectionHeader];
+        EnjoySectionHeader *header = [EnjoySectionHeader EnjoySectionHeader];
+        header.backgroundColor = [UIColor whiteColor];
+        return header;
     }
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return nil;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return section==0 ? 0.01 : 60;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.01f;
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath.section==0 ? 250 : 220;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        MemberCenterCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MemberCenterCell"];
+        return [tableView obtainCell:[MemberCenterCell class]];
+    }
+    else {
+        MemberEnjoyCell *cell = (MemberEnjoyCell *)[tableView obtainCell:[MemberEnjoyCell class]];
         return cell;
     }
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self pushViewController:[VIPDetailViewController class]];
 }
 

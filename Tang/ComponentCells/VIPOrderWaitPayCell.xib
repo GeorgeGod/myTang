@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="VIPOrderWaitPayCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_waitpaybg.png" translatesAutoresizingMaskIntoConstraints="NO" id="jVv-FT-86C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="ZHN-kx-4Av"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCx-yK-Emt">
+                        <rect key="frame" x="20" y="14" width="69.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余时间：29:59" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-WK-90V">
+                        <rect key="frame" x="237.5" y="15" width="117.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="应付：¥199.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNO-xP-zfL">
+                        <rect key="frame" x="271.5" y="41.5" width="83.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zi7-XS-vGI">
+                        <rect key="frame" x="20" y="70" width="355" height="50"/>
+                        <attributedString key="attributedText">
+                            <fragment content="用户名：王小锤">
+                                <attributes>
+                                    <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TCx-yK-Emt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="3vX-sV-oFZ"/>
+                    <constraint firstItem="zi7-XS-vGI" firstAttribute="top" secondItem="KNO-xP-zfL" secondAttribute="bottom" constant="14" id="6zS-15-beb"/>
+                    <constraint firstItem="zi7-XS-vGI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7bz-Vj-0xw"/>
+                    <constraint firstAttribute="trailing" secondItem="KNO-xP-zfL" secondAttribute="trailing" constant="20" id="BIM-iV-cvh"/>
+                    <constraint firstItem="zi7-XS-vGI" firstAttribute="top" secondItem="jVv-FT-86C" secondAttribute="bottom" id="JmF-7i-Mgn"/>
+                    <constraint firstItem="jVv-FT-86C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XFf-vP-UWO"/>
+                    <constraint firstAttribute="bottom" secondItem="zi7-XS-vGI" secondAttribute="bottom" id="bPQ-eR-vog"/>
+                    <constraint firstItem="TCx-yK-Emt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="brC-S0-Io5"/>
+                    <constraint firstAttribute="trailing" secondItem="Id6-WK-90V" secondAttribute="trailing" constant="20" id="cuL-xX-tyt"/>
+                    <constraint firstAttribute="trailing" secondItem="zi7-XS-vGI" secondAttribute="trailing" id="jxN-SO-FtZ"/>
+                    <constraint firstAttribute="trailing" secondItem="jVv-FT-86C" secondAttribute="trailing" id="l1V-Ty-JKa"/>
+                    <constraint firstItem="jVv-FT-86C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="twy-Ki-Awi"/>
+                    <constraint firstItem="Id6-WK-90V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="yAe-gj-7Nv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bannerBG" destination="jVv-FT-86C" id="G8S-1G-Hpt"/>
+                <outlet property="lastTime" destination="Id6-WK-90V" id="07L-Qm-Ck0"/>
+                <outlet property="shouldPay" destination="KNO-xP-zfL" id="LqH-d3-0VD"/>
+                <outlet property="userName" destination="zi7-XS-vGI" id="mn8-n6-Hh5"/>
+                <outlet property="waitPay" destination="TCx-yK-Emt" id="4wV-iN-WBi"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="banner_waitpaybg.png" width="375" height="70"/>
+    </resources>
+</document>

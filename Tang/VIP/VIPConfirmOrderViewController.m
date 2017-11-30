@@ -13,8 +13,10 @@
 #import "ActionSheetView.h"
 #import "PaymentBarView.h"
 #import "VIPPayResultViewController.h"
+#import "VIPDetailViewController.h"
+#import "VIPWaitPayViewController.h"
 
-@interface VIPConfirmOrderViewController ()
+@interface VIPConfirmOrderViewController ()<DelegateCallBack>
 @property (nonatomic, strong) PaymentBarView *paymentBar;
 @property (nonatomic, assign) BOOL isConfirm; //是否同意协议
 @property (nonatomic, assign) TSPayType payType; //支付方式
@@ -33,16 +35,56 @@
     }];
     
     self.paymentBar = [PaymentBarView PaymentBarView];
+    self.paymentBar.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.paymentBar];
-    [self.paymentBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
-        make.height.mas_equalTo(49);
-    }];
+    
     __weak typeof(self)weakSelf = self;
     self.paymentBar.buttonClickedBlock = ^(UIButton *btn) {
-        [weakSelf displayViewController:[VIPPayResultViewController class]];
+        //支付成功
+//        VIPPayResultViewController *resultCtrl = (VIPPayResultViewController *)[weakSelf displayViewController:[VIPPayResultViewController class]];
+//        resultCtrl.delegate = weakSelf;
+        
+        //支付失败
+        VIPWaitPayViewController *waitPayCtrl = (VIPWaitPayViewController *)[weakSelf displayViewController:[VIPWaitPayViewController class]];
+        waitPayCtrl.delegate = weakSelf;
     };
     [self.paymentBar setPrice:199];
+}
+
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        insets = self.view.safeAreaInsets;
+    }
+    [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 49+insets.bottom, 0));
+    }];
+    
+    [self.paymentBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view).insets(insets);
+        make.height.mas_equalTo(49);
+    }];
+}
+
+//代理方法
+-(void)buttonClickedBackCtrlDelegate:(BaseViewController *)target withType:(int)type {
+    [target dismissViewController];
+    switch (type) {
+        case 2: {
+            //查看我的权益
+            [self pushViewController:[VIPDetailViewController class]];
+            break;
+        }
+        case 3: {
+            //联系客服
+            [ContactCustomerService ContactCustomerService];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 -(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem {
@@ -73,6 +115,9 @@
     }
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return nil;
+}
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     if (section == 1) {
         UIView *footView = [UIView new];

@@ -50,8 +50,9 @@
  present出控制器
 
  @param clazz 控制器类名
+ @return 返回控制器对象
  */
--(void)displayViewController:(Class)clazz;
+-(UIViewController *)displayViewController:(Class)clazz;
 
 /**
  弹出控制器
