@@ -12,7 +12,7 @@
 #import "BaseViewController.h"
 
 //typedef NSString *(^VIPButtonCallBack)(id);
-typedef void(^VIPButtonCallBack)(id);
+typedef void(^VIPButtonCallBack)(id obj);
 
 
 
@@ -47,5 +47,15 @@ typedef void(^successBlock)(NSDictionary * _Nullable json);
  @param error 返回错误信息
  */
 typedef void(^failureBlock)(NSError * _Nullable error);
+
+
+
+
+/**
+ 滚动视图的回调（主要用于会员中心的轮播图滚动）
+
+ @param currentPage 滚到当前的分页
+ */
+typedef void(^scrollBlock)(int currentPage);
 
 #endif /* BlockCallBack_h */

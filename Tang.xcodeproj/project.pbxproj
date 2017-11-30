@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6552EB1FD028BB00B4697B /* MemberCenterStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6552EA1FD028BB00B4697B /* MemberCenterStatusModel.m */; };
 		5EA821D21FCD7C4600DC1FEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821D11FCD7C4600DC1FEE /* AppDelegate.m */; };
 		5EA821D51FCD7C4600DC1FEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA821D41FCD7C4600DC1FEE /* ViewController.m */; };
 		5EA821D81FCD7C4600DC1FEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA821D61FCD7C4600DC1FEE /* Main.storyboard */; };
@@ -78,6 +79,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E6552E91FD028BB00B4697B /* MemberCenterStatusModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberCenterStatusModel.h; sourceTree = "<group>"; };
+		5E6552EA1FD028BB00B4697B /* MemberCenterStatusModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberCenterStatusModel.m; sourceTree = "<group>"; };
 		5EA821CD1FCD7C4600DC1FEE /* Tang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA821D01FCD7C4600DC1FEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EA821D11FCD7C4600DC1FEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -222,6 +225,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E6552E81FD0285100B4697B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E6552E91FD028BB00B4697B /* MemberCenterStatusModel.h */,
+				5E6552EA1FD028BB00B4697B /* MemberCenterStatusModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5EA821C41FCD7C4600DC1FEE = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +292,7 @@
 				5EA821DB1FCD7C4600DC1FEE /* LaunchScreen.storyboard */,
 				5EA821DE1FCD7C4600DC1FEE /* Info.plist */,
 				5EA821DF1FCD7C4600DC1FEE /* main.m */,
+				5E6552E81FD0285100B4697B /* Models */,
 				5EA8220B1FCD8AE900DC1FEE /* PrefixHeader.pch */,
 				5EA821FC1FCD879C00DC1FEE /* MineResources.bundle */,
 			);
@@ -671,6 +684,7 @@
 				847BC1921FD0009F007C6FE8 /* NSDictionary+Log.m in Sources */,
 				847C17531FCE605D004793AD /* VIPDetailViewController.m in Sources */,
 				5EA822361FCF0D9400DC1FEE /* PaymentBarView.m in Sources */,
+				5E6552EB1FD028BB00B4697B /* MemberCenterStatusModel.m in Sources */,
 				847C17491FCE5D04004793AD /* HPHomeViewController.m in Sources */,
 				847C176A1FCE6C42004793AD /* LockerConfirmOrderViewController.m in Sources */,
 				847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */,

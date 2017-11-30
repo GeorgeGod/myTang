@@ -10,4 +10,7 @@
 
 @interface MemberCenterCell : UITableViewCell
 
+@property (nonatomic, copy  ) scrollBlock didEndScroll;
+@property (nonatomic, copy  ) ButtonClickedCallBack buttonClickedBlock;
+
 @end

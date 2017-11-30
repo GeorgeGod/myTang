@@ -19,6 +19,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+//    judgeCode = BOOL^(NSDictionary *json) {
+//        int code = [json[@"errcode"] intValue];
+//        return code==0;
+//    };
+    
+    judgeCode = ^BOOL(NSDictionary *json) {
+        int code = [json[@"errcode"] intValue];
+        return code==0;
+    };
+    
     //调用初始化试图
     if ([self respondsToSelector:@selector(initView)]) {
         [self initView];

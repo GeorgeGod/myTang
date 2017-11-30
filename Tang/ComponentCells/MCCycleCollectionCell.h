@@ -13,7 +13,7 @@
 @property (nonatomic, strong) UIImageView *cycleBG;
 @property (nonatomic, strong) UILabel *head;
 @property (nonatomic, strong) UILabel *title;
-@property (nonatomic, strong) UILabel *detail;
+@property (nonatomic, strong) UIButton *detail;
 @property (nonatomic, strong) UILabel *describe;
 
 @end

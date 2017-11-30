@@ -35,4 +35,8 @@
 #import <AFNetworking.h>
 #import <JKCategories/JKCategories.h>
 
+
+//模型
+#import "MemberCenterStatusModel.h"
+
 #endif /* PrefixHeader_pch */

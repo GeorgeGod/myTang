@@ -31,15 +31,17 @@
     self.leftBarButtonItem([UIImage load:@"news_no"]);
     self.rightBarButtonItem([UIImage load:@"news_yes"]);
     self.isLogin = YES;
-    
 }
 
 //override
 -(void)initView {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 -(void)initData {

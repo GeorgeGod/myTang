@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
-
+{
+    //用来判断返回json数据的errcode是否为0
+    BOOL(^judgeCode)(NSDictionary *json);
+}
 @property (nonatomic, strong) void(^leftBarButtonItem)(id item);
 @property (nonatomic, strong) void(^rightBarButtonItem)(id item);
 

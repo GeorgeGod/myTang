@@ -75,20 +75,27 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
-            //请求失败
-            failure(error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //请求失败
+                failure(error);
+            });
         } else {
             //请求成功
             if (data == nil) {
-                success(nil);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    success(nil);
+                });
             } else {
                 NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                 
-                if ([dic[@"errcode"] intValue] == 40001) {
+                NSString *msg = dic[@"Message"];
+                if ([dic[@"errcode"] intValue] == 40001 || msg.length > 0) {
                     //可能token过期了
                     [Http getTokenThenRequest:params success:success failure:failure];
                 } else {
-                    success(dic);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        success(dic);
+                    });
                 }
             }
         }

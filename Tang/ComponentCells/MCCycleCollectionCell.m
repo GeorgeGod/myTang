@@ -27,7 +27,12 @@
 
 -(void)initView {
     self.cycleBG = [[UIImageView alloc] initWithImage:[UIImage load:@"innoMaker_bg"]];
+    self.cycleBG.userInteractionEnabled = YES;
     self.cycleBG.contentMode = UIViewContentModeScaleAspectFit;
+    self.cycleBG.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.cycleBG.layer.shadowOpacity = 0.55;
+    self.cycleBG.layer.shadowRadius = 10.f;
+    self.cycleBG.layer.shadowOffset = CGSizeMake(0, 4);
     [self.contentView addSubview:self.cycleBG];
     
     self.head = [UILabel new];
@@ -43,10 +48,11 @@
     [self.contentView addSubview:self.title];
     
     
-    self.detail = [UILabel new];
-    self.detail.text = @"会员权益说明 >";
-    self.detail.textColor = [UIColor colorWithHexString:@"#ECEEF5"];
-    self.detail.font = [UIFont font:12];
+    self.detail = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.detail setTitle:@"会员权益说明 >" forState:UIControlStateNormal];
+    [self.detail setTitleColor:[UIColor colorWithHexString:@"#ECEEF5"] forState:UIControlStateNormal];
+    self.detail.titleLabel.font = [UIFont font:12];
+    self.detail.jk_touchAreaInsets = UIEdgeInsetsMake(10, 0, 10, 10);
     [self.contentView addSubview:self.detail];
     
     self.describe = [UILabel new];

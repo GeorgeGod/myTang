@@ -12,6 +12,7 @@
 
 +(void)requestTest {
     
+    /*
     HttpParams *para = [HttpParams new];
     para.uri = @"/api/app/meeting/getarea";
     para.bodyParams = @{@"Type":@(0)};
@@ -23,21 +24,54 @@
         
         NSLog(@"bbb");
     }];
+     */
+    
+    
+//    //登录
+//    HttpParams *para = [HttpParams new];
+//    para.uri = @"/api/app/members/login";
+//
+//    NSString *uuid = [RequestTest getUUID];
+//    if (uuid == nil) {
+//        uuid = @"";
+//    }
+//    para.bodyParams = @{
+//                        @"Mobile":@"15201834213",
+//                        @"Password":@"123123",
+//                        @"UuId":uuid,
+//                        @"DeviceToken":@"",
+//                        };
+//
+//    [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
+//
+//        NSLog(@"aaa=%@", (NSDictionary *)json);
+//
+//        USERINFO.memberId = [NSString stringWithFormat:@"%@", json[@"memberid"]]; //96080158
+//        USERINFO.username = json[@"name"]; //The
+//        USERINFO.mobile = json[@"mobile"];
+//
+//    } failure:^(NSError * _Nullable error) {
+//        NSLog(@"bbb");
+//    }];
+    
     
     
     //9.6
-    para = [HttpParams new];
+    HttpParams *para = [HttpParams new];
     para.uri = @"/api/app/buyvip/list";
-    para.bodyParams = @{@"IdentityId":@(0)}; //会员ID
-    
+    para.bodyParams = @{@"IdentityId":USERINFO.memberId}; //会员ID
+
     [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
-        
+
+
+        NSArray<MemberCenterStatusModel *> *dataArray = [MemberCenterStatusModel mj_objectArrayWithKeyValuesArray:json[@"list"]];
+
         NSLog(@"aaa=%@", (NSDictionary *)json);
     } failure:^(NSError * _Nullable error) {
         NSLog(@"bbb");
     }];
     
-    
+    /*
     //9.7
     para = [HttpParams new];
     para.uri = @"/api/app/buyvip/getprice";
@@ -66,6 +100,36 @@
     } failure:^(NSError * _Nullable error) {
         NSLog(@"bbb");
     }];
+     
+     */
+}
+
+
++(NSString*)getUUID
+{
+    static NSString *stringUUID = nil;
+    
+    if(!stringUUID){
+        // UserDefaultから読みこんで、なかったら生成
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        
+        NSLog(@"read UUID = %@", stringUUID);
+        stringUUID = [ud stringForKey:@"uuid"];
+        
+        if(!stringUUID || [stringUUID isEqualToString:@""])
+        {
+            CFUUIDRef uuidObj = CFUUIDCreate(nil);
+            stringUUID =CFBridgingRelease(CFUUIDCreateString(nil, uuidObj));
+            CFRelease(uuidObj);
+            
+            // 書き込む
+            NSLog(@"write UUID = %@", stringUUID);
+            [ud setObject:stringUUID forKey:@"uuid"];
+        }
+    }
+    
+    NSLog(@"UUID = %@", stringUUID);
+    return stringUUID;
 }
 
 @end

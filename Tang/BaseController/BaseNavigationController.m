@@ -17,19 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.navigationBar.translucent = NO;
     
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     
     /* 1.设置导航条标题字体颜色以及大小*/
-    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#030303"], NSFontAttributeName:[UIFont font:17]}];
     
     /* 2.设置导航条颜色 */
     [navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     navigationBar.shadowImage = [UIImage new];
     
     /* 3.改变导航栏返回按钮颜色*/
-    [navigationBar setTintColor:[UIColor whiteColor]];
+    [navigationBar setTintColor:[UIColor colorWithHexString:@"#222222"]];
 }
 
 

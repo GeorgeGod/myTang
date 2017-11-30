@@ -13,11 +13,14 @@
 
 //override
 -(void)initView {
-    UITableView *tb = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UITableView *tb = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     tb.delegate = self;
     tb.dataSource = self;
     [self.view addSubview:tb];
     self.tableView = tb;
+    [tb mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 
