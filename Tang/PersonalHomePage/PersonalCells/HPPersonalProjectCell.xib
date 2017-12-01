@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HPPersonalProjectCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6x2-SC-W5V">
+                        <rect key="frame" x="20" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Jrv-Bo-5la"/>
+                            <constraint firstAttribute="height" constant="50" id="a5r-Cu-JIc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐硕体验咨询" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zla-nR-NHK">
+                        <rect key="frame" x="85" y="12" width="270" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一家拥有梦想创造力的体验咨询公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0B-Q9-tdB">
+                        <rect key="frame" x="85" y="38" width="270" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="t0B-Q9-tdB" firstAttribute="top" secondItem="zla-nR-NHK" secondAttribute="bottom" constant="8" id="6pI-ai-6YK"/>
+                    <constraint firstAttribute="trailing" secondItem="t0B-Q9-tdB" secondAttribute="trailing" constant="20" id="70K-dS-aJJ"/>
+                    <constraint firstAttribute="trailing" secondItem="zla-nR-NHK" secondAttribute="trailing" constant="20" id="fSK-x4-wFc"/>
+                    <constraint firstItem="zla-nR-NHK" firstAttribute="leading" secondItem="6x2-SC-W5V" secondAttribute="trailing" constant="15" id="ofM-ua-VRp"/>
+                    <constraint firstItem="zla-nR-NHK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="p1T-BJ-JVR"/>
+                    <constraint firstItem="6x2-SC-W5V" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qBn-Ky-G6a"/>
+                    <constraint firstItem="6x2-SC-W5V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rKl-cc-OcR"/>
+                    <constraint firstItem="t0B-Q9-tdB" firstAttribute="leading" secondItem="6x2-SC-W5V" secondAttribute="trailing" constant="15" id="wmu-Zo-Ea7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </tableViewCell>
+    </objects>
+</document>

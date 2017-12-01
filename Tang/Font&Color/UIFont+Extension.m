@@ -21,4 +21,8 @@
         return [self font:size];
     }
 }
+
++(instancetype)mediumFont:(float)size {
+    return [UIFont fontWithName:@"PingFangSC-Medium" size:size];
+}
 @end

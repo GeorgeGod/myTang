@@ -50,6 +50,13 @@ typedef void(^failureBlock)(NSError * _Nullable error);
 
 
 
+/**
+ 输入完成的回调
+
+ @param inputStr 输入的信息
+ */
+typedef void(^inputCompleteBlock)(NSString * _Nullable inputStr);
+
 
 /**
  滚动视图的回调（主要用于会员中心的轮播图滚动）

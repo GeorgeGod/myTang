@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *phone;
 @property (weak, nonatomic) IBOutlet UIImageView *portrait;
 @property (weak, nonatomic) IBOutlet UIImageView *message;
+@property (weak, nonatomic) IBOutlet UIImageView *gender;
 
 @property (weak, nonatomic) IBOutlet UILabel *nickname;
 @property (weak, nonatomic) IBOutlet UILabel *job;

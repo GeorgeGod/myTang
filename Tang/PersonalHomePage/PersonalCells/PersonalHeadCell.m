@@ -13,12 +13,22 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    [self initView];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)initView {
+    self.phone.image = [UIImage load:@"icon_phone"];
+    self.portrait.image = [UIImage load:@"portrait"];
+    self.gender.image = [UIImage load:@"icon_male"];
+    self.message.image = [UIImage load:@"icon_message"];
+    
+    self.nickname.textColor = [UIColor colorWithHexString:@"#222222"];
+    self.job.textColor = [UIColor colorWithHexString:@"#666666"];
+    [self.editInformationBtn setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
 }
 
+- (IBAction)editInformationAction:(UIButton *)sender {
+    
+}
 @end

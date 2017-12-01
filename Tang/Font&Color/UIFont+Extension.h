@@ -14,4 +14,6 @@
 
 +(instancetype)lightFont:(float)size;
 
++(instancetype)mediumFont:(float)size;
+
 @end
