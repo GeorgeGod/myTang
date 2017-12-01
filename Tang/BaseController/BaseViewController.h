@@ -36,6 +36,7 @@
 -(void)rightBarButtonItemAction:(UIBarButtonItem *)rightBarButtonItem;
 
 
+-(void)pushViewCtrl:(UIViewController *)ctrl;
 
 /**
  push出控制器

@@ -97,7 +97,9 @@
 -(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem { }
 -(void)rightBarButtonItemAction:(UIBarButtonItem *)rightBarButtonItem { }
 
-
+-(void)pushViewCtrl:(UIViewController *)ctrl {
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
 -(void)pushViewController:(Class)clazz {
     UIViewController *ctrl = [clazz new];
     if ([ctrl isKindOfClass:[UIViewController class]]) {

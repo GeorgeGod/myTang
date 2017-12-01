@@ -10,4 +10,8 @@
 
 @interface VIPConfirmOrderCell : UITableViewCell
 
++(CGFloat)obtainCellHeight:(NSString *)content date:(NSString *)dateStr;
+
+-(void)assignmentCellWithData:(id)data;
+
 @end

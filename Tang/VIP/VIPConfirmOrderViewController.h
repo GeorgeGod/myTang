@@ -10,4 +10,6 @@
 
 @interface VIPConfirmOrderViewController : BaseTableViewController
 
+@property (nonatomic, assign) TSMemberCenterType centerType;
+
 @end

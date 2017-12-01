@@ -10,10 +10,16 @@
 #define Enum_h
 
 typedef NS_ENUM(NSInteger, TSPayType) {
-    TSPayTypeAliPay         = 0, //支付宝支付
-    TSPayTypeWePay          = 1, //微信支付
-    TSPayTypeUnionPay       = 2, //银联支付
-    TSPayTypeTransferPay    = 3, //转账支付
+    TSPayTypeAliPay         = 1, //支付宝支付
+    TSPayTypeWePay          = 2, //微信支付
+    TSPayTypeUnionPay       = 3, //银联支付
+    TSPayTypeTransferPay    = 4, //转账支付
+};
+
+typedef NS_ENUM(NSInteger, TSMemberCenterType) {
+    TSMemberCenterTypeVIP       = 1, //vip
+    TSMemberCenterTypeMaker     = 2, //maker
+    TSMemberCenterTypeBox       = 3, //储物箱
 };
 
 

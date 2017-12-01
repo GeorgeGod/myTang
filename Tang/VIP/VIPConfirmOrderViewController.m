@@ -16,19 +16,29 @@
 #import "VIPDetailViewController.h"
 #import "VIPWaitPayViewController.h"
 
+#import "OrderPriceModel.h"
 @interface VIPConfirmOrderViewController ()<DelegateCallBack>
+{
+    NSArray<OrderPriceModel *> *dataArray;
+    int priceId; //价格ID
+    TSPayType payType; //支付方式
+}
 @property (nonatomic, strong) PaymentBarView *paymentBar;
 @property (nonatomic, assign) BOOL isConfirm; //是否同意协议
 @property (nonatomic, assign) TSPayType payType; //支付方式
 @end
 
 @implementation VIPConfirmOrderViewController
+@synthesize payType;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"确认订单";
     self.leftBarButtonItem([UIImage load:@"back_gray"]);
+    
+    //设置支付宝为默认支付方式
+    payType = TSPayTypeAliPay;
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 49, 0));
@@ -40,13 +50,7 @@
     
     __weak typeof(self)weakSelf = self;
     self.paymentBar.buttonClickedBlock = ^(UIButton *btn) {
-        //支付成功
-//        VIPPayResultViewController *resultCtrl = (VIPPayResultViewController *)[weakSelf displayViewController:[VIPPayResultViewController class]];
-//        resultCtrl.delegate = weakSelf;
-        
-        //支付失败
-        VIPWaitPayViewController *waitPayCtrl = (VIPWaitPayViewController *)[weakSelf displayViewController:[VIPWaitPayViewController class]];
-        waitPayCtrl.delegate = weakSelf;
+        [weakSelf buyButtonClicked];
     };
     [self.paymentBar setPrice:199];
 }
@@ -101,10 +105,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
+        if (indexPath.row < dataArray.count) {
             return 49;
         } else {
-            return 164;
+            return [VIPConfirmOrderCell obtainCellHeight:@"· 工具使用权\n· 储物箱租用权\n· 工作坊开发权\n· 专属课程福利\n· 参赛费用优惠\n· 专属兴趣小组" date:@"购买后即日起生效，有效期至2017-07-31"];
         }
     } else {
         if (indexPath.row == 0) {
@@ -151,17 +155,33 @@
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    //第一个分区返回价格列表的数量加1
+    return section==0 ? dataArray.count+1 : 2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
+        if (indexPath.row < dataArray.count) {
             VIPDetailPriceCell *cell = (VIPDetailPriceCell *)[tableView obtainCell:[VIPDetailPriceCell class]];
-            cell.viplogo.image = [UIImage load:@"vip"];
+            //异常捕获赋值（防止闪退）
+            OrderPriceModel *model = nil;
+            @try {
+                model = dataArray[indexPath.row];
+            } @catch (NSException *error) {} @finally {
+//                if ([model.MainTitle isKindOfClass:[NSString class]]) {
+//                    cell.title.text = [NSString stringWithFormat:@"%@", model.MainTitle];
+//                }
+                cell.price.text = model.Price;
+            }
+            if (self.centerType == TSMemberCenterTypeVIP) {
+                cell.viplogo.image = [UIImage load:@"vip"];
+            } else {
+                cell.viplogo.image = [UIImage load:@"maker"];
+            }
             return cell;
-        } else if (indexPath.row == 1) {
+        } else {
             VIPConfirmOrderCell *cell = (VIPConfirmOrderCell *)[tableView obtainXibCell:[VIPConfirmOrderCell class]];
+            [cell assignmentCellWithData:nil];
             return cell;
         }
     } else {
@@ -194,5 +214,85 @@
     }
 }
 
+//请求数据
+-(void)requestData {
+    //9.7
+    HttpParams *para = [HttpParams new];
+    para.uri = @"/api/app/buyvip/getprice";
+    para.bodyParams = @{@"typeId":@(self.centerType)}; //1：VIP会员，2：InnoMaker会员，3：InnoMaker储物箱
+    
+    [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
+        
+        dataArray = [OrderPriceModel mj_objectArrayWithKeyValuesArray:json[@"list"]];
+        [self refreshData];
+        
+        NSLog(@"aaa=%@", (NSDictionary *)json);
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"bbb");
+    }];
+}
 
+//刷新数据
+-(void)refreshData {
+    [self.tableView reloadData];
+}
+
+
+//购买按钮点击事件
+-(void)buyButtonClicked {
+    NSString *memberId = USERINFO.memberId;
+    if (memberId.length == 0) {
+        //未登录
+        return;
+    }
+    if (priceId == 0) {
+        //未选择价格
+        priceId = dataArray.firstObject.Index;
+//        return;
+    }
+    if (payType == 0) {
+        //未选择支付方式
+        return;
+    }
+    //请求订单ID
+    HttpParams *para = [HttpParams new];
+    para.uri = @"/api/app/buyvip/add";
+    para.bodyParams = @{@"typeId":@(self.centerType), //1：VIP会员，2：InnoMaker会员，3：InnoMaker储物箱
+                        @"IdentityId":memberId, //会员ID
+                        @"priceId":@(priceId), //价格id
+                        @"payType":@(payType),//1：支付宝，2：微信支付，3：银联，5：公司转账
+                        };
+    
+    [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
+        
+        NSLog(@"aaa=%@", (NSDictionary *)json);
+        if ([json[@"errcode"] intValue] == 0) {
+            [self paymentWithOrderId:[json[@"id"] longValue]];
+        }
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"bbb");
+    }];
+}
+
+
+/**
+ 调起支付第三方支付界面支付
+ */
+-(void)paymentWithOrderId:(long)orderId {
+    if (orderId == 0) {
+        NSLog(@"订单ID有问题!");
+        return;
+    }
+    //TODO 支付吧
+    __weak typeof(self)weakSelf = self;
+    if (/* DISABLES CODE */ (1)) {
+        //支付成功
+        VIPPayResultViewController *resultCtrl = (VIPPayResultViewController *)[weakSelf displayViewController:[VIPPayResultViewController class]];
+        resultCtrl.delegate = weakSelf;
+    } else {
+        //支付失败
+        VIPWaitPayViewController *waitPayCtrl = (VIPWaitPayViewController *)[weakSelf displayViewController:[VIPWaitPayViewController class]];
+        waitPayCtrl.delegate = weakSelf;
+    }
+}
 @end

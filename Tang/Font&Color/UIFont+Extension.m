@@ -13,4 +13,12 @@
 +(instancetype)font:(float)size {
     return [UIFont fontWithName:@"Arial" size:size];
 }
+
++(instancetype)lightFont:(float)size {
+    if (@available(iOS 8.2, *)) {
+        return [UIFont systemFontOfSize:size weight:UIFontWeightLight];
+    } else {
+        return [self font:size];
+    }
+}
 @end

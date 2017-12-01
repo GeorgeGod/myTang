@@ -13,7 +13,7 @@
 -(UITableViewCell *)obtainCell:(Class)clazz {
     UITableViewCell *cell = [self dequeueReusableCellWithIdentifier:NSStringFromClass(clazz)];
     if (!cell) {
-        cell = [[clazz alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass(clazz)];
+        cell = [[clazz alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass(clazz)];
     }
     return cell;
 }

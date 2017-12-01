@@ -88,15 +88,23 @@
             } else {
                 NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                 
-                NSString *msg = dic[@"Message"];
-                if ([dic[@"errcode"] intValue] == 40001 || msg.length > 0) {
-                    //可能token过期了
-                    [Http getTokenThenRequest:params success:success failure:failure];
-                } else {
+                if ([dic[@"errcode"] intValue] == 0) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         success(dic);
                     });
+                } else {
+                    //可能token过期了
+                    [Http getTokenThenRequest:params success:success failure:failure];
                 }
+//                NSString *msg = dic[@"Message"];
+//                if ([dic[@"errcode"] intValue] == 40001 || [dic[@"errcode"] intValue] == 40002 || msg.length > 0) {
+//                    //可能token过期了
+//                    [Http getTokenThenRequest:params success:success failure:failure];
+//                } else {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        success(dic);
+//                    });
+//                }
             }
         }
     }];

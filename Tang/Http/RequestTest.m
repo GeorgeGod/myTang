@@ -57,25 +57,30 @@
     
     
     //9.6
-    HttpParams *para = [HttpParams new];
-    para.uri = @"/api/app/buyvip/list";
-    para.bodyParams = @{@"IdentityId":USERINFO.memberId}; //会员ID
-
-    [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
-
-
-        NSArray<MemberCenterStatusModel *> *dataArray = [MemberCenterStatusModel mj_objectArrayWithKeyValuesArray:json[@"list"]];
-
-        NSLog(@"aaa=%@", (NSDictionary *)json);
-    } failure:^(NSError * _Nullable error) {
-        NSLog(@"bbb");
-    }];
+//    HttpParams *para = [HttpParams new];
+//    para.uri = @"/api/app/buyvip/list";
+//    
+//    NSString *memberId = USERINFO.memberId;
+//    if (memberId==nil) {
+//        memberId = @"";
+//    }
+//    para.bodyParams = @{@"IdentityId":memberId}; //会员ID
+//
+//    [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
+//
+//
+//        NSArray<MemberCenterStatusModel *> *dataArray = [MemberCenterStatusModel mj_objectArrayWithKeyValuesArray:json[@"list"]];
+//
+//        NSLog(@"aaa=%@", (NSDictionary *)json);
+//    } failure:^(NSError * _Nullable error) {
+//        NSLog(@"bbb");
+//    }];
     
-    /*
+    
     //9.7
-    para = [HttpParams new];
+    HttpParams *para = [HttpParams new];
     para.uri = @"/api/app/buyvip/getprice";
-    para.bodyParams = @{@"typeId":@(0)}; //1：VIP会员，2：InnoMaker会员，3：InnoMaker储物箱
+    para.bodyParams = @{@"typeId":@(1)}; //1：VIP会员，2：InnoMaker会员，3：InnoMaker储物箱
     
     [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
         
@@ -84,7 +89,7 @@
         NSLog(@"bbb");
     }];
     
-    
+    /*
     //9.8
     para = [HttpParams new];
     para.uri = @"/api/app/buyvip/add";
