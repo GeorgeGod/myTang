@@ -94,7 +94,9 @@
     };
 }
 
--(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem { }
+-(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem {
+    [self popViewController];
+}
 -(void)rightBarButtonItemAction:(UIBarButtonItem *)rightBarButtonItem { }
 
 -(void)pushViewCtrl:(UIViewController *)ctrl {

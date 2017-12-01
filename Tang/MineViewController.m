@@ -13,6 +13,7 @@
 #import "MineClassifyTableViewCell.h"
 #import "MineNormalTableViewCell.h"
 
+#import "HomePageCtrl.h"
 #import "MemberCenterCtrl.h"
 @interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -134,7 +135,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self pushViewController:[MemberCenterCtrl class]];
+//
+    
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [self pushViewController:[MemberCenterCtrl class]];
+    } else {
+        [self pushViewCtrl:[HomePageCtrl new]];
+    }
 }
 
 @end
