@@ -10,6 +10,8 @@
 #import "EnjoySectionHeader.h"
 #import "MemberCenterCell.h"
 #import "MemberEnjoyCell.h"
+#import "MemberCenterTipsCell.h"
+#import "VIPConfirmOrderViewController.h"
 #import "VIPDetailViewController.h"
 
 @interface MemberCenterCtrl ()
@@ -48,6 +50,15 @@
     btn.showsTouchWhenHighlighted = YES;
     [self.view addSubview:btn];
     self.bottomButton = btn;
+    __weak typeof(self)weakSelf = self;
+    [btn jk_addActionHandler:^(NSInteger tag) {
+        if (currentPage<0 || currentPage>2) {
+            NSLog(@"---会员中心的page出错了！");
+        }
+        VIPConfirmOrderViewController *orderCtrl = [VIPConfirmOrderViewController new];
+        orderCtrl.centerType = currentPage+1;
+        [weakSelf pushViewCtrl:orderCtrl];
+    }];
 }
 
 
@@ -84,7 +95,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -92,6 +103,10 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return nil;
+    } else if (section == 1) {
+        EnjoySectionHeader *header = [EnjoySectionHeader EnjoySectionHeader];
+        header.backgroundColor = [UIColor whiteColor];
+        return header;
     } else {
         EnjoySectionHeader *header = [EnjoySectionHeader EnjoySectionHeader];
         header.backgroundColor = [UIColor whiteColor];
@@ -110,7 +125,13 @@
     return 0.01f;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath.section==0 ? 245 : 220;
+    if (indexPath.section == 0) {
+        return 245;
+    } else if (indexPath.section == 1) {
+        return 220;
+    } else {
+        return [MemberCenterTipsCell obtainRichTextHeight];
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,22 +151,24 @@
         };
         return cell;
     }
-    else {
+    else if (indexPath.section == 1) {
         MemberEnjoyCell *cell = (MemberEnjoyCell *)[tableView obtainCell:[MemberEnjoyCell class]];
         return cell;
+    } else {
+        return [tableView obtainCell:[MemberCenterTipsCell class]];
     }
 }
-
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-////    [self pushViewController:[VIPDetailViewController class]];
-//}
 
 -(void)requestData {
     HttpParams *para = [HttpParams new];
     para.uri = @"/api/app/buyvip/list";
-    para.bodyParams = @{@"IdentityId":USERINFO.memberId}; //会员ID
-    
+    @try {
+        para.bodyParams = @{@"IdentityId":USERINFO.memberId}; //会员ID
+    } @catch (NSException *error) {
+        
+    } @finally {
+        
+    }
     [Http postWithParams:para success:^(NSDictionary * _Nullable json) {
         
         if (judgeCode(json)) {

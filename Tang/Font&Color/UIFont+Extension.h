@@ -12,4 +12,6 @@
 
 +(instancetype)font:(float)size;
 
++(instancetype)lightFont:(float)size;
+
 @end
