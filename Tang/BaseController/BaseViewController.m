@@ -19,11 +19,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    judgeCode = BOOL^(NSDictionary *json) {
-//        int code = [json[@"errcode"] intValue];
-//        return code==0;
-//    };
-    
     judgeCode = ^BOOL(NSDictionary *json) {
         int code = [json[@"errcode"] intValue];
         return code==0;

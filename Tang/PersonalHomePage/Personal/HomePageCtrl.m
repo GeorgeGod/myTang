@@ -11,11 +11,19 @@
 #import "HPPersonalEmptyCell.h"
 #import "HPPersonalProjectCell.h"
 #import "HPPersonalEduCell.h"
+#import "HPPersonalTagsCell.h"
 #import "HPPersonalHeadView.h"
 
 #import "HPEditPersonalViewController.h"
-@interface HomePageCtrl ()
+#import "HPAddEduViewController.h"
+#import "HPManageEduViewController.h"
+#import "HPAddTagsViewController.h"
+#import "HPManageTagsViewController.h"
 
+@interface HomePageCtrl ()
+{
+    NSArray *tagsArray;
+}
 @end
 
 @implementation HomePageCtrl
@@ -28,6 +36,8 @@
     self.leftBarButtonItem([UIImage load:@"back_gray"]);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor whiteColor];
+    
+    tagsArray = @[@"程序员", @"设计师", @"产品经理", @"BD运营", @"投资", @"财务", @"法务", @"人力资源", @"分析师", @"渠道", @"学生", @"学生", @"创业者", @"用户体验", @"房地产", @"市场营销", @"科技宅"];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -51,6 +61,11 @@
             return 70;
         } else if (section == 2) {
             return 67;
+        } else if (section == 3) {
+//            HPPersonalTagsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HPPersonalTagsCell" forIndexPath:indexPath];
+            float height = [HPPersonalTagsCell calculateCellHeightWithData:tagsArray];
+            NSLog(@"cell height = %f", height);
+            return height;
         }
         return 60; //105;
     }
@@ -103,8 +118,14 @@
         } else if (section == 2) {
             HPPersonalEduCell *cell = (HPPersonalEduCell *)[tableView obtainXibCell:[HPPersonalEduCell class]];
             return cell;
+        } else if (section == 3) {
+            HPPersonalTagsCell *cell = (HPPersonalTagsCell *)[tableView obtainCell:[HPPersonalTagsCell class]];
+            [cell assignmentCellWithData:tagsArray];
+            return cell;
         }
         HPPersonalEmptyCell *cell = (HPPersonalEmptyCell *)[tableView obtainCell:[HPPersonalEmptyCell class]];
+        cell.addButton.tag = section;
+        [cell.addButton addTarget:self action:@selector(addButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [cell assignmentCellWithSection:section];
         return cell;
     }
@@ -114,10 +135,23 @@
 -(void)editButtonAction:(UIButton *)sender {
     if (sender.tag == 102) {
         //编辑教育
-        
+        HPManageEduViewController *managerCtrl = [HPManageEduViewController new];
+        [self pushViewCtrl:managerCtrl];
     } else {
         //编辑标签
-        
+        HPManageTagsViewController *managerCtrl = [HPManageTagsViewController new];
+        [self pushViewCtrl:managerCtrl];
+    }
+}
+
+//点击添加标签、教育
+-(void)addButtonAction:(UIButton *)sender {
+    if (sender.tag == 2) {
+         HPAddEduViewController *addCtrl = [HPAddEduViewController new];
+        [self pushViewCtrl:addCtrl];
+    } else if (sender.tag == 3) {
+        HPAddTagsViewController *addCtrl = [HPAddTagsViewController new];
+        [self pushViewCtrl:addCtrl];
     }
 }
 

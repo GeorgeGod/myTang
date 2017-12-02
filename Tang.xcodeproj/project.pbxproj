@@ -51,6 +51,13 @@
 		5EADE9811FD19C7E00573DB1 /* HPEditDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EADE97F1FD19C7E00573DB1 /* HPEditDefaultCell.xib */; };
 		5EADE9851FD19EEE00573DB1 /* HPEditPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9841FD19EEE00573DB1 /* HPEditPersonalModel.m */; };
 		5EADE9881FD1A68300573DB1 /* HPEditJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9871FD1A68300573DB1 /* HPEditJobViewController.m */; };
+		5EADE98B1FD255DC00573DB1 /* HPAddEduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE98A1FD255DC00573DB1 /* HPAddEduViewController.m */; };
+		5EADE98E1FD262BF00573DB1 /* HPManageEduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE98D1FD262BF00573DB1 /* HPManageEduViewController.m */; };
+		5EADE9911FD2791100573DB1 /* MCContentCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9901FD2791100573DB1 /* MCContentCtrl.m */; };
+		5EADE9941FD29D3E00573DB1 /* HPAddTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9931FD29D3E00573DB1 /* HPAddTagsViewController.m */; };
+		5EADE99A1FD2A55F00573DB1 /* HPTagsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9991FD2A55F00573DB1 /* HPTagsCollectionCell.m */; };
+		5EADE99D1FD2B6B800573DB1 /* HPManageTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE99C1FD2B6B800573DB1 /* HPManageTagsViewController.m */; };
+		5EADE9A01FD2B6E500573DB1 /* HPTagsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE99F1FD2B6E500573DB1 /* HPTagsContentViewController.m */; };
 		8477A48E1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477A48D1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m */; };
 		8477A4911FD1264B003D1FA8 /* OrderPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477A4901FD1264B003D1FA8 /* OrderPriceModel.m */; };
 		8477A4981FD14F4D003D1FA8 /* HomePageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477A4971FD14F4D003D1FA8 /* HomePageCtrl.m */; };
@@ -177,6 +184,20 @@
 		5EADE9841FD19EEE00573DB1 /* HPEditPersonalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditPersonalModel.m; sourceTree = "<group>"; };
 		5EADE9861FD1A68300573DB1 /* HPEditJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPEditJobViewController.h; sourceTree = "<group>"; };
 		5EADE9871FD1A68300573DB1 /* HPEditJobViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditJobViewController.m; sourceTree = "<group>"; };
+		5EADE9891FD255DC00573DB1 /* HPAddEduViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAddEduViewController.h; sourceTree = "<group>"; };
+		5EADE98A1FD255DC00573DB1 /* HPAddEduViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAddEduViewController.m; sourceTree = "<group>"; };
+		5EADE98C1FD262BF00573DB1 /* HPManageEduViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPManageEduViewController.h; sourceTree = "<group>"; };
+		5EADE98D1FD262BF00573DB1 /* HPManageEduViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPManageEduViewController.m; sourceTree = "<group>"; };
+		5EADE98F1FD2791100573DB1 /* MCContentCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCContentCtrl.h; sourceTree = "<group>"; };
+		5EADE9901FD2791100573DB1 /* MCContentCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCContentCtrl.m; sourceTree = "<group>"; };
+		5EADE9921FD29D3E00573DB1 /* HPAddTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAddTagsViewController.h; sourceTree = "<group>"; };
+		5EADE9931FD29D3E00573DB1 /* HPAddTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAddTagsViewController.m; sourceTree = "<group>"; };
+		5EADE9981FD2A55F00573DB1 /* HPTagsCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPTagsCollectionCell.h; sourceTree = "<group>"; };
+		5EADE9991FD2A55F00573DB1 /* HPTagsCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPTagsCollectionCell.m; sourceTree = "<group>"; };
+		5EADE99B1FD2B6B800573DB1 /* HPManageTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPManageTagsViewController.h; sourceTree = "<group>"; };
+		5EADE99C1FD2B6B800573DB1 /* HPManageTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPManageTagsViewController.m; sourceTree = "<group>"; };
+		5EADE99E1FD2B6E500573DB1 /* HPTagsContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPTagsContentViewController.h; sourceTree = "<group>"; };
+		5EADE99F1FD2B6E500573DB1 /* HPTagsContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPTagsContentViewController.m; sourceTree = "<group>"; };
 		8477A48C1FD0F7B0003D1FA8 /* MemberCenterTipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberCenterTipsCell.h; sourceTree = "<group>"; };
 		8477A48D1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberCenterTipsCell.m; sourceTree = "<group>"; };
 		8477A48F1FD1264B003D1FA8 /* OrderPriceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderPriceModel.h; sourceTree = "<group>"; };
@@ -462,6 +483,16 @@
 				5EADE9761FD19A1F00573DB1 /* HPEditPersonalViewController.m */,
 				5EADE9861FD1A68300573DB1 /* HPEditJobViewController.h */,
 				5EADE9871FD1A68300573DB1 /* HPEditJobViewController.m */,
+				5EADE98C1FD262BF00573DB1 /* HPManageEduViewController.h */,
+				5EADE98D1FD262BF00573DB1 /* HPManageEduViewController.m */,
+				5EADE9891FD255DC00573DB1 /* HPAddEduViewController.h */,
+				5EADE98A1FD255DC00573DB1 /* HPAddEduViewController.m */,
+				5EADE99B1FD2B6B800573DB1 /* HPManageTagsViewController.h */,
+				5EADE99C1FD2B6B800573DB1 /* HPManageTagsViewController.m */,
+				5EADE99E1FD2B6E500573DB1 /* HPTagsContentViewController.h */,
+				5EADE99F1FD2B6E500573DB1 /* HPTagsContentViewController.m */,
+				5EADE9921FD29D3E00573DB1 /* HPAddTagsViewController.h */,
+				5EADE9931FD29D3E00573DB1 /* HPAddTagsViewController.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -488,6 +519,8 @@
 				5EADE97D1FD19C7E00573DB1 /* HPEditDefaultCell.h */,
 				5EADE97E1FD19C7E00573DB1 /* HPEditDefaultCell.m */,
 				5EADE97F1FD19C7E00573DB1 /* HPEditDefaultCell.xib */,
+				5EADE9981FD2A55F00573DB1 /* HPTagsCollectionCell.h */,
+				5EADE9991FD2A55F00573DB1 /* HPTagsCollectionCell.m */,
 			);
 			path = PersonalCells;
 			sourceTree = "<group>";
@@ -551,6 +584,8 @@
 			children = (
 				847C175A1FCE61B6004793AD /* MemberCenterCtrl.h */,
 				847C175B1FCE61B6004793AD /* MemberCenterCtrl.m */,
+				5EADE98F1FD2791100573DB1 /* MCContentCtrl.h */,
+				5EADE9901FD2791100573DB1 /* MCContentCtrl.m */,
 				847C17511FCE605D004793AD /* VIPDetailViewController.h */,
 				847C17521FCE605D004793AD /* VIPDetailViewController.m */,
 				847C17541FCE6085004793AD /* VIPConfirmOrderViewController.h */,
@@ -817,18 +852,22 @@
 				847C17531FCE605D004793AD /* VIPDetailViewController.m in Sources */,
 				5EA822361FCF0D9400DC1FEE /* PaymentBarView.m in Sources */,
 				5E6552EB1FD028BB00B4697B /* MemberCenterStatusModel.m in Sources */,
+				5EADE98B1FD255DC00573DB1 /* HPAddEduViewController.m in Sources */,
 				847C176A1FCE6C42004793AD /* LockerConfirmOrderViewController.m in Sources */,
 				847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */,
 				5EADE9701FD1856500573DB1 /* HPPersonalTagsCell.m in Sources */,
 				5EA822071FCD88A300DC1FEE /* UIImage+Extension.m in Sources */,
+				5EADE9941FD29D3E00573DB1 /* HPAddTagsViewController.m in Sources */,
 				847C17661FCE6A93004793AD /* MakerPayResultViewController.m in Sources */,
 				847BC1781FCFCBAE007C6FE8 /* VIPOrderTypeCell.m in Sources */,
 				5EA822121FCDAF6C00DC1FEE /* UIImage+Path.m in Sources */,
 				5EA821EB1FCD7DCE00DC1FEE /* MineViewController.m in Sources */,
 				847C177E1FCE7883004793AD /* EnjoySectionHeader.m in Sources */,
+				5EADE99A1FD2A55F00573DB1 /* HPTagsCollectionCell.m in Sources */,
 				847C17591FCE60C8004793AD /* VIPPayResultViewController.m in Sources */,
 				847C17601FCE6A31004793AD /* MakerDetailViewController.m in Sources */,
 				847BC1731FCFC7DC007C6FE8 /* VIPOrderWaitPayCell.m in Sources */,
+				5EADE9911FD2791100573DB1 /* MCContentCtrl.m in Sources */,
 				5EA822041FCD881000DC1FEE /* UIFont+Extension.m in Sources */,
 				847BC18C1FCFF73B007C6FE8 /* RequestTest.m in Sources */,
 				8477A4BF1FD1535F003D1FA8 /* PersonalHeadCell.m in Sources */,
@@ -837,9 +876,11 @@
 				847C17631FCE6A75004793AD /* MakerConfirmOrderViewController.m in Sources */,
 				847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */,
 				5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */,
+				5EADE9A01FD2B6E500573DB1 /* HPTagsContentViewController.m in Sources */,
 				5EADE9741FD192AB00573DB1 /* HPPersonalHeadView.m in Sources */,
 				847C17911FCEBA8C004793AD /* VIPDetailDiscountCell.m in Sources */,
 				5EA821E01FCD7C4600DC1FEE /* main.m in Sources */,
+				5EADE98E1FD262BF00573DB1 /* HPManageEduViewController.m in Sources */,
 				847BC1891FCFF428007C6FE8 /* GVUserDefaults+Extension.m in Sources */,
 				847C175C1FCE61B6004793AD /* MemberCenterCtrl.m in Sources */,
 				847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */,
@@ -853,6 +894,7 @@
 				5EA821D21FCD7C4600DC1FEE /* AppDelegate.m in Sources */,
 				8477A48E1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m in Sources */,
 				5EA822301FCF00AF00DC1FEE /* ActionSheetHeadView.m in Sources */,
+				5EADE99D1FD2B6B800573DB1 /* HPManageTagsViewController.m in Sources */,
 				5EA8222D1FCF009700DC1FEE /* ActionSheetView.m in Sources */,
 				8477A4911FD1264B003D1FA8 /* OrderPriceModel.m in Sources */,
 				847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */,

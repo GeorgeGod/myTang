@@ -14,4 +14,6 @@
 @property (nonatomic, copy) NSString *placeholder;
 @property (nonatomic, assign) BOOL showArrow;
 +(instancetype)EditModel:(NSString *)title detail:(NSString *)detail place:(NSString *)placeholder show:(BOOL)show;
+
+-(NSString *)calculateAge:(NSString *)birth;
 @end

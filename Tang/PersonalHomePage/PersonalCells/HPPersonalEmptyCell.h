@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HPPersonalEmptyCell : UITableViewCell
-@property (nonatomic, strong) UIImageView *icon;
-@property (nonatomic, strong) UILabel *title;
+@property (nonatomic, strong) UIButton *addButton;
 -(void)assignmentCellWithSection:(NSInteger)section;
 @end

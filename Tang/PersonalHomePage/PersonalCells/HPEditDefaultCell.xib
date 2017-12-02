@@ -26,7 +26,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3F-zs-Lmq">
-                        <rect key="frame" x="308" y="16" width="47" height="17"/>
+                        <rect key="frame" x="155" y="0.0" width="200" height="48.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="200" id="9jE-FF-B3G"/>
+                        </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -36,6 +39,8 @@
                     <constraint firstItem="N3F-zs-Lmq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5xQ-kj-MVX" secondAttribute="trailing" id="03Z-8o-8tY"/>
                     <constraint firstItem="5xQ-kj-MVX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2yz-RZ-moF"/>
                     <constraint firstAttribute="trailing" secondItem="N3F-zs-Lmq" secondAttribute="trailing" constant="20" id="7EW-js-vFw"/>
+                    <constraint firstAttribute="bottom" secondItem="N3F-zs-Lmq" secondAttribute="bottom" id="A46-i8-NYT"/>
+                    <constraint firstItem="N3F-zs-Lmq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ysu-z7-n0a"/>
                     <constraint firstItem="N3F-zs-Lmq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fOw-va-mBQ"/>
                     <constraint firstItem="5xQ-kj-MVX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yQ0-2H-rYO"/>
                 </constraints>

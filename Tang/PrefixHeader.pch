@@ -34,7 +34,7 @@
 #import <Masonry.h>
 #import <AFNetworking.h>
 #import <JKCategories/JKCategories.h>
-
+#import <WMPageController.h>
 
 //模型
 #import "MemberCenterStatusModel.h"

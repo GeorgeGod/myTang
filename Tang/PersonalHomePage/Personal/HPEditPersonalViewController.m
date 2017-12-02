@@ -86,11 +86,13 @@
         } else {
             cell.accessoryView = nil;
         }
+        cell.detail.enabled = [model.title isEqualToString:@"真实姓名"];
         return cell;
     }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HPEditPersonalModel *model = dataArray[indexPath.section][indexPath.row];
     NSString *title = model.title;
     if ([title isEqualToString:@"个人头像"]) {
@@ -117,7 +119,17 @@
  弹出保存用户信息的弹框
  */
 -(void)alertSavePersonalInfoTips {
-//    UIAlertController
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"需要保持吗?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"不保存" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self popViewController];
+    }];
+    UIAlertAction *save = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alert addAction:cancel];
+    [alert addAction:save];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

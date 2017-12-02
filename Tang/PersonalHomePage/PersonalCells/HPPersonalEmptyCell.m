@@ -20,41 +20,34 @@
 }
 
 -(void)initView {
-    //创建icon
-    UIImageView *icon = [UIImageView new];
-    self.icon = icon;
-    [self.contentView addSubview:icon];
-    //创建标题
-    UILabel *title = [UILabel new];
-    self.title = title;
-    title.textColor = [UIColor colorWithHexString:@"#666666"];
-    title.font = [UIFont lightFont:15];
-    [self.contentView addSubview:title];
-    //布局
-    [icon mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.addButton.titleLabel.font = [UIFont lightFont:15];
+    self.addButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.addButton jk_setImagePosition:LXMImagePositionLeft spacing:4];
+    [self.contentView addSubview:self.addButton];
+    [self.addButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(20);
-        make.right.equalTo(title.mas_left).offset(-4);
-        make.centerY.equalTo(self.contentView);
-    }];
-    [title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(icon.mas_right);
-        make.centerY.equalTo(self.contentView);
+        make.top.bottom.equalTo(self.contentView);
+        make.width.mas_equalTo(200);
     }];
 }
 
 -(void)assignmentCellWithSection:(NSInteger)section {
     if (section == 1) {
-        self.icon.image = [UIImage load:@""];
-        self.title.textColor = [UIColor colorWithHexString:@"#666666"];
-        self.title.text = @"暂无项目信息";
+        [self.addButton setTitle:@"暂无项目信息" forState:UIControlStateNormal];
+        [self.addButton setTitleColor:[UIColor colorWithHexString:@"#666666"] forState:UIControlStateNormal];
+        [self.addButton setImage:nil forState:UIControlStateNormal];
+        [self.addButton jk_setImagePosition:LXMImagePositionLeft spacing:0];
     } else if (section == 2) {
-        self.icon.image = [UIImage load:@"icon_mine_add"];
-        self.title.textColor = [UIColor colorWithHexString:@"#4B9FED"];
-        self.title.text = @"点击添加教育信息";
+        [self.addButton setTitle:@"点击添加教育信息" forState:UIControlStateNormal];
+        [self.addButton setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
+        [self.addButton setImage:[UIImage load:@"icon_mine_add"] forState:UIControlStateNormal];
+        [self.addButton jk_setImagePosition:LXMImagePositionLeft spacing:4];
     } else {
-        self.icon.image = [UIImage load:@"icon_mine_add"];
-        self.title.textColor = [UIColor colorWithHexString:@"#4B9FED"];
-        self.title.text = @"点击添加标签";
+        [self.addButton setTitle:@"点击添加标签" forState:UIControlStateNormal];
+        [self.addButton setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
+        [self.addButton setImage:[UIImage load:@"icon_mine_add"] forState:UIControlStateNormal];
+        [self.addButton jk_setImagePosition:LXMImagePositionLeft spacing:4];
     }
 }
 
