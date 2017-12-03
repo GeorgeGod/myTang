@@ -54,4 +54,19 @@
     }];
 }
 
+-(void)assignmentCellWithData:(NSDictionary *)dataDic {
+    self.title.text = dataDic[@"title"];
+    self.price.text = dataDic[@"price"];
+    
+    if ([dataDic objectForKey:@"desc"]) {
+        self.describe.text = dataDic[@"desc"];
+        //更新一下布局
+    }
+    if ([dataDic objectForKey:@"icon"]) {
+        self.viplogo.image = [UIImage load:dataDic[@"icon"]];
+        //更新一下布局
+        
+    }
+}
+
 @end

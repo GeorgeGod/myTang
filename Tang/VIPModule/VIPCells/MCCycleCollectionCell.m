@@ -63,24 +63,28 @@
 }
 
 -(void)initConstraints {
+    UIView *superView = self.cycleBG;
     [self.cycleBG mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.contentView);
+//        make.center.equalTo(self.contentView);
+        make.centerY.equalTo(self.contentView);
+        make.left.right.equalTo(self.contentView).insets(UIEdgeInsetsMake(0, 20, 0, 20));
+//        make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(0, 20, 0, 20));
     }];
     [self.head mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.top.mas_equalTo(10);
+        make.left.mas_equalTo(superView).offset(20);
+        make.top.mas_equalTo(superView).offset(10);
     }];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.head.mas_bottom).offset(57);
-        make.left.mas_equalTo(20);
+        make.left.mas_equalTo(superView).offset(20);
     }];
     [self.detail mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.title);
         make.top.equalTo(self.title.mas_bottom);
     }];
     [self.describe mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.bottom.equalTo(self.contentView).offset(-10);
+        make.left.mas_equalTo(superView).offset(20);
+        make.bottom.equalTo(superView).offset(-10);
     }];
 }
 @end

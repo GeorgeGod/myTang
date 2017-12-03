@@ -19,7 +19,7 @@
 #import "UIImage+Path.h"
 #import "UITableView+Extension.h"
 #import "GVUserDefaults+Extension.h"
-#import "Scale.h"
+#import "NSNumber+Extension.h"
 
 
 #import "BlockCallBack.h"

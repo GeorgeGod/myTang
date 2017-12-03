@@ -21,7 +21,7 @@
 
 -(void)initView {
     self.addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.addButton.titleLabel.font = [UIFont lightFont:15];
+    self.addButton.titleLabel.font = [UIFont LightFont:15];
     self.addButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [self.addButton jk_setImagePosition:LXMImagePositionLeft spacing:4];
     [self.contentView addSubview:self.addButton];

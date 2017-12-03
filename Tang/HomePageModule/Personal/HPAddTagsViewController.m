@@ -1,33 +1,34 @@
 //
-//  HPEditJobViewController.m
+//  HPAddTagsViewController.m
 //  Tang
 //
-//  Created by 虞嘉伟 on 2017/12/1.
+//  Created by 虞嘉伟 on 2017/12/2.
 //  Copyright © 2017年 虞嘉伟. All rights reserved.
 //
 
-#import "HPEditJobViewController.h"
+#import "HPAddTagsViewController.h"
 
-@interface HPEditJobViewController ()<UITextViewDelegate>
+@interface HPAddTagsViewController ()<UITextViewDelegate>
 {
     int limitWord;
 }
 @property (nonatomic, strong) UILabel *limitWordLabel;
 @end
 
-@implementation HPEditJobViewController
-@synthesize jobStr;
+@implementation HPAddTagsViewController
+
+@synthesize tagStr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    limitWord = 20;
-    if (!jobStr) {
-        jobStr = @"";
+    limitWord = 8;
+    if (!tagStr) {
+        tagStr = @"";
     }
     
     self.leftBarButtonItem([UIImage load:@"back_gray"]);
+    self.rightBarButtonItem(@"保存");
     self.tableView.backgroundColor = [UIColor whiteColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 -(void)initView {
@@ -41,28 +42,17 @@
     }];
 }
 
+-(void)rightBarButtonItemAction:(UIBarButtonItem *)rightBarButtonItem {
+    [self saveButtonAction];
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 150;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 88;
-}
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    UIView *footView = [UIView new];
-    footView.backgroundColor = [UIColor whiteColor];
-    UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [saveBtn setTitle:@"保存" forState:UIControlStateNormal];
-    [saveBtn jk_setBackgroundColor:[UIColor colorWithHexString:@"#222222"] forState:UIControlStateNormal];
-    [saveBtn addTarget:self action:@selector(saveButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [footView addSubview:saveBtn];
-    [saveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(footView).insets(UIEdgeInsetsMake(20, 20, 20, 20));
-    }];
-    return footView;
-}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
@@ -74,13 +64,13 @@
         tv.tag = 100;
         tv.delegate = self;
         tv.textColor = [UIColor colorWithHexString:@"#222222"];
-        tv.font = [UIFont lightFont:15];
+        tv.font = [UIFont LightFont:15];
         [cell.contentView addSubview:tv];
         
         //创建label
         UILabel *lab = [UILabel new];
         lab.textColor = [UIColor colorWithHexString:@"#999999"];
-        lab.font = [UIFont lightFont:12];
+        lab.font = [UIFont LightFont:12];
         self.limitWordLabel = lab;
         [cell.contentView addSubview:lab];
         
@@ -93,8 +83,8 @@
         }];
     }
     UITextView *tv = [cell.contentView viewWithTag:100];
-    tv.text = jobStr;
-    self.limitWordLabel.text = [NSString stringWithFormat:@"%ld/%d", jobStr.length, limitWord];
+    tv.text = tagStr;
+    self.limitWordLabel.text = [NSString stringWithFormat:@"%ld/%d", tagStr.length, limitWord];
     return cell;
 }
 
@@ -115,8 +105,8 @@
 }
 - (void)textViewDidChange:(UITextView *)textView {
     //观察输入的情况
-    jobStr = textView.text;
-    self.limitWordLabel.text = [NSString stringWithFormat:@"%ld/%d", jobStr.length, limitWord];
+    tagStr = textView.text;
+    self.limitWordLabel.text = [NSString stringWithFormat:@"%ld/%d", tagStr.length, limitWord];
     NSLog(@"输入框:%@,字数:%ld", textView.text, textView.text.length);
 }
 
@@ -126,9 +116,10 @@
  */
 -(void)saveButtonAction {
     if (self.inputComplete) {
-        self.inputComplete(jobStr);
+        self.inputComplete(tagStr);
     }
     [self popViewController];
 }
+
 
 @end

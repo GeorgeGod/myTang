@@ -11,12 +11,12 @@
 
 @interface MemberCenterCell()<UICollectionViewDelegate, UICollectionViewDataSource>
 {
-    float imageW;  //图片宽度
-    float interS;  //间距
+//    float imageW;  //图片宽度
+    float itemS;  //间距
 }
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIPageControl *pageCtrl;
-@property (nonatomic, strong) NSArray *dataArray;
+//@property (nonatomic, strong) NSArray *dataArray;
 @end
 
 @implementation MemberCenterCell
@@ -27,24 +27,25 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        [self initData];
+//        [self initData];
         
         [self initView];
     }
     return self;
 }
 
--(void)initData {
-    self.dataArray = @[@"", @"", @""];
-}
+//-(void)initData {
+//    self.dataArray = @[@"", @"", @""];
+//}
 
 -(void)initView {
-    interS = 13;
-    imageW = 335;
+    itemS = 0;
+//    imageW = 335;
+    float screenW = [UIScreen mainScreen].bounds.size.width;
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
-    flowLayout.minimumLineSpacing = interS;
-    flowLayout.itemSize = CGSizeMake(imageW, 180);
-    flowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
+    flowLayout.minimumLineSpacing = itemS;
+    flowLayout.itemSize = CGSizeMake(screenW, 180); //CGSizeMake(imageW, 180);
+//    flowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     collectionView.delegate = self;
@@ -52,6 +53,8 @@
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.showsVerticalScrollIndicator = NO;
     collectionView.showsHorizontalScrollIndicator = NO;
+    collectionView.scrollEnabled = NO;
+    collectionView.pagingEnabled = YES;
     [self addSubview:collectionView];
     [collectionView registerClass:[MCCycleCollectionCell class] forCellWithReuseIdentifier:@"MCCycleCollectionCell"];
     collectionView.clipsToBounds = NO;
@@ -59,7 +62,6 @@
     
     UIPageControl *ctrl = [UIPageControl new];
     ctrl.numberOfPages = 3;
-    ctrl.currentPage = 0;
     ctrl.pageIndicatorTintColor = [UIColor colorWithHexString:@"#222222" alpha:0.3];
     ctrl.currentPageIndicatorTintColor = [UIColor colorWithHexString:@"#222222"];
     [self addSubview:ctrl];
@@ -67,9 +69,9 @@
     
     //布局
     [collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).offset(30);
+        make.top.equalTo(self).offset(scale(30));
         make.left.right.equalTo(self);
-        make.height.mas_equalTo(180);
+        make.height.mas_equalTo(scale(180));
     }];
     [ctrl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
@@ -113,14 +115,14 @@
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"--%f", scrollView.contentOffset.x);
-    int offsetX = (int)(scrollView.contentOffset.x / imageW);
-    if (offsetX >= 0 && offsetX < self.pageCtrl.numberOfPages) {
-        self.pageCtrl.currentPage = offsetX;
-        if (self.didEndScroll) {
-            self.didEndScroll(offsetX);
-        }
-    }
+//    NSLog(@"--%f", scrollView.contentOffset.x);
+//    int offsetX = (int)(scrollView.contentOffset.x / imageW);
+//    if (offsetX >= 0 && offsetX < self.pageCtrl.numberOfPages) {
+//        self.pageCtrl.currentPage = offsetX;
+//        if (self.didEndScroll) {
+//            self.didEndScroll(offsetX);
+//        }
+//    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -145,15 +147,29 @@
  private 调整CollectionView的滚动
  */
 -(void)adjustPageScroll:(UIScrollView *)scrollView {
-    CGPoint offset = scrollView.contentOffset;
-    int page = (int)(offset.x/imageW+0.5); 
-    if (page > 2) {
-        page = 2;
-    }
-    if (page < 0) {
-        page = 0;
-    }
-    [scrollView setContentOffset:CGPointMake(imageW * page+interS*(page-1),               scrollView.contentOffset.y) animated:YES]; //设置scrollview的显示为当前滑动到的页面
+//    CGPoint offset = scrollView.contentOffset;
+//    int page = (int)(offset.x/imageW+0.5);
+//    if (page > 2) {
+//        page = 2;
+//    }
+//    if (page < 0) {
+//        page = 0;
+//    }
+//    [scrollView setContentOffset:CGPointMake(imageW * page+itemS*(page-1),               scrollView.contentOffset.y) animated:YES]; //设置scrollview的显示为当前滑动到的页面
 }
+
+-(void)assignmentCellWithCurrentPage:(NSInteger)index {
+    self.pageCtrl.currentPage = index;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        float screenW = [UIScreen mainScreen].bounds.size.width;
+        [self.collectionView setContentOffset:CGPointMake(screenW*index, 0)];
+    });
+}
+
+//-(void)pageCtrlValueChanged:(UIPageControl *)ctrl {
+//    NSInteger page = ctrl.currentPage;
+//    float screenW = [UIScreen mainScreen].bounds.size.width;
+//    [self.collectionView setContentOffset:CGPointMake(screenW*page, 180)];
+//}
 
 @end

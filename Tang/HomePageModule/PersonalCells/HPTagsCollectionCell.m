@@ -15,7 +15,7 @@
     if (self) {
         self.title = [UILabel new];
         self.title.textColor = [UIColor colorWithHexString:@"#999999"];
-        self.title.font = [UIFont lightFont:12];
+        self.title.font = [UIFont LightFont:12];
         self.title.text = @"每类标签限选5个";
         [self addSubview:self.title];
         [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -40,7 +40,7 @@
         [self.tags setTitleColor:[UIColor colorWithHexString:@"#FFFFFF"] forState:UIControlStateSelected];
         [self.tags jk_setBackgroundColor:[UIColor colorWithHexString:@"#FFFFFF"] forState:UIControlStateNormal];
         [self.tags jk_setBackgroundColor:[UIColor colorWithHexString:@"#222222"] forState:UIControlStateSelected];
-        [self.tags.titleLabel setFont:[UIFont lightFont:14]];
+        [self.tags.titleLabel setFont:[UIFont LightFont:14]];
         self.tags.layer.borderColor = [UIColor colorWithHexString:@"#B2B2B2"].CGColor;
         self.tags.layer.borderWidth = 0.5;
 //        self.tags.enabled = NO;

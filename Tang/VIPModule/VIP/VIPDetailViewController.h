@@ -10,4 +10,7 @@
 
 @interface VIPDetailViewController : BaseTableViewController
 
+//标记当前是第几页
+@property (nonatomic, assign) NSInteger currentPage;
+
 @end

@@ -18,9 +18,8 @@
 @interface MemberCenterCtrl ()
 {
     int currentPage; //当前Page
-    NSArray<NSString *> *dataArray;
+    NSArray<NSString *> *titleArray;
 }
-//@property (nonatomic, strong) UIButton *bottomButton; //底部按钮
 @end
 
 @implementation MemberCenterCtrl
@@ -31,7 +30,8 @@
     if (self = [super init]) {
         
         self.menuHeight = 0;
-        dataArray = @[@"VIP", @"Maker", @"储物箱"];
+        titleArray = @[@"VIP", @"Maker", @"储物箱"];
+        self.bounces = YES;
     }
     return self;
 }
@@ -60,7 +60,7 @@
 
 #pragma mark - Datasource & Delegate
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
-    return dataArray.count;
+    return titleArray.count;
 }
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
@@ -70,7 +70,7 @@
 }
 
 - (NSString *)pageController:(WMPageController *)pageController titleAtIndex:(NSInteger)index {
-    return dataArray[index];
+    return titleArray[index];
 }
 
 - (CGRect)pageController:(WMPageController *)pageController preferredFrameForMenuView:(WMMenuView *)menuView {

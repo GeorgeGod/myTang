@@ -110,7 +110,7 @@ const float lineH = 30;     //行高
  @return 返回实际的item的宽度
  */
 +(float)calculateItemWidthWithTitle:(NSString *)title {
-    float realW = [title boundingRectWithSize:CGSizeMake(1000, 14) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont lightFont:14]} context:nil].size.width;
+    float realW = [title boundingRectWithSize:CGSizeMake(1000, 14) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont LightFont:14]} context:nil].size.width;
     float stdW = [self calculateStandardItemWidth];
     if (realW > stdW && realW <= 2*stdW) {
         return 2*stdW;

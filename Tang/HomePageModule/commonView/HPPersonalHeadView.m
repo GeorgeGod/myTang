@@ -17,7 +17,7 @@
     //标题
     UILabel *title = [UILabel new];
     title.textColor = [UIColor colorWithHexString:@"#222222"];
-    title.font = [UIFont mediumFont:17];
+    title.font = [UIFont MediumFont:17];
     headView.title = title;
     [headView addSubview:title];
     

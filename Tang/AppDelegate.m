@@ -25,6 +25,12 @@
     self.window.rootViewController = [BaseNavigationController RootViewCtrl:[MineViewController new]];
     
     [RequestTest requestTest];
+    
+    
+    NSArray *arr = [UIFont familyNames];
+    for (NSString *font in arr) {
+        NSLog(@"font:%@", font);
+    }
     return YES;
 }
 

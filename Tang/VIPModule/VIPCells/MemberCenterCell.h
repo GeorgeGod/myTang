@@ -13,4 +13,5 @@
 @property (nonatomic, copy  ) scrollBlock didEndScroll;
 @property (nonatomic, copy  ) ButtonClickedCallBack buttonClickedBlock;
 
+-(void)assignmentCellWithCurrentPage:(NSInteger)index;
 @end

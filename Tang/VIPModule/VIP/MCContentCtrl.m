@@ -16,8 +16,9 @@
 
 @interface MCContentCtrl ()
 {
-    int currentPage; //当前Page
+//    int currentPage; //当前Page
     NSArray<MemberCenterStatusModel *> *dataArray;
+    NSArray <NSDictionary *> *privilegeArray; //特权数组
 }
 @property (nonatomic, strong) UIButton *bottomButton; //底部按钮
 @end
@@ -27,11 +28,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.title = @"会员中心";
-//    self.leftBarButtonItem([UIImage load:@"back_gray"]);
-//    self.rightBarButtonItem(@"联系客服");
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    if (self.currentPage == 0) {
+        privilegeArray = @[
+                           @{@"icon":@"icon_gift", @"title":@"298元大礼包"},
+                           @{@"icon":@"icon_discount", @"title":@"Store专享价"},
+                           @{@"icon":@"icon_enquire", @"title":@"企业咨询服务"},
+                           @{@"icon":@"icon_exclusive", @"title":@"会员专属标识"},
+                           @{@"icon":@"icon_country", @"title":@"全国通用"},
+                           ];
+    } else if (self.currentPage == 1) {
+        privilegeArray = @[
+                           @{@"icon":@"icon_tools", @"title":@"工具使用权"},
+                           @{@"icon":@"icon_box", @"title":@"储物箱租用权"},
+                           @{@"icon":@"icon_workshop", @"title":@"工作坊开发权"},
+                           @{@"icon":@"icon_course", @"title":@"专属课程福利"},
+                           @{@"icon":@"icon_cost", @"title":@"参赛费用优惠"},
+                           @{@"icon":@"icon_hobby", @"title":@"专属兴趣小组"},
+                           ];
+    } else {
+        privilegeArray = @[
+                           @{@"icon":@"¥100", @"title":@"包月租用储物箱"},
+                           @{@"icon":@"¥180", @"title":@"半年租用储物箱"},
+                           @{@"icon":@"¥360", @"title":@"全年租用储物箱"},
+                           ];
+    }
 }
 
 -(void)leftBarButtonItemAction:(UIBarButtonItem *)leftBarButtonItem {
@@ -52,11 +75,11 @@
     self.bottomButton = btn;
     __weak typeof(self)weakSelf = self;
     [btn jk_addActionHandler:^(NSInteger tag) {
-        if (currentPage<0 || currentPage>2) {
+        if (self.currentPage<0 || self.currentPage>2) {
             NSLog(@"---会员中心的page出错了！");
         }
         VIPConfirmOrderViewController *orderCtrl = [VIPConfirmOrderViewController new];
-        orderCtrl.centerType = currentPage+1;
+        orderCtrl.centerType = self.currentPage+1;
         [weakSelf pushViewCtrl:orderCtrl];
     }];
 }
@@ -95,7 +118,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return  self.currentPage == 2 ? 3 : 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -108,14 +131,10 @@
         header.backgroundColor = [UIColor whiteColor];
         return header;
     } else {
-        EnjoySectionHeader *header = [EnjoySectionHeader EnjoySectionHeader];
+        EnjoySectionHeader *header = [EnjoySectionHeader EnjoySectionFooter];
         header.backgroundColor = [UIColor whiteColor];
         return header;
     }
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return nil;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -126,9 +145,11 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 245;
+        float sw = [UIScreen mainScreen].bounds.size.width;
+        float h = 245.0/375*sw;
+        return h;//245; //w:375,h:245
     } else if (indexPath.section == 1) {
-        return 220;
+        return (self.currentPage==2) ? 80 : 220;
     } else {
         return [MemberCenterTipsCell obtainRichTextHeight];
     }
@@ -139,20 +160,18 @@
         MemberCenterCell *cell = (MemberCenterCell *)[tableView obtainCell:[MemberCenterCell class]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         __weak typeof(self)weakSelf = self;
-        cell.didEndScroll = ^(int crtPage) {
-            NSLog(@"current page : %d", crtPage);
-            currentPage = crtPage;
-            //刷新数据
-            [weakSelf refreshData];
-        };
         cell.buttonClickedBlock = ^(UIButton *btn) {
             NSLog(@"查看会员权益");
-            [self pushViewController:[VIPDetailViewController class]];
+            VIPDetailViewController *detailCtrl = [VIPDetailViewController new];
+            detailCtrl.currentPage = weakSelf.currentPage;
+            [weakSelf pushViewCtrl:detailCtrl];
         };
+        [cell assignmentCellWithCurrentPage:self.currentPage];
         return cell;
     }
     else if (indexPath.section == 1) {
         MemberEnjoyCell *cell = (MemberEnjoyCell *)[tableView obtainCell:[MemberEnjoyCell class]];
+        [cell assignmentCellWithData:privilegeArray];
         return cell;
     } else {
         return [tableView obtainCell:[MemberCenterTipsCell class]];
@@ -186,8 +205,8 @@
  刷新数据
  */
 -(void)refreshData {
-    int state = dataArray[currentPage].Status;
-    NSString *date = [NSString stringWithFormat:@"已开通，%@到期", dataArray[currentPage].DeadLint];
+    int state = dataArray[self.currentPage].Status;
+    NSString *date = [NSString stringWithFormat:@"已开通，%@到期", dataArray[self.currentPage].DeadLint];
     [self changeBottomButtonState:state withDate:date];
 }
 

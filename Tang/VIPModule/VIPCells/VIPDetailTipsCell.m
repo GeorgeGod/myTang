@@ -29,8 +29,35 @@
     [self.contentView addSubview:label];
     self.title = label;
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(self.contentView).insets(UIEdgeInsetsMake(5, 20, 0, 20));
+        make.left.right.top.equalTo(self.contentView).insets(UIEdgeInsetsMake(5, 20, 20, 20));
     }];
+}
+
+-(void)assignmentCellWithData:(NSString *)str {
+    self.title.attributedText = [VIPDetailTipsCell obtainTipsAttributed:str];
+}
+
+
+/**
+ 计算行高
+ 
+ @param str 数据源
+ @return 返回cell的高度
+ */
++(float)CalculateCellHeightWithData:(NSString *)str {
+    NSMutableAttributedString *attrStr = [VIPDetailTipsCell obtainTipsAttributed:str];
+    float screenW = [UIScreen mainScreen].bounds.size.width;
+    CGSize size = [attrStr boundingRectWithSize:CGSizeMake(screenW-20*2, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+    return size.height+25;
+}
+
++(NSMutableAttributedString *)obtainTipsAttributed:(NSString *)str {
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:str];
+    [attrStr addAttribute:NSFontAttributeName value:[UIFont LightFont:12] range:NSMakeRange(0, str.length)];
+    NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
+    style.lineSpacing = 5;
+    [attrStr addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, str.length)];
+    return attrStr;
 }
 
 @end

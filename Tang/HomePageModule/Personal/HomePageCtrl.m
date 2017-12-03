@@ -62,7 +62,6 @@
         } else if (section == 2) {
             return 67;
         } else if (section == 3) {
-//            HPPersonalTagsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HPPersonalTagsCell" forIndexPath:indexPath];
             float height = [HPPersonalTagsCell calculateCellHeightWithData:tagsArray];
             NSLog(@"cell height = %f", height);
             return height;

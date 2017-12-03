@@ -54,7 +54,7 @@
     
     if (txt.length > 0) {
         NSRange range = NSMakeRange(0, txt.length);
-        [attrStr addAttribute:NSFontAttributeName value:[UIFont lightFont:12] range:range];
+        [attrStr addAttribute:NSFontAttributeName value:[UIFont LightFont:12] range:range];
         NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
         style.lineSpacing = 3;
         [attrStr addAttribute:NSParagraphStyleAttributeName value:style range:range];
@@ -70,7 +70,7 @@
     
     if (txt.length > 0) {
         NSRange range = NSMakeRange(0, txt.length);
-        [attrStr addAttribute:NSFontAttributeName value:[UIFont lightFont:12] range:range];
+        [attrStr addAttribute:NSFontAttributeName value:[UIFont LightFont:12] range:range];
         NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
         style.lineSpacing = 4;
         [attrStr addAttribute:NSParagraphStyleAttributeName value:style range:range];
