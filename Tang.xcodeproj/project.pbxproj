@@ -342,13 +342,16 @@
 				847C17461FCE5C74004793AD /* HomePageModule */,
 				847C173C1FCE5267004793AD /* BaseController */,
 				5EA821FE1FCD87B900DC1FEE /* Font&Color */,
-				5EA822161FCED45E00DC1FEE /* Cell */,
 				5EA822261FCEEDC600DC1FEE /* Alert */,
 				847BC1821FCFE8CE007C6FE8 /* Http */,
 				847BC1861FCFF3D8007C6FE8 /* UserDefault */,
 				5EA821D61FCD7C4600DC1FEE /* Main.storyboard */,
 				5EA821D91FCD7C4600DC1FEE /* Assets.xcassets */,
 				5EA821DB1FCD7C4600DC1FEE /* LaunchScreen.storyboard */,
+				847C17411FCE5267004793AD /* BaseNavigationController.h */,
+				847C173F1FCE5267004793AD /* BaseNavigationController.m */,
+				5EADE9A61FD3F4C900573DB1 /* NSNumber+Extension.h */,
+				5EADE9A71FD3F4C900573DB1 /* NSNumber+Extension.m */,
 				5EA821DE1FCD7C4600DC1FEE /* Info.plist */,
 				5EA821DF1FCD7C4600DC1FEE /* main.m */,
 				5EA8220B1FCD8AE900DC1FEE /* PrefixHeader.pch */,
@@ -372,19 +375,10 @@
 				5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */,
 				5EA822271FCEEE0000DC1FEE /* UIAlertController+Extension.h */,
 				5EA822281FCEEE0000DC1FEE /* UIAlertController+Extension.m */,
-				5EADE9A61FD3F4C900573DB1 /* NSNumber+Extension.h */,
-				5EADE9A71FD3F4C900573DB1 /* NSNumber+Extension.m */,
-			);
-			path = "Font&Color";
-			sourceTree = "<group>";
-		};
-		5EA822161FCED45E00DC1FEE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
 				5EA8221A1FCED6D100DC1FEE /* UITableView+Extension.h */,
 				5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */,
 			);
-			path = Cell;
+			path = "Font&Color";
 			sourceTree = "<group>";
 		};
 		5EA822261FCEEDC600DC1FEE /* Alert */ = {
@@ -529,8 +523,6 @@
 			children = (
 				847C17401FCE5267004793AD /* BaseTableViewController.h */,
 				847C173D1FCE5267004793AD /* BaseTableViewController.m */,
-				847C17411FCE5267004793AD /* BaseNavigationController.h */,
-				847C173F1FCE5267004793AD /* BaseNavigationController.m */,
 				847C17421FCE5267004793AD /* BaseViewController.h */,
 				847C173E1FCE5267004793AD /* BaseViewController.m */,
 			);

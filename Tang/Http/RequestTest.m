@@ -7,6 +7,7 @@
 //
 
 #import "RequestTest.h"
+#import "Http.h"
 
 @implementation RequestTest
 

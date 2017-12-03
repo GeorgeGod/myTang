@@ -7,6 +7,7 @@
 //
 
 #import "MemberCenterCtrl.h"
+#import "UIImage+Path.h"
 #import "EnjoySectionHeader.h"
 #import "MemberCenterCell.h"
 #import "MemberEnjoyCell.h"
@@ -14,6 +15,7 @@
 #import "MCContentCtrl.h"
 #import "VIPConfirmOrderViewController.h"
 #import "VIPDetailViewController.h"
+#import "ContactCustomerService.h"
 
 @interface MemberCenterCtrl ()
 {

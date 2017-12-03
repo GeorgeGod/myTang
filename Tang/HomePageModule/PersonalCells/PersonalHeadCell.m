@@ -7,6 +7,8 @@
 //
 
 #import "PersonalHeadCell.h"
+#import "UIImage+Path.h"
+#import "UIColor+Extension.h"
 
 @implementation PersonalHeadCell
 

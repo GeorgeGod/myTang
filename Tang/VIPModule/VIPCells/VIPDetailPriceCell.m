@@ -7,6 +7,10 @@
 //
 
 #import "VIPDetailPriceCell.h"
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
+#import "UIImage+Path.h"
 
 @implementation VIPDetailPriceCell
 
@@ -25,7 +29,7 @@
     {
         UILabel *label = [UILabel new];
         label.text = @"包月VIP会员";
-        label.font = [UIFont font:17];
+        label.font = [UIFont RegularFont:17];
         label.textColor = [UIColor colorWithHexString:@"#222222"];
         [self.contentView addSubview:label];
         self.title = label;
@@ -34,7 +38,7 @@
         UILabel *label = [UILabel new];
         label.text = @"¥199/月";
         label.textAlignment = NSTextAlignmentRight;
-        label.font = [UIFont font:17];
+        label.font = [UIFont RegularFont:17];
         label.textColor = [UIColor colorWithHexString:@"#FC5D4D"];
         [self.contentView addSubview:label];
         self.price = label;

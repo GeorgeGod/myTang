@@ -7,6 +7,15 @@
 //
 
 #import "VIPConfirmOrderViewController.h"
+#import "UIImage+Path.h"
+#import <Masonry.h>
+#import <MJExtension.h>
+#import "UIFont+Extension.h"
+#import "UITableView+Extension.h"
+#import "GVUserDefaults+Extension.h"
+#import "UIColor+Extension.h"
+#import "NSNumber+Extension.h"
+#import <JKCategories/JKCategories.h>
 #import "VIPDetailPriceCell.h"
 #import "VIPConfirmOrderCell.h"
 #import "DefaultCell.h"
@@ -17,6 +26,9 @@
 #import "VIPWaitPayViewController.h"
 
 #import "OrderPriceModel.h"
+#import "ContactCustomerService.h"
+#import "Http.h"
+
 @interface VIPConfirmOrderViewController ()<DelegateCallBack>
 {
     NSArray<OrderPriceModel *> *dataArray;
@@ -132,7 +144,7 @@
         NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:@"我同意《INNOSPACE+ VIP服务协议》"];
         [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"#666666"] range:NSMakeRange(0, 3)];
         [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"#4B9FED"] range:NSMakeRange(3, attrStr.length-3)];
-        [attrStr addAttribute:NSFontAttributeName value:[UIFont font:12] range:NSMakeRange(0, attrStr.length)];
+        [attrStr addAttribute:NSFontAttributeName value:[UIFont RegularFont:12] range:NSMakeRange(0, attrStr.length)];
         [confirmAgreementBtn setAttributedTitle:attrStr forState:UIControlStateNormal];
         
         [confirmAgreementBtn setImage:[UIImage load:@"checkbox_nor"] forState:UIControlStateNormal];
@@ -195,7 +207,7 @@
             if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
                 cell.textLabel.textColor = [UIColor colorWithHexString:@"#999999"];
-                cell.textLabel.font = [UIFont font:12];
+                cell.textLabel.font = [UIFont RegularFont:12];
             }
             cell.textLabel.text = @"*支付成功后不可退款，会员权益立即激活";
             return cell;

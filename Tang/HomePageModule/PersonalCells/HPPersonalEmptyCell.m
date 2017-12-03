@@ -7,6 +7,11 @@
 //
 
 #import "HPPersonalEmptyCell.h"
+#import <JKCategories/JKCategories.h>
+#import <Masonry.h>
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
 
 @implementation HPPersonalEmptyCell
 

@@ -7,6 +7,8 @@
 //
 
 #import "HPTagsContentViewController.h"
+#import <Masonry.h>
+#import "UIView+Extension.h"
 #import "HPPersonalTagsCell.h"
 #import "HPTagsCollectionCell.h"
 
@@ -29,7 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor randomColor];
 }
 
 -(void)initData {

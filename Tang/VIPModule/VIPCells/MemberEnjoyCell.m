@@ -7,6 +7,11 @@
 //
 
 #import "MemberEnjoyCell.h"
+#import <Masonry.h>
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
+
 @interface MemberEnjoyCell()
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray< NSDictionary *> *dataArray;

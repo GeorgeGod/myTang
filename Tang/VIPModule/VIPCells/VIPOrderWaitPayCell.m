@@ -7,6 +7,7 @@
 //
 
 #import "VIPOrderWaitPayCell.h"
+#import "UIImage+Path.h"
 
 @interface VIPOrderWaitPayCell()
 @property (weak, nonatomic) IBOutlet UIImageView *bannerBG;

@@ -7,6 +7,9 @@
 //
 
 #import "HPEditPersonalViewController.h"
+#import "UIImage+Path.h"
+#import "UIColor+Extension.h"
+#import "UITableView+Extension.h"
 #import "HPEditPersonalModel.h"
 #import "HPEditPortraitCell.h"
 #import "HPEditDefaultCell.h"

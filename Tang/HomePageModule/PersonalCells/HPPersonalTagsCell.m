@@ -7,6 +7,8 @@
 //
 
 #import "HPPersonalTagsCell.h"
+#import <Masonry.h>
+#import "UIFont+Extension.h"
 #import "HPTagsCollectionCell.h"
 
 const float lineSpace = 15; //行间距

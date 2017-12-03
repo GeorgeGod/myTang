@@ -7,6 +7,10 @@
 //
 
 #import "HomePageCtrl.h"
+#import "UIImage+Path.h"
+#import "UIColor+Extension.h"
+#import <JKCategories/JKCategories.h>
+#import "UITableView+Extension.h"
 #import "PersonalHeadCell.h"
 #import "HPPersonalEmptyCell.h"
 #import "HPPersonalProjectCell.h"

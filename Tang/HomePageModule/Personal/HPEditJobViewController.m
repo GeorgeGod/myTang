@@ -7,6 +7,11 @@
 //
 
 #import "HPEditJobViewController.h"
+#import "UIImage+Path.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
+#import "UIFont+Extension.h"
+#import <JKCategories/JKCategories.h>
 
 @interface HPEditJobViewController ()<UITextViewDelegate>
 {

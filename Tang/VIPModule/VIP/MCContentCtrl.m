@@ -7,12 +7,22 @@
 //
 
 #import "MCContentCtrl.h"
+#import <JKCategories/JKCategories.h>
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+#import "UITableView+Extension.h"
+#import "ContactCustomerService.h"
 #import "EnjoySectionHeader.h"
 #import "MemberCenterCell.h"
 #import "MemberEnjoyCell.h"
 #import "MemberCenterTipsCell.h"
 #import "VIPConfirmOrderViewController.h"
 #import "VIPDetailViewController.h"
+
+#import "MemberCenterStatusModel.h"
+#import "Http.h"
+#import <MJExtension/MJExtension.h>
+#import "GVUserDefaults+Extension.h"
 
 @interface MCContentCtrl ()
 {

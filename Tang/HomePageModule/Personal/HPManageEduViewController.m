@@ -7,6 +7,12 @@
 //
 
 #import "HPManageEduViewController.h"
+#import "UIImage+Path.h"
+#import "UIColor+Extension.h"
+#import "UIView+Extension.h"
+#import <Masonry.h>
+#import "UITableView+Extension.h"
+#import <JKCategories/JKCategories.h>
 #import "HPEditPersonalModel.h"
 #import "HPEditDefaultCell.h"
 

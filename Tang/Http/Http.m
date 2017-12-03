@@ -7,6 +7,7 @@
 //
 
 #import "Http.h"
+#import "GVUserDefaults+Extension.h"
 
 @implementation HttpParams
 +(instancetype)HttpParams {

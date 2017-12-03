@@ -7,6 +7,9 @@
 //
 
 #import "DefaultCell.h"
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
 
 @implementation DefaultCell
 
@@ -21,10 +24,10 @@
 
 -(void)initView {
     self.textLabel.textColor = [UIColor colorWithHexString:@"#222222"];
-    self.textLabel.font = [UIFont font:15];
+    self.textLabel.font = [UIFont RegularFont:15];
     
     self.detailTextLabel.textColor = [UIColor colorWithHexString:@"#666666"];
-    self.detailTextLabel.font = [UIFont font:14];
+    self.detailTextLabel.font = [UIFont RegularFont:14];
     
     self.accessoryView = [[UIImageView alloc] initWithImage:[UIImage load:@"right_arrow"]];
 }

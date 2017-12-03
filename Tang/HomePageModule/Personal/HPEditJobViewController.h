@@ -7,6 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
+#import "BlockCallBack.h"
 
 @interface HPEditJobViewController : BaseTableViewController
 

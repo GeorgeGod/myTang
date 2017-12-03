@@ -7,6 +7,7 @@
 //
 
 #import "MCContentCtrl.h"
+#import <WMPageController.h>
 
 @interface MemberCenterCtrl : WMPageController
 

@@ -7,6 +7,9 @@
 //
 
 #import "HPAddEduViewController.h"
+#import "UIImage+Path.h"
+#import "UITableView+Extension.h"
+#import <Masonry.h>
 #import "HPEditPersonalModel.h"
 #import "HPEditDefaultCell.h"
 

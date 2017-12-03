@@ -7,6 +7,8 @@
 //
 
 #import "BaseNavigationController.h"
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
 
 @interface BaseNavigationController ()
 
@@ -22,7 +24,7 @@
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     
     /* 1.设置导航条标题字体颜色以及大小*/
-    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#030303"], NSFontAttributeName:[UIFont font:17]}];
+    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#030303"], NSFontAttributeName:[UIFont RegularFont:17]}];
     
     /* 2.设置导航条颜色 */
     [navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];

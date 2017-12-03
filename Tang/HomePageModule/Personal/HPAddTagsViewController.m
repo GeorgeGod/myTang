@@ -7,6 +7,10 @@
 //
 
 #import "HPAddTagsViewController.h"
+#import "UIImage+Path.h"
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
 
 @interface HPAddTagsViewController ()<UITextViewDelegate>
 {

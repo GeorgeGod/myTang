@@ -7,6 +7,8 @@
 //
 
 #import "HPManageTagsViewController.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
 #import "HPTagsContentViewController.h"
 
 @interface HPManageTagsViewController ()

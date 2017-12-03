@@ -7,6 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
+#import "Enum.h"
 
 @interface VIPConfirmOrderViewController : BaseTableViewController
 

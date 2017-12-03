@@ -11,7 +11,7 @@
 @interface UIFont (Extension)
 
 //苹方-简 常规体
-+(instancetype)font:(float)size;
++(instancetype)RegularFont:(float)size;
 
 //苹方-简 极细体
 +(instancetype)UltraLightFont:(float)size;

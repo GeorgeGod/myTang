@@ -7,6 +7,10 @@
 //
 
 #import "EnjoySectionHeader.h"
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import "NSNumber+Extension.h"
 
 @interface EnjoySectionHeader()
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -41,7 +45,7 @@
     title.text = txt;
     title.textColor = [UIColor colorWithHexString:@"#999999"];
     title.textAlignment = NSTextAlignmentCenter;
-    title.font = [UIFont font:15];
+    title.font = [UIFont RegularFont:15];
     headView.titleLabel = title;
     [headView addSubview:title];
     

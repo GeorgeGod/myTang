@@ -7,6 +7,8 @@
 //
 
 #import "VIPConfirmOrderCell.h"
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
 
 @interface VIPConfirmOrderCell()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

@@ -7,6 +7,11 @@
 //
 
 #import "HPPersonalHeadView.h"
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import "UIImage+Path.h"
+#import <JKCategories/JKCategories.h>
 
 @implementation HPPersonalHeadView
 
@@ -25,7 +30,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"编辑" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
-    [btn.titleLabel setFont:[UIFont font:14]];
+    [btn.titleLabel setFont:[UIFont RegularFont:14]];
     btn.showsTouchWhenHighlighted = YES;
     [btn jk_setImagePosition:LXMImagePositionLeft spacing:4];
     headView.button = btn;

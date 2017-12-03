@@ -7,6 +7,9 @@
 //
 
 #import "MineHeadTableViewCell.h"
+#import "UIImage+Path.h"
+#import <Masonry.h>
+#import "UIColor+Extension.h"
 
 @implementation MineHeadTableViewCell
 

@@ -7,7 +7,10 @@
 //
 
 #import "HPTagsCollectionCell.h"
-
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
+#import <JKCategories/JKCategories.h>
 
 @implementation HPTagsCollectionHeadView
 -(instancetype)initWithFrame:(CGRect)frame {

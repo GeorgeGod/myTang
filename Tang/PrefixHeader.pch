@@ -12,31 +12,31 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "UIColor+Extension.h"
-#import "UIFont+Extension.h"
-#import "UIImage+Extension.h"
-#import "UIView+Extension.h"
-#import "UIImage+Path.h"
-#import "UITableView+Extension.h"
-#import "GVUserDefaults+Extension.h"
-#import "NSNumber+Extension.h"
-
-
-#import "BlockCallBack.h"
-#import "DelegateCallBack.h"
-#import "Enum.h"
-
-#import "ContactCustomerService.h"
-
-#import "Http.h"
-
-#import <MJExtension/MJExtension.h>
-#import <Masonry.h>
-#import <AFNetworking.h>
-#import <JKCategories/JKCategories.h>
-#import <WMPageController.h>
-
-//模型
-#import "MemberCenterStatusModel.h"
+//#import "UIColor+Extension.h"
+//#import "UIFont+Extension.h"
+//#import "UIImage+Extension.h"
+//#import "UIView+Extension.h"
+//#import "UIImage+Path.h"
+//#import "UITableView+Extension.h"
+//#import "GVUserDefaults+Extension.h"
+//#import "NSNumber+Extension.h"
+//
+//
+//#import "BlockCallBack.h"
+//#import "DelegateCallBack.h"
+//#import "Enum.h"
+//
+//#import "ContactCustomerService.h"
+//
+//#import "Http.h"
+//
+//#import <MJExtension/MJExtension.h>
+//#import <Masonry.h>
+//#import <AFNetworking.h>
+//#import <JKCategories/JKCategories.h>
+//#import <WMPageController.h>
+//
+////模型
+//#import "MemberCenterStatusModel.h"
 
 #endif /* PrefixHeader_pch */

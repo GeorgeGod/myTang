@@ -7,6 +7,8 @@
 //
 
 #import "BaseTableViewController.h"
+#import <JKCategories/JKCategories.h>
+#import <Masonry.h>
 
 @implementation BaseTableViewController
 

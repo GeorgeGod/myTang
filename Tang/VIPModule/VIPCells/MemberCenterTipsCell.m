@@ -7,6 +7,9 @@
 //
 
 #import "MemberCenterTipsCell.h"
+#import "UIFont+Extension.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
 
 @interface MemberCenterTipsCell()
 @property (nonatomic, strong) UILabel *title;
@@ -19,7 +22,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         UILabel *label = [UILabel new];
-        label.font = [UIFont font:12];
+        label.font = [UIFont RegularFont:12];
         label.numberOfLines = 0;
         label.textColor = [UIColor colorWithHexString:@"#999999"];
         self.title = label;

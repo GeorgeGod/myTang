@@ -7,6 +7,10 @@
 //
 
 #import "MemberCenterCell.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
+#import "NSNumber+Extension.h"
+#import <JKCategories/JKCategories.h>
 #import "MCCycleCollectionCell.h"
 
 @interface MemberCenterCell()<UICollectionViewDelegate, UICollectionViewDataSource>

@@ -7,6 +7,16 @@
 //
 
 #import "VIPDetailViewController.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
+#import "UIImage+Extension.h"
+#import "ContactCustomerService.h"
+#import "UITableView+Extension.h"
+#import "UIColor+Extension.h"
+#import <JKCategories/JKCategories.h>
+#import "UIColor+Extension.h"
 #import "VIPConfirmOrderViewController.h"
 
 #import "VIPDetailPriceCell.h"
@@ -97,7 +107,7 @@
     
     UIButton *vipBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [vipBtn setTitle:@"立即开通VIP会员" forState:UIControlStateNormal];
-    vipBtn.titleLabel.font = [UIFont font:17];
+    vipBtn.titleLabel.font = [UIFont RegularFont:17];
     [vipBtn setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#222222"]] forState:UIControlStateNormal];
     [vipBtn setShowsTouchWhenHighlighted:YES];
     __weak typeof(self) weakSelf = self;

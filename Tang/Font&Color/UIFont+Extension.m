@@ -11,7 +11,7 @@
 @implementation UIFont (Extension)
 
 //苹方-简 常规体
-+(instancetype)font:(float)size {
++(instancetype)RegularFont:(float)size {
     return [UIFont fontWithName:@"PingFangSC-Regular" size:size];
 }
 

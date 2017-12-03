@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BlockCallBack.h"
 #define HOST @"http://tangshuo2017.idea-source.net"
 
 @interface HttpParams : NSObject
