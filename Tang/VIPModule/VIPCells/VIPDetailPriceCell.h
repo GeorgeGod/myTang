@@ -13,5 +13,7 @@
 @property (nonatomic, strong) UIImageView *viplogo;
 @property (nonatomic, strong) UILabel *title;
 @property (nonatomic, strong) UILabel *price;
+@property (nonatomic, strong) UILabel *describe;
 
+-(void)assignmentCellWithData:(NSDictionary *)dataDic;
 @end

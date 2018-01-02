@@ -27,7 +27,6 @@
 		5EA822071FCD88A300DC1FEE /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822061FCD88A300DC1FEE /* UIImage+Extension.m */; };
 		5EA8220A1FCD89CD00DC1FEE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822091FCD89CD00DC1FEE /* UIView+Extension.m */; };
 		5EA822121FCDAF6C00DC1FEE /* UIImage+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */; };
-		5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822141FCDC23F00DC1FEE /* Scale.m */; };
 		5EA8221C1FCED6D100DC1FEE /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */; };
 		5EA822201FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8221E1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m */; };
 		5EA822211FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8221F1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib */; };
@@ -37,6 +36,30 @@
 		5EA822301FCF00AF00DC1FEE /* ActionSheetHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8222F1FCF00AF00DC1FEE /* ActionSheetHeadView.m */; };
 		5EA822331FCF04F600DC1FEE /* ActionSheetBoardVciew.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822321FCF04F600DC1FEE /* ActionSheetBoardVciew.m */; };
 		5EA822361FCF0D9400DC1FEE /* PaymentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA822351FCF0D9400DC1FEE /* PaymentBarView.m */; };
+		5EADE9631FD17C0500573DB1 /* HPPersonalEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9621FD17C0500573DB1 /* HPPersonalEmptyCell.m */; };
+		5EADE9671FD184C100573DB1 /* HPPersonalProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9651FD184C100573DB1 /* HPPersonalProjectCell.m */; };
+		5EADE9681FD184C100573DB1 /* HPPersonalProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EADE9661FD184C100573DB1 /* HPPersonalProjectCell.xib */; };
+		5EADE96C1FD184E600573DB1 /* HPPersonalEduCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE96A1FD184E600573DB1 /* HPPersonalEduCell.m */; };
+		5EADE96D1FD184E600573DB1 /* HPPersonalEduCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EADE96B1FD184E600573DB1 /* HPPersonalEduCell.xib */; };
+		5EADE9701FD1856500573DB1 /* HPPersonalTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE96F1FD1856500573DB1 /* HPPersonalTagsCell.m */; };
+		5EADE9741FD192AB00573DB1 /* HPPersonalHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9731FD192AB00573DB1 /* HPPersonalHeadView.m */; };
+		5EADE9771FD19A1F00573DB1 /* HPEditPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9761FD19A1F00573DB1 /* HPEditPersonalViewController.m */; };
+		5EADE97B1FD19B6400573DB1 /* HPEditPortraitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9791FD19B6400573DB1 /* HPEditPortraitCell.m */; };
+		5EADE97C1FD19B6400573DB1 /* HPEditPortraitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EADE97A1FD19B6400573DB1 /* HPEditPortraitCell.xib */; };
+		5EADE9801FD19C7E00573DB1 /* HPEditDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE97E1FD19C7E00573DB1 /* HPEditDefaultCell.m */; };
+		5EADE9811FD19C7E00573DB1 /* HPEditDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EADE97F1FD19C7E00573DB1 /* HPEditDefaultCell.xib */; };
+		5EADE9851FD19EEE00573DB1 /* HPEditPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9841FD19EEE00573DB1 /* HPEditPersonalModel.m */; };
+		5EADE9881FD1A68300573DB1 /* HPEditJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9871FD1A68300573DB1 /* HPEditJobViewController.m */; };
+		5EADE98B1FD255DC00573DB1 /* HPAddEduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE98A1FD255DC00573DB1 /* HPAddEduViewController.m */; };
+		5EADE98E1FD262BF00573DB1 /* HPManageEduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE98D1FD262BF00573DB1 /* HPManageEduViewController.m */; };
+		5EADE9911FD2791100573DB1 /* MCContentCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9901FD2791100573DB1 /* MCContentCtrl.m */; };
+		5EADE9941FD29D3E00573DB1 /* HPAddTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9931FD29D3E00573DB1 /* HPAddTagsViewController.m */; };
+		5EADE99A1FD2A55F00573DB1 /* HPTagsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9991FD2A55F00573DB1 /* HPTagsCollectionCell.m */; };
+		5EADE99D1FD2B6B800573DB1 /* HPManageTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE99C1FD2B6B800573DB1 /* HPManageTagsViewController.m */; };
+		5EADE9A01FD2B6E500573DB1 /* HPTagsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE99F1FD2B6E500573DB1 /* HPTagsContentViewController.m */; };
+		5EADE9A41FD3D6DE00573DB1 /* VIPPrivilegeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9A21FD3D6DE00573DB1 /* VIPPrivilegeCell.m */; };
+		5EADE9A51FD3D6DE00573DB1 /* VIPPrivilegeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EADE9A31FD3D6DE00573DB1 /* VIPPrivilegeCell.xib */; };
+		5EADE9A81FD3F4C900573DB1 /* NSNumber+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADE9A71FD3F4C900573DB1 /* NSNumber+Extension.m */; };
 		8477A48E1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477A48D1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m */; };
 		8477A4911FD1264B003D1FA8 /* OrderPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477A4901FD1264B003D1FA8 /* OrderPriceModel.m */; };
 		8477A4981FD14F4D003D1FA8 /* HomePageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477A4971FD14F4D003D1FA8 /* HomePageCtrl.m */; };
@@ -52,8 +75,6 @@
 		847BC1851FCFE8EE007C6FE8 /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BC1841FCFE8EE007C6FE8 /* Http.m */; };
 		847BC1891FCFF428007C6FE8 /* GVUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BC1881FCFF428007C6FE8 /* GVUserDefaults+Extension.m */; };
 		847BC18C1FCFF73B007C6FE8 /* RequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BC18B1FCFF73B007C6FE8 /* RequestTest.m */; };
-		847BC18F1FCFFF1A007C6FE8 /* Foundation+NSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BC18E1FCFFF1A007C6FE8 /* Foundation+NSLog.m */; };
-		847BC1921FD0009F007C6FE8 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BC1911FD0009F007C6FE8 /* NSDictionary+Log.m */; };
 		847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173D1FCE5267004793AD /* BaseTableViewController.m */; };
 		847C17441FCE5267004793AD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173E1FCE5267004793AD /* BaseViewController.m */; };
 		847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C173F1FCE5267004793AD /* BaseNavigationController.m */; };
@@ -74,10 +95,6 @@
 		847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17811FCE798C004793AD /* MemberCenterCell.m */; };
 		847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17841FCE8652004793AD /* MCCycleCollectionCell.m */; };
 		847C17881FCEB9DE004793AD /* VIPDetailPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17871FCEB9DE004793AD /* VIPDetailPriceCell.m */; };
-		847C178C1FCEBA32004793AD /* VIPDetailGiftBagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C178A1FCEBA32004793AD /* VIPDetailGiftBagCell.m */; };
-		847C178D1FCEBA32004793AD /* VIPDetailGiftBagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847C178B1FCEBA32004793AD /* VIPDetailGiftBagCell.xib */; };
-		847C17911FCEBA8C004793AD /* VIPDetailDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C178F1FCEBA8C004793AD /* VIPDetailDiscountCell.m */; };
-		847C17921FCEBA8C004793AD /* VIPDetailDiscountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */; };
 		847C17951FCEBAC4004793AD /* VIPDetailTipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */; };
 		89FB1DC188E31433325A8E09 /* libPods-Tang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5E258E51337524F00D4225 /* libPods-Tang.a */; };
 /* End PBXBuildFile section */
@@ -119,8 +136,6 @@
 		5EA8220B1FCD8AE900DC1FEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5EA822101FCDAF6C00DC1FEE /* UIImage+Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Path.h"; sourceTree = "<group>"; };
 		5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Path.m"; sourceTree = "<group>"; };
-		5EA822131FCDC23F00DC1FEE /* Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scale.h; sourceTree = "<group>"; };
-		5EA822141FCDC23F00DC1FEE /* Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scale.m; sourceTree = "<group>"; };
 		5EA8221A1FCED6D100DC1FEE /* UITableView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
 		5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extension.m"; sourceTree = "<group>"; };
 		5EA8221D1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPConfirmOrderCell.h; sourceTree = "<group>"; };
@@ -139,6 +154,49 @@
 		5EA822321FCF04F600DC1FEE /* ActionSheetBoardVciew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetBoardVciew.m; sourceTree = "<group>"; };
 		5EA822341FCF0D9400DC1FEE /* PaymentBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentBarView.h; sourceTree = "<group>"; };
 		5EA822351FCF0D9400DC1FEE /* PaymentBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentBarView.m; sourceTree = "<group>"; };
+		5EADE9611FD17C0500573DB1 /* HPPersonalEmptyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPersonalEmptyCell.h; sourceTree = "<group>"; };
+		5EADE9621FD17C0500573DB1 /* HPPersonalEmptyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPersonalEmptyCell.m; sourceTree = "<group>"; };
+		5EADE9641FD184C100573DB1 /* HPPersonalProjectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPersonalProjectCell.h; sourceTree = "<group>"; };
+		5EADE9651FD184C100573DB1 /* HPPersonalProjectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPersonalProjectCell.m; sourceTree = "<group>"; };
+		5EADE9661FD184C100573DB1 /* HPPersonalProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HPPersonalProjectCell.xib; sourceTree = "<group>"; };
+		5EADE9691FD184E600573DB1 /* HPPersonalEduCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPersonalEduCell.h; sourceTree = "<group>"; };
+		5EADE96A1FD184E600573DB1 /* HPPersonalEduCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPersonalEduCell.m; sourceTree = "<group>"; };
+		5EADE96B1FD184E600573DB1 /* HPPersonalEduCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HPPersonalEduCell.xib; sourceTree = "<group>"; };
+		5EADE96E1FD1856500573DB1 /* HPPersonalTagsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPersonalTagsCell.h; sourceTree = "<group>"; };
+		5EADE96F1FD1856500573DB1 /* HPPersonalTagsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPersonalTagsCell.m; sourceTree = "<group>"; };
+		5EADE9721FD192AB00573DB1 /* HPPersonalHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPersonalHeadView.h; sourceTree = "<group>"; };
+		5EADE9731FD192AB00573DB1 /* HPPersonalHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPersonalHeadView.m; sourceTree = "<group>"; };
+		5EADE9751FD19A1F00573DB1 /* HPEditPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPEditPersonalViewController.h; sourceTree = "<group>"; };
+		5EADE9761FD19A1F00573DB1 /* HPEditPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditPersonalViewController.m; sourceTree = "<group>"; };
+		5EADE9781FD19B6400573DB1 /* HPEditPortraitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPEditPortraitCell.h; sourceTree = "<group>"; };
+		5EADE9791FD19B6400573DB1 /* HPEditPortraitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditPortraitCell.m; sourceTree = "<group>"; };
+		5EADE97A1FD19B6400573DB1 /* HPEditPortraitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HPEditPortraitCell.xib; sourceTree = "<group>"; };
+		5EADE97D1FD19C7E00573DB1 /* HPEditDefaultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPEditDefaultCell.h; sourceTree = "<group>"; };
+		5EADE97E1FD19C7E00573DB1 /* HPEditDefaultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditDefaultCell.m; sourceTree = "<group>"; };
+		5EADE97F1FD19C7E00573DB1 /* HPEditDefaultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HPEditDefaultCell.xib; sourceTree = "<group>"; };
+		5EADE9831FD19EEE00573DB1 /* HPEditPersonalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPEditPersonalModel.h; sourceTree = "<group>"; };
+		5EADE9841FD19EEE00573DB1 /* HPEditPersonalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditPersonalModel.m; sourceTree = "<group>"; };
+		5EADE9861FD1A68300573DB1 /* HPEditJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPEditJobViewController.h; sourceTree = "<group>"; };
+		5EADE9871FD1A68300573DB1 /* HPEditJobViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPEditJobViewController.m; sourceTree = "<group>"; };
+		5EADE9891FD255DC00573DB1 /* HPAddEduViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAddEduViewController.h; sourceTree = "<group>"; };
+		5EADE98A1FD255DC00573DB1 /* HPAddEduViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAddEduViewController.m; sourceTree = "<group>"; };
+		5EADE98C1FD262BF00573DB1 /* HPManageEduViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPManageEduViewController.h; sourceTree = "<group>"; };
+		5EADE98D1FD262BF00573DB1 /* HPManageEduViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPManageEduViewController.m; sourceTree = "<group>"; };
+		5EADE98F1FD2791100573DB1 /* MCContentCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCContentCtrl.h; sourceTree = "<group>"; };
+		5EADE9901FD2791100573DB1 /* MCContentCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCContentCtrl.m; sourceTree = "<group>"; };
+		5EADE9921FD29D3E00573DB1 /* HPAddTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAddTagsViewController.h; sourceTree = "<group>"; };
+		5EADE9931FD29D3E00573DB1 /* HPAddTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAddTagsViewController.m; sourceTree = "<group>"; };
+		5EADE9981FD2A55F00573DB1 /* HPTagsCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPTagsCollectionCell.h; sourceTree = "<group>"; };
+		5EADE9991FD2A55F00573DB1 /* HPTagsCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPTagsCollectionCell.m; sourceTree = "<group>"; };
+		5EADE99B1FD2B6B800573DB1 /* HPManageTagsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPManageTagsViewController.h; sourceTree = "<group>"; };
+		5EADE99C1FD2B6B800573DB1 /* HPManageTagsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPManageTagsViewController.m; sourceTree = "<group>"; };
+		5EADE99E1FD2B6E500573DB1 /* HPTagsContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPTagsContentViewController.h; sourceTree = "<group>"; };
+		5EADE99F1FD2B6E500573DB1 /* HPTagsContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPTagsContentViewController.m; sourceTree = "<group>"; };
+		5EADE9A11FD3D6DE00573DB1 /* VIPPrivilegeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPPrivilegeCell.h; sourceTree = "<group>"; };
+		5EADE9A21FD3D6DE00573DB1 /* VIPPrivilegeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPPrivilegeCell.m; sourceTree = "<group>"; };
+		5EADE9A31FD3D6DE00573DB1 /* VIPPrivilegeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VIPPrivilegeCell.xib; sourceTree = "<group>"; };
+		5EADE9A61FD3F4C900573DB1 /* NSNumber+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Extension.h"; sourceTree = "<group>"; };
+		5EADE9A71FD3F4C900573DB1 /* NSNumber+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Extension.m"; sourceTree = "<group>"; };
 		8477A48C1FD0F7B0003D1FA8 /* MemberCenterTipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberCenterTipsCell.h; sourceTree = "<group>"; };
 		8477A48D1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberCenterTipsCell.m; sourceTree = "<group>"; };
 		8477A48F1FD1264B003D1FA8 /* OrderPriceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderPriceModel.h; sourceTree = "<group>"; };
@@ -166,9 +224,6 @@
 		847BC1881FCFF428007C6FE8 /* GVUserDefaults+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Extension.m"; sourceTree = "<group>"; };
 		847BC18A1FCFF73B007C6FE8 /* RequestTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestTest.h; sourceTree = "<group>"; };
 		847BC18B1FCFF73B007C6FE8 /* RequestTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestTest.m; sourceTree = "<group>"; };
-		847BC18E1FCFFF1A007C6FE8 /* Foundation+NSLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Foundation+NSLog.m"; sourceTree = "<group>"; };
-		847BC1901FD0009F007C6FE8 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
-		847BC1911FD0009F007C6FE8 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		847C173D1FCE5267004793AD /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		847C173E1FCE5267004793AD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		847C173F1FCE5267004793AD /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
@@ -211,12 +266,6 @@
 		847C17841FCE8652004793AD /* MCCycleCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCCycleCollectionCell.m; sourceTree = "<group>"; };
 		847C17861FCEB9DE004793AD /* VIPDetailPriceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailPriceCell.h; sourceTree = "<group>"; };
 		847C17871FCEB9DE004793AD /* VIPDetailPriceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailPriceCell.m; sourceTree = "<group>"; };
-		847C17891FCEBA32004793AD /* VIPDetailGiftBagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailGiftBagCell.h; sourceTree = "<group>"; };
-		847C178A1FCEBA32004793AD /* VIPDetailGiftBagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailGiftBagCell.m; sourceTree = "<group>"; };
-		847C178B1FCEBA32004793AD /* VIPDetailGiftBagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VIPDetailGiftBagCell.xib; sourceTree = "<group>"; };
-		847C178E1FCEBA8C004793AD /* VIPDetailDiscountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailDiscountCell.h; sourceTree = "<group>"; };
-		847C178F1FCEBA8C004793AD /* VIPDetailDiscountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailDiscountCell.m; sourceTree = "<group>"; };
-		847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VIPDetailDiscountCell.xib; sourceTree = "<group>"; };
 		847C17931FCEBAC4004793AD /* VIPDetailTipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPDetailTipsCell.h; sourceTree = "<group>"; };
 		847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIPDetailTipsCell.m; sourceTree = "<group>"; };
 		CA5E258E51337524F00D4225 /* libPods-Tang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,17 +339,19 @@
 				847C174A1FCE5DC9004793AD /* CallBack */,
 				847C17671FCE6AF6004793AD /* LOCKER */,
 				847C175D1FCE61CD004793AD /* MAKER */,
-				847C17461FCE5C74004793AD /* PersonalHomePage */,
+				847C17461FCE5C74004793AD /* HomePageModule */,
 				847C173C1FCE5267004793AD /* BaseController */,
-				5EA8220C1FCDAD7A00DC1FEE /* Scale */,
 				5EA821FE1FCD87B900DC1FEE /* Font&Color */,
-				5EA822161FCED45E00DC1FEE /* Cell */,
 				5EA822261FCEEDC600DC1FEE /* Alert */,
 				847BC1821FCFE8CE007C6FE8 /* Http */,
 				847BC1861FCFF3D8007C6FE8 /* UserDefault */,
 				5EA821D61FCD7C4600DC1FEE /* Main.storyboard */,
 				5EA821D91FCD7C4600DC1FEE /* Assets.xcassets */,
 				5EA821DB1FCD7C4600DC1FEE /* LaunchScreen.storyboard */,
+				847C17411FCE5267004793AD /* BaseNavigationController.h */,
+				847C173F1FCE5267004793AD /* BaseNavigationController.m */,
+				5EADE9A61FD3F4C900573DB1 /* NSNumber+Extension.h */,
+				5EADE9A71FD3F4C900573DB1 /* NSNumber+Extension.m */,
 				5EA821DE1FCD7C4600DC1FEE /* Info.plist */,
 				5EA821DF1FCD7C4600DC1FEE /* main.m */,
 				5EA8220B1FCD8AE900DC1FEE /* PrefixHeader.pch */,
@@ -324,29 +375,10 @@
 				5EA822111FCDAF6C00DC1FEE /* UIImage+Path.m */,
 				5EA822271FCEEE0000DC1FEE /* UIAlertController+Extension.h */,
 				5EA822281FCEEE0000DC1FEE /* UIAlertController+Extension.m */,
-				847BC18E1FCFFF1A007C6FE8 /* Foundation+NSLog.m */,
-				847BC1901FD0009F007C6FE8 /* NSDictionary+Log.h */,
-				847BC1911FD0009F007C6FE8 /* NSDictionary+Log.m */,
-			);
-			path = "Font&Color";
-			sourceTree = "<group>";
-		};
-		5EA8220C1FCDAD7A00DC1FEE /* Scale */ = {
-			isa = PBXGroup;
-			children = (
-				5EA822131FCDC23F00DC1FEE /* Scale.h */,
-				5EA822141FCDC23F00DC1FEE /* Scale.m */,
-			);
-			path = Scale;
-			sourceTree = "<group>";
-		};
-		5EA822161FCED45E00DC1FEE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
 				5EA8221A1FCED6D100DC1FEE /* UITableView+Extension.h */,
 				5EA8221B1FCED6D100DC1FEE /* UITableView+Extension.m */,
 			);
-			path = Cell;
+			path = "Font&Color";
 			sourceTree = "<group>";
 		};
 		5EA822261FCEEDC600DC1FEE /* Alert */ = {
@@ -367,6 +399,24 @@
 				5EA8222F1FCF00AF00DC1FEE /* ActionSheetHeadView.m */,
 			);
 			path = ComponentSheets;
+			sourceTree = "<group>";
+		};
+		5EADE9711FD1926F00573DB1 /* commonView */ = {
+			isa = PBXGroup;
+			children = (
+				5EADE9721FD192AB00573DB1 /* HPPersonalHeadView.h */,
+				5EADE9731FD192AB00573DB1 /* HPPersonalHeadView.m */,
+			);
+			path = commonView;
+			sourceTree = "<group>";
+		};
+		5EADE9821FD19EC400573DB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EADE9831FD19EEE00573DB1 /* HPEditPersonalModel.h */,
+				5EADE9841FD19EEE00573DB1 /* HPEditPersonalModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5F53873F6648FB8CEE4AA34E /* Pods */ = {
@@ -402,6 +452,20 @@
 			children = (
 				8477A4961FD14F4D003D1FA8 /* HomePageCtrl.h */,
 				8477A4971FD14F4D003D1FA8 /* HomePageCtrl.m */,
+				5EADE9751FD19A1F00573DB1 /* HPEditPersonalViewController.h */,
+				5EADE9761FD19A1F00573DB1 /* HPEditPersonalViewController.m */,
+				5EADE9861FD1A68300573DB1 /* HPEditJobViewController.h */,
+				5EADE9871FD1A68300573DB1 /* HPEditJobViewController.m */,
+				5EADE98C1FD262BF00573DB1 /* HPManageEduViewController.h */,
+				5EADE98D1FD262BF00573DB1 /* HPManageEduViewController.m */,
+				5EADE9891FD255DC00573DB1 /* HPAddEduViewController.h */,
+				5EADE98A1FD255DC00573DB1 /* HPAddEduViewController.m */,
+				5EADE99B1FD2B6B800573DB1 /* HPManageTagsViewController.h */,
+				5EADE99C1FD2B6B800573DB1 /* HPManageTagsViewController.m */,
+				5EADE99E1FD2B6E500573DB1 /* HPTagsContentViewController.h */,
+				5EADE99F1FD2B6E500573DB1 /* HPTagsContentViewController.m */,
+				5EADE9921FD29D3E00573DB1 /* HPAddTagsViewController.h */,
+				5EADE9931FD29D3E00573DB1 /* HPAddTagsViewController.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -412,6 +476,24 @@
 				8477A4BC1FD1535F003D1FA8 /* PersonalHeadCell.h */,
 				8477A4BD1FD1535F003D1FA8 /* PersonalHeadCell.m */,
 				8477A4BE1FD1535F003D1FA8 /* PersonalHeadCell.xib */,
+				5EADE9611FD17C0500573DB1 /* HPPersonalEmptyCell.h */,
+				5EADE9621FD17C0500573DB1 /* HPPersonalEmptyCell.m */,
+				5EADE9641FD184C100573DB1 /* HPPersonalProjectCell.h */,
+				5EADE9651FD184C100573DB1 /* HPPersonalProjectCell.m */,
+				5EADE9661FD184C100573DB1 /* HPPersonalProjectCell.xib */,
+				5EADE9691FD184E600573DB1 /* HPPersonalEduCell.h */,
+				5EADE96A1FD184E600573DB1 /* HPPersonalEduCell.m */,
+				5EADE96B1FD184E600573DB1 /* HPPersonalEduCell.xib */,
+				5EADE96E1FD1856500573DB1 /* HPPersonalTagsCell.h */,
+				5EADE96F1FD1856500573DB1 /* HPPersonalTagsCell.m */,
+				5EADE9781FD19B6400573DB1 /* HPEditPortraitCell.h */,
+				5EADE9791FD19B6400573DB1 /* HPEditPortraitCell.m */,
+				5EADE97A1FD19B6400573DB1 /* HPEditPortraitCell.xib */,
+				5EADE97D1FD19C7E00573DB1 /* HPEditDefaultCell.h */,
+				5EADE97E1FD19C7E00573DB1 /* HPEditDefaultCell.m */,
+				5EADE97F1FD19C7E00573DB1 /* HPEditDefaultCell.xib */,
+				5EADE9981FD2A55F00573DB1 /* HPTagsCollectionCell.h */,
+				5EADE9991FD2A55F00573DB1 /* HPTagsCollectionCell.m */,
 			);
 			path = PersonalCells;
 			sourceTree = "<group>";
@@ -441,21 +523,21 @@
 			children = (
 				847C17401FCE5267004793AD /* BaseTableViewController.h */,
 				847C173D1FCE5267004793AD /* BaseTableViewController.m */,
-				847C17411FCE5267004793AD /* BaseNavigationController.h */,
-				847C173F1FCE5267004793AD /* BaseNavigationController.m */,
 				847C17421FCE5267004793AD /* BaseViewController.h */,
 				847C173E1FCE5267004793AD /* BaseViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
 		};
-		847C17461FCE5C74004793AD /* PersonalHomePage */ = {
+		847C17461FCE5C74004793AD /* HomePageModule */ = {
 			isa = PBXGroup;
 			children = (
+				5EADE9821FD19EC400573DB1 /* Models */,
+				5EADE9711FD1926F00573DB1 /* commonView */,
 				8477A4BB1FD15317003D1FA8 /* PersonalCells */,
 				8477A4951FD14EFF003D1FA8 /* Personal */,
 			);
-			path = PersonalHomePage;
+			path = HomePageModule;
 			sourceTree = "<group>";
 		};
 		847C174A1FCE5DC9004793AD /* CallBack */ = {
@@ -473,6 +555,8 @@
 			children = (
 				847C175A1FCE61B6004793AD /* MemberCenterCtrl.h */,
 				847C175B1FCE61B6004793AD /* MemberCenterCtrl.m */,
+				5EADE98F1FD2791100573DB1 /* MCContentCtrl.h */,
+				5EADE9901FD2791100573DB1 /* MCContentCtrl.m */,
 				847C17511FCE605D004793AD /* VIPDetailViewController.h */,
 				847C17521FCE605D004793AD /* VIPDetailViewController.m */,
 				847C17541FCE6085004793AD /* VIPConfirmOrderViewController.h */,
@@ -546,12 +630,9 @@
 				847C17841FCE8652004793AD /* MCCycleCollectionCell.m */,
 				847C17861FCEB9DE004793AD /* VIPDetailPriceCell.h */,
 				847C17871FCEB9DE004793AD /* VIPDetailPriceCell.m */,
-				847C17891FCEBA32004793AD /* VIPDetailGiftBagCell.h */,
-				847C178A1FCEBA32004793AD /* VIPDetailGiftBagCell.m */,
-				847C178B1FCEBA32004793AD /* VIPDetailGiftBagCell.xib */,
-				847C178E1FCEBA8C004793AD /* VIPDetailDiscountCell.h */,
-				847C178F1FCEBA8C004793AD /* VIPDetailDiscountCell.m */,
-				847C17901FCEBA8C004793AD /* VIPDetailDiscountCell.xib */,
+				5EADE9A11FD3D6DE00573DB1 /* VIPPrivilegeCell.h */,
+				5EADE9A21FD3D6DE00573DB1 /* VIPPrivilegeCell.m */,
+				5EADE9A31FD3D6DE00573DB1 /* VIPPrivilegeCell.xib */,
 				847C17931FCEBAC4004793AD /* VIPDetailTipsCell.h */,
 				847C17941FCEBAC4004793AD /* VIPDetailTipsCell.m */,
 				5EA8221D1FCEDF5E00DC1FEE /* VIPConfirmOrderCell.h */,
@@ -636,13 +717,16 @@
 			files = (
 				5EA821F31FCD85DC00DC1FEE /* MineHeadTableViewCell.xib in Resources */,
 				5EA821F81FCD85EE00DC1FEE /* MineClassifyTableViewCell.xib in Resources */,
+				5EADE96D1FD184E600573DB1 /* HPPersonalEduCell.xib in Resources */,
 				847BC1791FCFCBAE007C6FE8 /* VIPOrderTypeCell.xib in Resources */,
+				5EADE9A51FD3D6DE00573DB1 /* VIPPrivilegeCell.xib in Resources */,
 				5EA821DD1FCD7C4600DC1FEE /* LaunchScreen.storyboard in Resources */,
 				5EA822211FCEDF5E00DC1FEE /* VIPConfirmOrderCell.xib in Resources */,
-				847C178D1FCEBA32004793AD /* VIPDetailGiftBagCell.xib in Resources */,
+				5EADE97C1FD19B6400573DB1 /* HPEditPortraitCell.xib in Resources */,
+				5EADE9681FD184C100573DB1 /* HPPersonalProjectCell.xib in Resources */,
+				5EADE9811FD19C7E00573DB1 /* HPEditDefaultCell.xib in Resources */,
 				5EA821DA1FCD7C4600DC1FEE /* Assets.xcassets in Resources */,
 				847BC1741FCFC7DC007C6FE8 /* VIPOrderWaitPayCell.xib in Resources */,
-				847C17921FCEBA8C004793AD /* VIPDetailDiscountCell.xib in Resources */,
 				5EA821FD1FCD879C00DC1FEE /* MineResources.bundle in Resources */,
 				5EA821D81FCD7C4600DC1FEE /* Main.storyboard in Resources */,
 				8477A4C01FD1535F003D1FA8 /* PersonalHeadCell.xib in Resources */,
@@ -708,13 +792,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8477A4981FD14F4D003D1FA8 /* HomePageCtrl.m in Sources */,
+				5EADE9671FD184C100573DB1 /* HPPersonalProjectCell.m in Sources */,
 				5EA821F71FCD85EE00DC1FEE /* MineClassifyTableViewCell.m in Sources */,
+				5EADE9851FD19EEE00573DB1 /* HPEditPersonalModel.m in Sources */,
 				847C17881FCEB9DE004793AD /* VIPDetailPriceCell.m in Sources */,
+				5EADE97B1FD19B6400573DB1 /* HPEditPortraitCell.m in Sources */,
+				5EADE9631FD17C0500573DB1 /* HPPersonalEmptyCell.m in Sources */,
 				847C176D1FCE6CA5004793AD /* LockerPayResultViewController.m in Sources */,
 				847C177A1FCE6DC9004793AD /* ContactCustomerService.m in Sources */,
 				847C17561FCE6085004793AD /* VIPConfirmOrderViewController.m in Sources */,
-				847BC18F1FCFFF1A007C6FE8 /* Foundation+NSLog.m in Sources */,
+				5EADE9801FD19C7E00573DB1 /* HPEditDefaultCell.m in Sources */,
+				5EADE9A41FD3D6DE00573DB1 /* VIPPrivilegeCell.m in Sources */,
 				5EA822241FCEE5D200DC1FEE /* DefaultCell.m in Sources */,
+				5EADE9771FD19A1F00573DB1 /* HPEditPersonalViewController.m in Sources */,
 				847C17441FCE5267004793AD /* BaseViewController.m in Sources */,
 				847C17951FCEBAC4004793AD /* VIPDetailTipsCell.m in Sources */,
 				5EA822291FCEEE0000DC1FEE /* UIAlertController+Extension.m in Sources */,
@@ -725,47 +815,55 @@
 				847BC1851FCFE8EE007C6FE8 /* Http.m in Sources */,
 				847C17701FCE6D0D004793AD /* VIPWaitPayViewController.m in Sources */,
 				5EA821FB1FCD860B00DC1FEE /* MineNormalTableViewCell.m in Sources */,
-				847BC1921FD0009F007C6FE8 /* NSDictionary+Log.m in Sources */,
 				847C17531FCE605D004793AD /* VIPDetailViewController.m in Sources */,
 				5EA822361FCF0D9400DC1FEE /* PaymentBarView.m in Sources */,
 				5E6552EB1FD028BB00B4697B /* MemberCenterStatusModel.m in Sources */,
+				5EADE98B1FD255DC00573DB1 /* HPAddEduViewController.m in Sources */,
 				847C176A1FCE6C42004793AD /* LockerConfirmOrderViewController.m in Sources */,
 				847C17451FCE5267004793AD /* BaseNavigationController.m in Sources */,
+				5EADE9701FD1856500573DB1 /* HPPersonalTagsCell.m in Sources */,
 				5EA822071FCD88A300DC1FEE /* UIImage+Extension.m in Sources */,
+				5EADE9941FD29D3E00573DB1 /* HPAddTagsViewController.m in Sources */,
 				847C17661FCE6A93004793AD /* MakerPayResultViewController.m in Sources */,
 				847BC1781FCFCBAE007C6FE8 /* VIPOrderTypeCell.m in Sources */,
 				5EA822121FCDAF6C00DC1FEE /* UIImage+Path.m in Sources */,
 				5EA821EB1FCD7DCE00DC1FEE /* MineViewController.m in Sources */,
 				847C177E1FCE7883004793AD /* EnjoySectionHeader.m in Sources */,
+				5EADE99A1FD2A55F00573DB1 /* HPTagsCollectionCell.m in Sources */,
 				847C17591FCE60C8004793AD /* VIPPayResultViewController.m in Sources */,
 				847C17601FCE6A31004793AD /* MakerDetailViewController.m in Sources */,
 				847BC1731FCFC7DC007C6FE8 /* VIPOrderWaitPayCell.m in Sources */,
+				5EADE9911FD2791100573DB1 /* MCContentCtrl.m in Sources */,
 				5EA822041FCD881000DC1FEE /* UIFont+Extension.m in Sources */,
 				847BC18C1FCFF73B007C6FE8 /* RequestTest.m in Sources */,
 				8477A4BF1FD1535F003D1FA8 /* PersonalHeadCell.m in Sources */,
 				847BC1811FCFE0B1007C6FE8 /* PayOrderBarView.m in Sources */,
 				847C17761FCE6D31004793AD /* LockerWaitPayViewController.m in Sources */,
 				847C17631FCE6A75004793AD /* MakerConfirmOrderViewController.m in Sources */,
+				5EADE9A81FD3F4C900573DB1 /* NSNumber+Extension.m in Sources */,
 				847C17431FCE5267004793AD /* BaseTableViewController.m in Sources */,
-				5EA822151FCDC23F00DC1FEE /* Scale.m in Sources */,
-				847C17911FCEBA8C004793AD /* VIPDetailDiscountCell.m in Sources */,
+				5EADE9A01FD2B6E500573DB1 /* HPTagsContentViewController.m in Sources */,
+				5EADE9741FD192AB00573DB1 /* HPPersonalHeadView.m in Sources */,
 				5EA821E01FCD7C4600DC1FEE /* main.m in Sources */,
+				5EADE98E1FD262BF00573DB1 /* HPManageEduViewController.m in Sources */,
 				847BC1891FCFF428007C6FE8 /* GVUserDefaults+Extension.m in Sources */,
 				847C175C1FCE61B6004793AD /* MemberCenterCtrl.m in Sources */,
 				847C17821FCE798C004793AD /* MemberCenterCell.m in Sources */,
 				5EA821EE1FCD7EFA00DC1FEE /* MineModel.m in Sources */,
 				847BC16F1FCFAC38007C6FE8 /* MemberEnjoyCell.m in Sources */,
 				5EA822201FCEDF5E00DC1FEE /* VIPConfirmOrderCell.m in Sources */,
-				847C178C1FCEBA32004793AD /* VIPDetailGiftBagCell.m in Sources */,
+				5EADE96C1FD184E600573DB1 /* HPPersonalEduCell.m in Sources */,
 				5EA8221C1FCED6D100DC1FEE /* UITableView+Extension.m in Sources */,
 				5EA822011FCD87F500DC1FEE /* UIColor+Extension.m in Sources */,
 				5EA821D21FCD7C4600DC1FEE /* AppDelegate.m in Sources */,
 				8477A48E1FD0F7B0003D1FA8 /* MemberCenterTipsCell.m in Sources */,
 				5EA822301FCF00AF00DC1FEE /* ActionSheetHeadView.m in Sources */,
+				5EADE99D1FD2B6B800573DB1 /* HPManageTagsViewController.m in Sources */,
 				5EA8222D1FCF009700DC1FEE /* ActionSheetView.m in Sources */,
 				8477A4911FD1264B003D1FA8 /* OrderPriceModel.m in Sources */,
 				847C17851FCE8652004793AD /* MCCycleCollectionCell.m in Sources */,
 				5EA822331FCF04F600DC1FEE /* ActionSheetBoardVciew.m in Sources */,
+				5EADE9881FD1A68300573DB1 /* HPEditJobViewController.m in Sources */,
 				5EA821F21FCD85DC00DC1FEE /* MineHeadTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

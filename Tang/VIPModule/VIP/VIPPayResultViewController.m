@@ -7,6 +7,11 @@
 //
 
 #import "VIPPayResultViewController.h"
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import <JKCategories/JKCategories.h>
+#import "UIImage+Path.h"
 
 @interface VIPPayResultViewController ()
 
@@ -63,7 +68,7 @@
     tips.textAlignment = NSTextAlignmentCenter;
     tips.numberOfLines = 0;
     tips.text = @"您购买的VIP特权已生效，会员专属大礼包\n请联系客服领取";
-    tips.font = [UIFont font:14];
+    tips.font = [UIFont RegularFont:14];
     [footView addSubview:tips];
     
     //创建“查看权益“的按钮
@@ -80,7 +85,7 @@
     UIButton *contactCustomerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [contactCustomerBtn setTitle:@"联系客服领取大礼包" forState:UIControlStateNormal];
     [contactCustomerBtn setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
-    contactCustomerBtn.titleLabel.font = [UIFont font:14];
+    contactCustomerBtn.titleLabel.font = [UIFont RegularFont:14];
     contactCustomerBtn.showsTouchWhenHighlighted = YES;
     [contactCustomerBtn jk_addActionHandler:^(NSInteger tag) {
         [weakSelf backCtrlWithType:3];
@@ -139,7 +144,7 @@
         UILabel *statusLabel = [UILabel new];
         statusLabel.textColor = [UIColor whiteColor];
         statusLabel.textAlignment = NSTextAlignmentCenter;
-        statusLabel.font = [UIFont font:20];
+        statusLabel.font = [UIFont RegularFont:20];
         statusLabel.tag = 3;
         [cell.contentView addSubview:statusLabel];
         [statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -7,6 +7,9 @@
 //
 
 #import "MineClassifyTableViewCell.h"
+#import "UIImage+Path.h"
+#import <Masonry.h>
+#import "NSNumber+Extension.h"
 
 @implementation MineClassifyTableViewCell
 

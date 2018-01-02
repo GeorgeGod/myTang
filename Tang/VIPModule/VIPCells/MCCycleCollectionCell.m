@@ -7,6 +7,11 @@
 //
 
 #import "MCCycleCollectionCell.h"
+#import "UIImage+Path.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
+#import "UIFont+Extension.h"
+#import <JKCategories/JKCategories.h>
 
 @interface MCCycleCollectionCell()
 
@@ -38,49 +43,51 @@
     self.head = [UILabel new];
     self.head.text = @"加入INNO会员  尊享豪礼特权";
     self.head.textColor = [UIColor colorWithHexString:@"#666666"];
-    self.head.font = [UIFont font:17];
+    self.head.font = [UIFont RegularFont:17];
     [self.contentView addSubview:self.head];
     
     self.title = [UILabel new];
     self.title.text = @"InnoMaker特权";
     self.title.textColor = [UIColor colorWithHexString:@"#ECEEF5"];
-    self.title.font = [UIFont font:30];
+    self.title.font = [UIFont RegularFont:30];
     [self.contentView addSubview:self.title];
     
     
     self.detail = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.detail setTitle:@"会员权益说明 >" forState:UIControlStateNormal];
     [self.detail setTitleColor:[UIColor colorWithHexString:@"#ECEEF5"] forState:UIControlStateNormal];
-    self.detail.titleLabel.font = [UIFont font:12];
+    self.detail.titleLabel.font = [UIFont RegularFont:12];
     self.detail.jk_touchAreaInsets = UIEdgeInsetsMake(10, 0, 10, 10);
     [self.contentView addSubview:self.detail];
     
     self.describe = [UILabel new];
     self.describe.text = @"*仅限于上海创智旗舰使用";
     self.describe.textColor = [UIColor colorWithHexString:@"#666666"];
-    self.describe.font = [UIFont font:10];
+    self.describe.font = [UIFont RegularFont:10];
     [self.contentView addSubview:self.describe];
 }
 
 -(void)initConstraints {
+    UIView *superView = self.cycleBG;
     [self.cycleBG mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.contentView);
+        make.centerY.equalTo(self.contentView);
+        make.left.right.equalTo(self.contentView).insets(UIEdgeInsetsMake(0, 20, 0, 20));
     }];
     [self.head mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.top.mas_equalTo(10);
+        make.left.mas_equalTo(superView).offset(20);
+        make.top.mas_equalTo(superView).offset(10);
     }];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.head.mas_bottom).offset(57);
-        make.left.mas_equalTo(20);
+        make.left.mas_equalTo(superView).offset(20);
     }];
     [self.detail mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.title);
         make.top.equalTo(self.title.mas_bottom);
     }];
     [self.describe mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.bottom.equalTo(self.contentView).offset(-10);
+        make.left.mas_equalTo(superView).offset(20);
+        make.bottom.equalTo(superView).offset(-10);
     }];
 }
 @end

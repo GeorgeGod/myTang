@@ -7,6 +7,8 @@
 //
 
 #import "BaseTableViewController.h"
+#import <JKCategories/JKCategories.h>
+#import <Masonry.h>
 
 @implementation BaseTableViewController
 
@@ -18,6 +20,10 @@
     tb.dataSource = self;
     [self.view addSubview:tb];
     self.tableView = tb;
+    if ([self respondsToSelector:@selector(tableFootView:)]) {
+        UIView *tableFootView = [self tableFootView:tb];
+        self.tableView.tableFooterView = tableFootView;
+    }
     [tb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
@@ -52,6 +58,7 @@
     
 }
 
-
+//空方法,需要被子类实现
+-(UIView *)tableFootView:(UITableView *)tableView { return nil; }
 
 @end

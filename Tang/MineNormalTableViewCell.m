@@ -7,6 +7,10 @@
 //
 
 #import "MineNormalTableViewCell.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
 
 @interface MineNormalTableViewCell() {
     UIView *reddot;
@@ -20,7 +24,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.textLabel.textColor = [UIColor colorWithHexString:@"#222222"];
-        self.textLabel.font = [UIFont font:15];
+        self.textLabel.font = [UIFont RegularFont:15];
         
         reddot = [UIView new];
         reddot.backgroundColor = [UIColor colorWithHexString:@"#FC5D4D"];

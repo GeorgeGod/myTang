@@ -6,8 +6,9 @@
 //  Copyright © 2017年 虞嘉伟. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "MCContentCtrl.h"
+#import <WMPageController.h>
 
-@interface MemberCenterCtrl : BaseTableViewController
+@interface MemberCenterCtrl : WMPageController
 
 @end

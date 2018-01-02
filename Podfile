@@ -12,5 +12,6 @@ target 'Tang' do
   pod 'Masonry'
   pod 'JKCategories'
   pod 'FDFullscreenPopGesture'
+  pod 'WMPageController'
   
 end

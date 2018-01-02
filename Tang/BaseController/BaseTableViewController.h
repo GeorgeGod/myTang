@@ -10,6 +10,14 @@
 
 @interface BaseTableViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView * _Nullable tableView;
+
+/**
+ 设置tableView的tableFooterView
+ 
+ @param tableView tableView
+ @return view及其子类对象
+ */
+-(nullable UIView *)tableFootView:(UITableView *_Nullable)tableView;
 
 @end

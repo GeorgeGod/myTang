@@ -10,6 +10,10 @@
 
 @interface EnjoySectionHeader : UIView
 
+//会员中心的sectionHeader(开通即可享有)
 +(instancetype)EnjoySectionHeader;
+
+//会员中心的sectionFooter(注意事项)
++(instancetype)EnjoySectionFooter;
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "VIPOrderTipsCell.h"
+#import "UIColor+Extension.h"
+#import <Masonry.h>
+#import "UIFont+Extension.h"
 
 @interface VIPOrderTipsCell()
 @property (nonatomic, strong) UILabel *orderNum;
@@ -47,7 +50,7 @@
     copy.layer.borderWidth = 0.5;
     [copy setTitle:@"复制" forState:UIControlStateNormal];
     copy.showsTouchWhenHighlighted = YES;
-    copy.titleLabel.font = [UIFont font:12];
+    copy.titleLabel.font = [UIFont RegularFont:12];
     [copy setTitleColor:[UIColor colorWithHexString:@"#222222"] forState:UIControlStateNormal];
     [copy addTarget:self action:@selector(copyOrderAction) forControlEvents:UIControlEventTouchUpInside];
     self.orderNumCopyBtn = copy;

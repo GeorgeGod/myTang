@@ -7,11 +7,31 @@
 //
 
 #import "EnjoySectionHeader.h"
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import "NSNumber+Extension.h"
 
+@interface EnjoySectionHeader()
+@property (nonatomic, strong) UILabel *titleLabel;
+@end
 @implementation EnjoySectionHeader
 
 +(instancetype)EnjoySectionHeader {
+    EnjoySectionHeader *headView = [EnjoySectionHeader EnjoySectionHeaderWithTitle:@"开通即可享有"];
     
+    return headView;
+}
+
++(instancetype)EnjoySectionFooter {
+    EnjoySectionHeader *footView = [EnjoySectionHeader EnjoySectionHeaderWithTitle:@"注意事项"];
+    
+    return footView;
+}
+
+
+//private
++(instancetype)EnjoySectionHeaderWithTitle:(NSString *)txt {
     //创建容器view
     EnjoySectionHeader *headView = [EnjoySectionHeader new];
     
@@ -22,10 +42,11 @@
     
     //标题
     UILabel *title = [UILabel new];
-    title.text = @"开通即可享有";
+    title.text = txt;
     title.textColor = [UIColor colorWithHexString:@"#999999"];
     title.textAlignment = NSTextAlignmentCenter;
-    title.font = [UIFont font:15];
+    title.font = [UIFont RegularFont:15];
+    headView.titleLabel = title;
     [headView addSubview:title];
     
     //右分割线
@@ -36,7 +57,7 @@
     //布局
     [leftline mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(scale(53));
-        make.right.equalTo(title.mas_left).offset(-20);
+        make.width.mas_equalTo(scale(70));
         make.height.mas_equalTo(0.5);
         make.centerY.equalTo(title);
     }];
@@ -44,13 +65,12 @@
         make.center.equalTo(headView);
     }];
     [rightline mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(title.mas_right).offset(20);
         make.right.equalTo(headView).offset(scale(-53));
+        make.width.mas_equalTo(scale(70));
         make.height.mas_equalTo(0.5);
         make.centerY.equalTo(title);
     }];
     
     return headView;
 }
-
 @end

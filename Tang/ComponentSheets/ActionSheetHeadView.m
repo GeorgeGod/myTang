@@ -7,6 +7,10 @@
 //
 
 #import "ActionSheetHeadView.h"
+#import "UIColor+Extension.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import <JKCategories/JKCategories.h>
 
 @implementation ActionSheetHeadView
 
@@ -18,7 +22,7 @@
         titleLable.text = title;
         titleLable.textAlignment = NSTextAlignmentCenter;
         titleLable.textColor = [UIColor colorWithHexString:@"#222222"];
-        titleLable.font = [UIFont font:15];
+        titleLable.font = [UIFont RegularFont:15];
         [self addSubview:titleLable];
         
         [titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -28,7 +32,7 @@
         //左按钮
         UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [leftBtn setTitle:left forState:UIControlStateNormal];
-        leftBtn.titleLabel.font = [UIFont font:15];
+        leftBtn.titleLabel.font = [UIFont RegularFont:15];
         [leftBtn setTitleColor:[UIColor colorWithHexString:@"#4B9FED"] forState:UIControlStateNormal];
         __weak typeof(self)weakSelf = self;
         [leftBtn jk_addActionHandler:^(NSInteger tag) {

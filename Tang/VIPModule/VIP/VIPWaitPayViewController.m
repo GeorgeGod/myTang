@@ -7,6 +7,11 @@
 //
 
 #import "VIPWaitPayViewController.h"
+#import "UIFont+Extension.h"
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+#import "UIImage+Path.h"
+#import "UITableView+Extension.h"
 #import "VIPOrderWaitPayCell.h"
 #import "VIPOrderTypeCell.h"
 #import "VIPOrderTipsCell.h"
@@ -124,10 +129,10 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UITableViewCell"];
             
             cell.textLabel.textColor = [UIColor colorWithHexString:@"#222222"];
-            cell.textLabel.font = [UIFont font:15];
+            cell.textLabel.font = [UIFont RegularFont:15];
             
             cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"#222222"];
-            cell.detailTextLabel.font = [UIFont font:14];
+            cell.detailTextLabel.font = [UIFont RegularFont:14];
         }
         if (indexPath.row == 0) {
             cell.textLabel.text = @"会员费";

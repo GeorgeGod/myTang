@@ -7,6 +7,8 @@
 //
 
 #import "MineViewController.h"
+#import "UIImage+Path.h"
+#import <Masonry.h>
 #import "MineModel.h"
 
 #import "MineHeadTableViewCell.h"

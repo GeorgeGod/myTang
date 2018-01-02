@@ -10,8 +10,21 @@
 
 @interface UIFont (Extension)
 
-+(instancetype)font:(float)size;
+//苹方-简 常规体
++(instancetype)RegularFont:(float)size;
 
-+(instancetype)lightFont:(float)size;
+//苹方-简 极细体
++(instancetype)UltraLightFont:(float)size;
 
+//苹方-简 细体
++(instancetype)LightFont:(float)size;
+
+//苹方-简 纤细体
++(instancetype)ThinFont:(float)size;
+
+//苹方-简 中黑体
++(instancetype)MediumFont:(float)size;
+
+//苹方-简 中粗体
++(instancetype)SemiboldFont:(float)size;
 @end

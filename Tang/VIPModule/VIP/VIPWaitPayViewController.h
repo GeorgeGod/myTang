@@ -7,6 +7,8 @@
 //
 
 #import "BaseTableViewController.h"
+#import "BlockCallBack.h"
+#import "DelegateCallBack.h"
 
 @interface VIPWaitPayViewController : BaseTableViewController
 

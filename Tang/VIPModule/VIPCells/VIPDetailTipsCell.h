@@ -12,4 +12,13 @@
 
 @property (nonatomic, strong) UILabel *title;
 
+-(void)assignmentCellWithData:(NSString *)str;
+/**
+ 计算行高
+ 
+ @param str 数据源
+ @return 返回cell的高度
+ */
++(float)CalculateCellHeightWithData:(NSString *)str;
+
 @end

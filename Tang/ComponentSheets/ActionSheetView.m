@@ -7,6 +7,8 @@
 //
 
 #import "ActionSheetView.h"
+#import <Masonry.h>
+#import <JKCategories/JKCategories.h>
 #import "ActionSheetBoardVciew.h"
 
 @interface ActionSheetView()

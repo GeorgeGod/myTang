@@ -7,6 +7,10 @@
 //
 
 #import "PaymentBarView.h"
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+#import "NSNumber+Extension.h"
+#import <JKCategories/JKCategories.h>
 
 @interface PaymentBarView()
 @property (nonatomic, strong) UILabel *priceLabel;
